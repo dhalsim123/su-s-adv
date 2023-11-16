@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:replace="~{fragments/commons::head}">
+</head>
+<header th:replace="~{fragments/commons::header}">
+</header>
+<body>
+<main class="container mt-5">
+    <div class="d-flex flex-column gap-1 justify-content-center align-items-center">
+        <form class="d-flex flex-column gap-3" th:action="@{/users/settings/change-username}"
+              th:method="PATCH"
+              th:object="${changeUsernameDTO}">
+            <h1 class="h3 mb-3 fw-normal">Change your username</h1>
+            <div class="form-floating">
+                <input th:errorclass="'is-invalid alert-danger'" type="text" class="form-control"
+                       id="username"
+                       name="username"
+                       th:value="${username}"
+                       placeholder="Username">
+                <label for="username">Username</label>
+                <p th:errors="*{username}" th:if="${#fields.hasErrors('username')}" id="usernameError"
+                   class="text-light form-text bg-danger rounded p-1 text-center">Username length must be more than 3
+                    characters</p>
+            </div>
+            <button class="btn py-2 sing-in-buttons" type="submit">Change your username</button>
+        </form>
+    </div>
+
+</main>
+</body>
+</html>

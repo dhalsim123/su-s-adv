@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:replace="~{fragments/commons::head}">
+</head>
+<header th:replace="~{fragments/commons::header}">
+</header>
+<body>
+
+<main class="container mt-3">
+
+
+    <section class="mb-lg-5 mb-sm-3">
+        <div class="d-flex justify-content-between">
+            <div>
+                <h1 class="mb-1" th:text="${personPageViewDTO.name}"></h1>
+                <div class="d-flex gap-1">
+                    <span th:if="${personPageViewDTO.actedInTitles.size() > 0}">Actor&nbsp;&nbsp;</span>
+                    <span th:if="${personPageViewDTO.directedTitles.size() > 0}">Director&nbsp;&nbsp;</span>
+                    <span th:if="${personPageViewDTO.writtenTitles.size() > 0}">Writer&nbsp;&nbsp;</span>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex flex-lg-row flex-sm-column flex-column-770 gap-1 mb-1 poster-video-title-page-div">
+            <div>
+                <img class="videoPoster-titlePage" th:src="${personPageViewDTO.getPhotoUrl()}" alt="">
+            </div>
+            <div th:if="${personPageViewDTO.bestRatedTitleVideoImdb} != null" id="trailer-top-div" class="videoDiv-titlePage">
+                <iframe class="rounded" th:src="@{'https://www.imdb.com/video/embed/' + ${personPageViewDTO.bestRatedTitleVideoImdb}}" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="100%" width="100%" allowfullscreen></iframe>
+            </div>
+        </div>
+
+
+    </section>
+
+    <section th:if="${personPageViewDTO.knownFor.size() > 0}" class="mb-lg-5 mb-sm-3">
+        <div>
+            <h3 class="mb-lg-3 mb-sm-1">
+                Known For:
+            </h3>
+        </div>
+        <div class="d-flex gap-3 flex-wrap flex-column-770 ">
+            <a class="a-no-decoration d-flex gap-3 w-50 titleDiv-person-page1 rounded" th:each="title : ${personPageViewDTO.knownFor}" th:href="@{/title/{id}(id=${title.id})}">
+                <div>
+                    <img height="100rem" class="rounded" th:src="@{${title.getMainPosterURLPhotoUrl()}}" alt="">
+                </div>
+                <div class="d-flex flex-column justify-content-center">
+                    <p class="m-0" th:text="${title.title}"></p>
+                    <div class="d-flex align-items-center">
+                        <svg width="15" height="15" xmlns="http://www.w3.org/2000/svg"
+                             class="ipc-icon ipc-icon--star-inline color1" viewBox="0 0 24 24" fill="currentColor"
+                             role="presentation">
+                            <path d="M12 20.1l5.82 3.682c1.066.675 2.37-.322 2.09-1.584l-1.543-6.926 5.146-4.667c.94-.85.435-2.465-.799-2.567l-6.773-.602L13.29.89a1.38 1.38 0 0 0-2.581 0l-2.65 6.53-6.774.602C.052 8.126-.453 9.74.486 10.59l5.147 4.666-1.542 6.926c-.28 1.262 1.023 2.26 2.09 1.585L12 20.099z"></path>
+                        </svg>
+                        <p class="m-0" th:text="|${title.imdbRating}|">Card title</p>
+                    </div>
+                    <p class="m-0" th:text="${title.year}"></p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section th:if="${personPageViewDTO.knownFor.size() > 0}" class="mb-lg-5 mb-sm-3">
+        <div>
+            <h3 class="mb-lg-3 mb-sm-1">
+                Credits
+            </h3>
+        </div>
+        <div class="mb-3" th:if="${personPageViewDTO.actedInTitles.size() > 0 || personPageViewDTO.actingInUpcomingTitles.size() > 0}">
+            <h5 class="mb-lg-3 mb-sm-1">
+                Actor
+            </h5>
+            <div class="d-flex gap-3 w-75 flex-wrap flex-column personPage-credits-div">
+                <div th:if="${personPageViewDTO.actingInUpcomingTitles.size() > 0}" class="d-flex gap-3">
+                    <p class="bold-font m-0">Upcoming</p>
+                    <span th:text="${personPageViewDTO.actingInUpcomingTitles.size()}"></span>
+                </div>
+                <div class="cards d-flex flex-column gap-1">
+                    <a th:each="title : ${personPageViewDTO.actingInUpcomingTitles}" th:href="@{/title/{id}(id=${title.id})}" class="a-no-decoration d-flex gap-3 titleDiv-person-page2 rounded" >
+                        <div>
+                            <img height="75rem" class="rounded" th:src="@{${title.getMainPosterURLPhotoUrl()}}" alt="">
+                        </div>
+                        <div class="d-flex flex-column justify-content-center">
+                            <p class="m-0" th:text="${title.title}"></p>
+                            <p class="m-0" th:text="${title.year}"></p>
+                        </div>
+                    </a>
+                </div>
+                <div th:if="${personPageViewDTO.actedInTitles.size() > 0}" class="d-flex gap-3">
+                    <p class="bold-font m-0">Acted in</p>
+                    <span th:text="${personPageViewDTO.actedInTitles.size()}"></span>
+                </div>
+                <div class="cards d-flex flex-column gap-1">
+                    <a th:each="title : ${personPageViewDTO.actedInTitles}" th:href="@{/title/{id}(id=${title.id})}" class="a-no-decoration d-flex gap-3 titleDiv-person-page2 rounded" >
+                            <div>
+                                <img height="75rem" class="rounded" th:src="@{${title.getMainPosterURLPhotoUrl()}}" alt="">
+                            </div>
+                        <div class="d-flex flex-column justify-content-center">
+                            <p class="m-0" th:text="${title.title}"></p>
+                            <div class="d-flex align-items-center">
+                                <svg width="15" height="15" xmlns="http://www.w3.org/2000/svg"
+                                     class="ipc-icon ipc-icon--star-inline color1" viewBox="0 0 24 24" fill="currentColor"
+                                     role="presentation">
+                                    <path d="M12 20.1l5.82 3.682c1.066.675 2.37-.322 2.09-1.584l-1.543-6.926 5.146-4.667c.94-.85.435-2.465-.799-2.567l-6.773-.602L13.29.89a1.38 1.38 0 0 0-2.581 0l-2.65 6.53-6.774.602C.052 8.126-.453 9.74.486 10.59l5.147 4.666-1.542 6.926c-.28 1.262 1.023 2.26 2.09 1.585L12 20.099z"></path>
+                                </svg>
+                                <p class="m-0" th:text="|${title.imdbRating}|">Card title</p>
+                            </div>
+                            <p class="m-0" th:text="${title.year}"></p>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="mb-3" th:if="${personPageViewDTO.directedTitles.size() > 0 || personPageViewDTO.directingUpcomingTitles.size() > 0}">
+            <h5 class="mb-lg-3 mb-sm-1">
+                Director
+            </h5>
+            <div  class="d-flex gap-3 flex-wrap w-75 flex-column personPage-credits-div">
+                <div th:if="${personPageViewDTO.directingUpcomingTitles.size() > 0}" class="d-flex gap-3">
+                    <p class="bold-font m-0">Upcoming</p>
+                    <span th:text="${personPageViewDTO.directingUpcomingTitles.size()}"></span>
+                </div>
+                <div class="cards d-flex flex-column gap-1">
+                    <a th:each="title : ${personPageViewDTO.directingUpcomingTitles}" th:href="@{/title/{id}(id=${title.id})}" class="a-no-decoration d-flex gap-3 titleDiv-person-page2 rounded" >
+                        <div>
+                            <img height="75rem" class="rounded" th:src="@{${title.getMainPosterURLPhotoUrl()}}" alt="">
+                        </div>
+                        <div class="d-flex flex-column justify-content-center">
+                            <p class="m-0" th:text="${title.title}"></p>
+                            <p class="m-0" th:text="${title.year}"></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="d-flex gap-3">
+                    <p th:if="${personPageViewDTO.directedTitles.size() > 0}" class="bold-font m-0">Directed </p>
+                    <span th:text="${personPageViewDTO.directedTitles.size()}"></span>
+                </div>
+                <div class="cards">
+                    <div class="d-flex gap-3 titleDiv-person-page2 rounded" th:each="title : ${personPageViewDTO.directedTitles}">
+                        <a class="a-no-decoration" th:href="@{/title/{id}(id=${title.id})}">
+                            <div>
+                                <img height="75rem" class="rounded" th:src="@{${title.getMainPosterURLPhotoUrl()}}" alt="">
+                            </div>
+                        </a>
+                        <div class="d-flex flex-column justify-content-center">
+                            <a class="a-no-decoration" th:href="@{/title/{id}(id=${title.id})}"><p class="m-0" th:text="${title.title}"></p></a>
+                            <div class="d-flex align-items-center">
+                                <svg width="15" height="15" xmlns="http://www.w3.org/2000/svg"
+                                     class="ipc-icon ipc-icon--star-inline color1" viewBox="0 0 24 24" fill="currentColor"
+                                     role="presentation">
+                                    <path d="M12 20.1l5.82 3.682c1.066.675 2.37-.322 2.09-1.584l-1.543-6.926 5.146-4.667c.94-.85.435-2.465-.799-2.567l-6.773-.602L13.29.89a1.38 1.38 0 0 0-2.581 0l-2.65 6.53-6.774.602C.052 8.126-.453 9.74.486 10.59l5.147 4.666-1.542 6.926c-.28 1.262 1.023 2.26 2.09 1.585L12 20.099z"></path>
+                                </svg>
+                                <p class="m-0" th:text="|${title.imdbRating}|">Card title</p>
+                            </div>
+                            <p class="m-0" th:text="${title.year}"></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="mb-3" th:if="${personPageViewDTO.writtenTitles.size() > 0 || personPageViewDTO.writingForUpcomingTitles.size() > 0}">
+            <h5 class="mb-lg-3 mb-sm-1">
+                Writer
+            </h5>
+            <div th:if="${personPageViewDTO.writingForUpcomingTitles.size() > 0}" class="d-flex gap-3">
+                <p class="bold-font m-0">Upcoming</p>
+                <span th:text="${personPageViewDTO.writingForUpcomingTitles.size()}"></span>
+            </div>
+            <div class="cards d-flex flex-column gap-1">
+                <a th:each="title : ${personPageViewDTO.writingForUpcomingTitles}" th:href="@{/title/{id}(id=${title.id})}" class="a-no-decoration d-flex gap-3 titleDiv-person-page2 rounded" >
+                    <div>
+                        <img height="75rem" class="rounded" th:src="@{${title.getMainPosterURLPhotoUrl()}}" alt="">
+                    </div>
+                    <div class="d-flex flex-column justify-content-center">
+                        <p class="m-0" th:text="${title.title}"></p>
+                        <p class="m-0" th:text="${title.year}"></p>
+                    </div>
+                </a>
+            </div>
+            <div class="d-flex gap-3 flex-wrap w-75 flex-column personPage-credits-div">
+                <div th:if="${personPageViewDTO.writtenTitles.size() > 0}" class="d-flex gap-3">
+                    <p class="bold-font m-0">Wrote</p>
+                    <span th:text="${personPageViewDTO.writtenTitles.size()}"></span>
+                </div>
+                <div class="cards">
+                    <div class="d-flex gap-3 titleDiv-person-page2 rounded" th:each="title : ${personPageViewDTO.writtenTitles}">
+                        <a class="a-no-decoration" th:href="@{/title/{id}(id=${title.id})}">
+                            <div>
+                                <img height="75rem" class="rounded" th:src="@{${title.getMainPosterURLPhotoUrl()}}" alt="">
+                            </div>
+                        </a>
+                        <div class="d-flex flex-column justify-content-center">
+                            <a class="a-no-decoration" th:href="@{/title/{id}(id=${title.id})}"><p class="m-0" th:text="${title.title}"></p></a>
+                            <div class="d-flex align-items-center">
+                                <svg width="15" height="15" xmlns="http://www.w3.org/2000/svg"
+                                     class="ipc-icon ipc-icon--star-inline color1" viewBox="0 0 24 24" fill="currentColor"
+                                     role="presentation">
+                                    <path d="M12 20.1l5.82 3.682c1.066.675 2.37-.322 2.09-1.584l-1.543-6.926 5.146-4.667c.94-.85.435-2.465-.799-2.567l-6.773-.602L13.29.89a1.38 1.38 0 0 0-2.581 0l-2.65 6.53-6.774.602C.052 8.126-.453 9.74.486 10.59l5.147 4.666-1.542 6.926c-.28 1.262 1.023 2.26 2.09 1.585L12 20.099z"></path>
+                                </svg>
+                                <p class="m-0" th:text="|${title.imdbRating}|">Card title</p>
+                            </div>
+                            <p class="m-0" th:text="${title.year}"></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="/js/personPageScripts.js"></script>
+
+<!--    <section th:unless="${titleViewDTO.plot == null}" class="mb-lg-5 mb-sm-3">-->
+<!--        <div>-->
+<!--            <h3 class="mb-lg-3 mb-sm-1">-->
+<!--                Storyline-->
+<!--            </h3>-->
+<!--        </div>-->
+<!--        <div class="d-flex gap-3 flex-wrap w-75">-->
+<!--            <p th:text="${titleViewDTO.plot}"></p>-->
+<!--        </div>-->
+<!--    </section>-->
+
+<!--    <section th:unless="${titleViewDTO.boxOfficeIsEmpty()}" class="mb-lg-5 mb-sm-3">-->
+<!--        <div>-->
+<!--            <h3 class="mb-lg-3 mb-sm-1">-->
+<!--                Box office-->
+<!--            </h3>-->
+<!--        </div>-->
+<!--        <div class="d-flex gap-3 flex-wrap w-75 flex-column">-->
+<!--            <div th:if="${titleViewDTO.getBoxOfficeGrossUsa()} != null" class="d-flex flex-column">-->
+<!--                <p class="bold-font mb-1">Gross US</p>-->
+<!--                <p th:text="${titleViewDTO.getBoxOfficeGrossUsa()}"></p>-->
+<!--            </div>-->
+<!--            <div th:if="${titleViewDTO.getBoxOfficeOpeningWeekend()} != null" class="d-flex flex-column">-->
+<!--                <p class="bold-font mb-1">Opening weekend US</p>-->
+<!--                <p th:text="${titleViewDTO.getBoxOfficeOpeningWeekend()}"></p>-->
+<!--            </div>-->
+<!--            <div th:if="${titleViewDTO.getBoxOfficeWorldwide()} != null" class="d-flex flex-column">-->
+<!--                <p class="bold-font mb-1">Gross worldwide</p>-->
+<!--                <p th:text="${titleViewDTO.getBoxOfficeWorldwide()}"></p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
+
+
+
+
+
+
+</main>
+
+<script src="/js/watchlistScripts.js"></script>
+
+</body>
+</html>

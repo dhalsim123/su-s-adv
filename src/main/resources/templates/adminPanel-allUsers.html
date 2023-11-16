@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:replace="~{fragments/commons::head}">
+</head>
+<header th:replace="~{fragments/commons::header}">
+</header>
+<body>
+<main class="container mt-5">
+    <section th:if="${allUserSettingsDTO.size() > 0}" class="mb-lg-5 mb-sm-3">
+        <div class="mb-lg-5 mb-sm-1">
+            <h3 class="mb-lg-3 mb-sm-1">
+                All users
+            </h3>
+        </div>
+        <div class="mb-3">
+
+            <div class="d-flex gap-3 w-75 flex-wrap flex-column personPage-credits-div">
+                <div class="cards d-flex flex-column gap-1">
+                    <a th:each="user : ${allUserSettingsDTO}" th:href="@{/admin/users/{id}(id=${user.id})}"
+                       class="a-no-decoration d-flex gap-3 titleDiv-person-page2 rounded">
+                        <div class="d-flex flex-column justify-content-center">
+                            <div class="m-0">
+                                <span class="bold-font">Username:</span>
+                                <span class="m-0" th:text="${user.username}"></span>
+                            </div>
+                            <div class="m-0">
+                                <span class="bold-font">Email:</span>
+                                <span class="m-0" th:text="${user.email}"></span>
+                            </div>
+                            <div class="m-0">
+                                <span class="bold-font">Roles:</span>
+                            <span th:each="role : ${user.roles}" th:text="${role.role} + '&nbsp;'"></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</main>
+</body>
+</html>
+

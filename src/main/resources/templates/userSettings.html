@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:replace="~{fragments/commons::head}">
+</head>
+<header th:replace="~{fragments/commons::header}">
+</header>
+<body>
+<main class="container mt-5">
+    <div class="d-flex flex-column gap-1 justify-content-center align-items-center">
+        <div sec:authorize="hasRole('ROLE_ADMIN')">ADMIN</div>
+        <div><img width="150rem" src="https://png.pngtree.com/png-clipart/20210608/ourmid/pngtree-dark-gray-simple-avatar-png-image_3418404.jpg" alt=""></div>
+        <div th:text="|Username: ${userSettingsDTO.getUsername()}|"></div>
+        <div th:text="|Email: ${userSettingsDTO.getEmail()}|"></div>
+        <a th:href="@{/users/settings/change-username}"><button class="btn py-2 sing-in-buttons">Change username</button></a>
+    </div>
+</main>
+</body>
+</html>

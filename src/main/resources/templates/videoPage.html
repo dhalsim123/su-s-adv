@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:replace="~{fragments/commons::head}">
+</head>
+<header th:replace="~{fragments/commons::header}">
+</header>
+
+
+<main class="container mt-3">
+
+    <button onclick="window.history.back()" class="rounded d-flex justify-content-center align-items-center border-0 item1 mb-1 p-1 ps-3 pe-3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="ipc-icon ipc-icon--clear ipc-btn__icon ipc-btn__icon--pre" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M18.3 5.71a.996.996 0 0 0-1.41 0L12 10.59 7.11 5.7A.996.996 0 1 0 5.7 7.11L10.59 12 5.7 16.89a.996.996 0 1 0 1.41 1.41L12 13.41l4.89 4.89a.996.996 0 1 0 1.41-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"></path></svg>
+        Close
+    </button>
+    <section class="mb-lg-5 mb-sm-3">
+        <div class="d-flex flex-lg-row flex-sm-column flex-column-770 gap-3">
+
+            <div id="trailer-top-div" class="videoDiv1">
+                <iframe class="rounded" th:src="@{'https://www.imdb.com/video/embed/' + ${titleVideoViewDTO.getMainTrailerURLVideoImdbId()}}" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="100%" width="100%" allowfullscreen></iframe>
+            </div>
+            <div class="d-flex flex-column">
+                <a class="a-no-decoration item1" th:href="@{/title/{id}(id=${titleVideoViewDTO.id})}">
+                <div class="d-flex p-3 gap-3">
+                    <div>
+                        <img class="videoPoster1" th:src="${titleVideoViewDTO.getMainPosterURLPhotoUrl()}" alt="">
+                    </div>
+                    <div class="d-flex flex-column">
+                        <p class="m-0" th:text="|${titleVideoViewDTO.title} (${titleVideoViewDTO.year})|"></p>
+                        <p class="p1" th:text="${titleVideoViewDTO.genresToString()}"></p>
+                    </div>
+
+                </div>
+                </a>
+                <div class="d-flex flex-column p-3 gap-3">
+                    <h5>Official Trailer</h5>
+                    <p th:text="${titleVideoViewDTO.mainTrailerURLVideoDescription}"></p>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+
+
+
+</main>
+
+
+
+</html>

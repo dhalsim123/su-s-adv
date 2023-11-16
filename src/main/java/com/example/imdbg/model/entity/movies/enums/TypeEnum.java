@@ -1,0 +1,6 @@
+package com.example.imdbg.model.entity.movies.enums;
+
+public enum TypeEnum {
+    MOVIE, TV_MOVIE, TV_SERIES, TV_EPISODE, TV_SPECIAL, TV_MINI_SERIES, DOCUMENTARY, VIDEO_GAME,
+    SHORT_FILM, VIDEO, TV_SHORT, PODCAST_SERIES, PODCAST_EPISODE, MUSIC_VIDEO
+}
