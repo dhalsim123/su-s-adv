@@ -33,6 +33,9 @@ public interface TitleRepository extends JpaRepository<TitleEntity, Long> {
     @Query("SELECT t FROM TitleEntity t WHERE t.type.name = 'MOVIE' ORDER BY t.imdbRating DESC LIMIT 250")
     List<TitleEntity> findTop250ImdbRatedMovies();
 
+    @Query("SELECT t FROM TitleEntity t WHERE t.imdbTop250Rank != null ORDER BY t.imdbTop250Rank")
+    List<TitleEntity> findTop250ImdbList();
+
     @Query("SELECT a.idIMDB FROM TitleEntity t JOIN t.actors a WHERE t.imdbId = :titleImdbId")
     List<String> findIdsOfActorsForTitle (@Param("titleImdbId") String titleImdbId);
 

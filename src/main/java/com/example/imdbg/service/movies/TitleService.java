@@ -1,8 +1,8 @@
 package com.example.imdbg.service.movies;
 
 import com.example.imdbg.model.entity.movies.*;
-import com.example.imdbg.model.entity.movies.apidtos.ApiMovieAddDTO;
-import com.example.imdbg.model.entity.movies.apidtos.ApiPersonAddDTO;
+import com.example.imdbg.model.entity.api.apidtos.ApiMovieAddDTO;
+import com.example.imdbg.model.entity.api.apidtos.ApiPersonAddDTO;
 import com.example.imdbg.model.entity.movies.dtos.view.TitleCarouselViewDTO;
 import com.example.imdbg.model.entity.movies.dtos.view.TitleSearchViewDTO;
 import com.example.imdbg.model.entity.movies.dtos.view.TitleVideoViewDTO;
@@ -21,10 +21,10 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 @Service
 public class TitleService {
@@ -49,7 +49,7 @@ public class TitleService {
 
     private final Logger LOGGER = LoggerFactory.getLogger(TitleService.class);
 
-    private List<String> threadLog = new ArrayList<>();
+
 
     public TitleService(TitleRepository titleRepository, GenreService genreService, TypeService typeService, PersonService personService, PhotoService photoService, VideoService videoService, CharacterRoleService characterRoleService, ImdbScrapeService imdbScrapeService, MyApiFilmsService myApiFilmsService, ModelMapper modelMapper) {
         this.titleRepository = titleRepository;
@@ -64,76 +64,7 @@ public class TitleService {
         this.modelMapper = modelMapper;
     }
 
-    public void fetchTop250ImdbTitles(){
-        try {
-            LinkedHashMap<String, String> top250IdsAndRatings = imdbScrapeService.getTop250IdsAndRatings();
-            String info = createNewTitlesWithIdsAndRatingsMap(top250IdsAndRatings);
-            LOGGER.info("Finished fetching the top 250 Imdb titles. " + info);
-        }
-        catch (Exception e){
-            LOGGER.error("Couldn't fetch top250ImdbTitles because of this error:" + e);
-        }
-    }
-    public void fetch100MostPopularImdbTitles(){
-        try {
-            LinkedHashMap<String, String> mostPopularIdsAndRatings = imdbScrapeService.get100MostPopularIdsAndRatings();
-            String info = createNewTitlesWithIdsAndRatingsMap(mostPopularIdsAndRatings);
-            LOGGER.info("Finished fetching the 100 most popular Imdb titles. " + info);
-        }
-        catch (Exception e){
-            LOGGER.error("Couldn't fetch 100MostPopularImdbTitles because of this error: " + e);
-        }
-    }
 
-    public void fetchUpcomingImdbTitles(){
-        try {
-            List<String> upcomingReleases = imdbScrapeService.getUpcomingReleases();
-            String info = createNewTitlesWithIdsList(upcomingReleases);
-            LOGGER.info("Finished fetching the most popular upcoming releases of Imdb titles. " + info);
-        }
-        catch (Exception e){
-            LOGGER.error("Couldn't fetch UpcomingImdbTitles because of this error: " + e);
-        }
-    }
-
-    public void fetchSingleImdbTitle(String imdbId){
-        try {
-            createNewTitlesWithIdsList(new ArrayList<>(List.of(imdbId)));
-        }
-        catch (Exception e){
-            LOGGER.error("Couldn't fetch this Imdb title " + imdbId + " because of this error:" + e);
-        }
-    }
-
-    public List<String> getThreadLog(){
-        return this.threadLog;
-    }
-
-    public void clearThreadLog(){
-        this.threadLog = new ArrayList<>();
-    }
-
-    public void fetch50Titles(int pageNumber){
-        try {
-            LinkedHashMap<String, String> idsAndRatingsMap = imdbScrapeService.get50TitleIdsAndRatings(pageNumber);
-            String anyFailedIds = createNewTitlesWithIdsAndRatingsMap(idsAndRatingsMap);
-            LOGGER.info("Finished fetching page " + pageNumber + "  of the Imdb titles search results. " + (anyFailedIds.isEmpty() ? "" : "But failed to save: " + anyFailedIds));
-        }
-        catch (Exception e){
-            LOGGER.error("Couldn't fetch 100MostPopularImdbTitles because of this error: " + e);
-        }
-    }
-
-    public void fetch250Titles(int pageNumber){
-        try {
-            LinkedHashMap<String, String> idsAndRatingsMap = imdbScrapeService.get250TitleIdsAndRatings(pageNumber);
-            String anyFailedIds = createNewTitlesWithIdsAndRatingsMap(idsAndRatingsMap);
-            LOGGER.info("Finished fetching the " + pageNumber + " page of Imdb titles. " + (anyFailedIds.isEmpty() ? "" : "But failed to save: " + anyFailedIds));
-        }
-        catch (Exception e){
-            LOGGER.error("Couldn't fetch 100MostPopularImdbTitles because of this error: " + e);
-        }
-    }
 
 
 //    public void fetchTitlesFromPageNumber(int pageNumber){
@@ -161,7 +92,7 @@ public class TitleService {
 
 
 
-    private String createNewTitlesWithIdsAndRatingsMap(LinkedHashMap<String, String> idsAndRatingsMap) {
+    public String createNewTitlesWithIdsAndRatingsMap(LinkedHashMap<String, String> idsAndRatingsMap) {
         List<String> idsList = new ArrayList<>(idsAndRatingsMap.keySet());
         List<String> filteredList = filterExistingImdbIdTitles(idsList);
 
@@ -179,10 +110,10 @@ public class TitleService {
             }
         });
         
-        return getResultToString(filteredList, failedToSaveIds);
+        return getNewTitlesInfo(filteredList, failedToSaveIds);
     }
 
-    private String createNewTitlesWithIdsList(List<String> idsList) {
+    public String createNewTitlesWithIdsList(List<String> idsList) {
         List<String> filteredList = filterExistingImdbIdTitles(idsList);
 
         List<String> failedToSaveIds = new ArrayList<>();
@@ -198,22 +129,18 @@ public class TitleService {
             }
         });
 
-        return getResultToString(filteredList, failedToSaveIds);
+        return getNewTitlesInfo(filteredList, failedToSaveIds);
     }
 
-    private String getResultToString(List<String> filteredList, List<String> failedToSaveIds){
+    private String getNewTitlesInfo(List<String> filteredList, List<String> failedToSaveIds){
 
         if (filteredList.isEmpty() && failedToSaveIds.isEmpty()){
-            String s = "Already in DB";
-            threadLog.add(s);
-            return s;
+            return "Already in DB";
         }
 
 
         if (filteredList.size() == failedToSaveIds.size()){
-            String s = "Failed to save any Ids. Check the back-end logs for more info";
-            threadLog.add(s);
-            return "Failed to save any Ids. Check logs for more info";
+            return "Failed to save any Ids. Check the back-end logs for more info";
         }
 
 
@@ -221,10 +148,8 @@ public class TitleService {
 
         String created = "Created: " + String.join(", ", filteredList);
         String failedToSave = "Failed to save: " + String.join(", ", failedToSaveIds);
-        threadLog.add(created);
-        threadLog.add(failedToSave);
 
-        return failedToSave;
+        return created + "<br><br>" + failedToSave;
     }
 
     private void createTitleFromApiDataDTO(ApiMovieAddDTO apiMovieAddDTO){
@@ -252,6 +177,7 @@ public class TitleService {
                     .simplePlot(apiMovieAddDTO.getSimplePlot())
                     .imdbRating(Float.parseFloat(apiMovieAddDTO.getRating()))
                     .metascore(Integer.valueOf(apiMovieAddDTO.getMetascore()))
+                    .imdbVotes(Integer.valueOf(apiMovieAddDTO.getVotes()))
                     .runtime(Long.valueOf(apiMovieAddDTO.getRuntime()))
                     .genres(genres)
                     .type(type)
@@ -282,8 +208,8 @@ public class TitleService {
         return titleRepository.findTop250ImdbRatedTitles();
     }
 
-    public List<TitleEntity> findTop250ImdbRatedMovies(){
-        return titleRepository.findTop250ImdbRatedMovies();
+    public List<TitleEntity> findTop250ImdbList(){
+        return titleRepository.findTop250ImdbList();
     }
 
     public List<TitleEntity> findMostPopularImdbRatedMovies(){
@@ -354,6 +280,13 @@ public class TitleService {
         return newList;
     }
 
+    public void updateSingleTitle(String imdbId){
+        TitleEntity titleEntityByImdbId = this.findTitleEntityByImdbId(imdbId);
+        ApiMovieAddDTO apiMovieAddDTO = myApiFilmsService.requestMovieDataForImdbId(imdbId);
+
+        this.updateTitle(titleEntityByImdbId, apiMovieAddDTO);
+    }
+
     private void updateTitle(TitleEntity title, ApiMovieAddDTO apiMovieAddDTO) {
         try {
             if (apiMovieAddDTO.getBusiness() != null){
@@ -386,10 +319,16 @@ public class TitleService {
             title.setDirectors(directors);
             title.setWriters(writers);
 
+            title.setRuntime(Long.valueOf(apiMovieAddDTO.getRuntime()));
+
+
+            float rating = Float.parseFloat(apiMovieAddDTO.getRating());
+            if (rating != 0 ) {
+                title.setImdbRating(Float.parseFloat(apiMovieAddDTO.getRating()));
+            }
+
             characterRoleService.deleteAllCharacterRolesForTitle(title);
             this.createCharacterRoles(apiMovieAddDTO);
-
-            title.setRuntime(Long.valueOf(apiMovieAddDTO.getRuntime()));
 
             titleRepository.saveAndFlush(title);
         }
@@ -419,7 +358,7 @@ public class TitleService {
         return titleRepository.findById(id).orElseThrow(() -> new ObjectNotFoundException("Title with id " + id + " was not found"));
     }
     public List<TitleCarouselViewDTO> get18TopRatedCarouselViewDTOs (){
-        List<TitleEntity> top250ImdbRatedTitles = this.findTop250ImdbRatedMovies().stream().limit(18).toList();
+        List<TitleEntity> top250ImdbRatedTitles = this.findTop250ImdbList().stream().limit(18).toList();
 
         return mapTitleCarouselViewDTOS(top250ImdbRatedTitles);
     }
@@ -443,21 +382,23 @@ public class TitleService {
 
         ArrayList<String> idsList = new ArrayList<>(mostPopularIdsAndPopularity.keySet());
 
-        clearImdbPopularity();
-
         List<String> newTitleIds = this.filterExistingImdbIdTitles(idsList);
 
         createNewTitlesWithIdsList(newTitleIds);
 
         List<TitleEntity> allByImdbIdIsIn = titleRepository.findAllByImdbIdIsIn(idsList);
 
-        allByImdbIdIsIn.forEach(title -> title.setPopularity(Integer.valueOf(mostPopularIdsAndPopularity.get(title.getImdbId()))));
+        if (allByImdbIdIsIn.size() >= 100){
+            clearImdbPopularity();
+            allByImdbIdIsIn.forEach(title -> title.setPopularity(Integer.valueOf(mostPopularIdsAndPopularity.get(title.getImdbId()))));
+        }
+
 
         titleRepository.saveAllAndFlush(allByImdbIdIsIn);
 
     }
 
-    public void updateImdbTop250(){
+    public void updateImdbTop250Ranks(){
         LinkedHashMap<String, String> top250IdsAndRatings = imdbScrapeService.getTop250IdsAndRatings();
 
         ArrayList<String> idsList = new ArrayList<>(top250IdsAndRatings.keySet());
@@ -469,6 +410,12 @@ public class TitleService {
         List<TitleEntity> allByImdbIdIsIn = titleRepository.findAllByImdbIdIsIn(idsList);
 
         allByImdbIdIsIn.forEach(title -> title.setImdbRating(Float.parseFloat(top250IdsAndRatings.get(title.getImdbId()))));
+
+        AtomicInteger atomicInteger = new AtomicInteger(1);
+
+        top250IdsAndRatings.forEach((id, value) -> {
+            allByImdbIdIsIn.stream().filter(title -> title.getImdbId().equals(id)).forEach(title -> title.setImdbTop250Rank(atomicInteger.getAndIncrement()));
+        });
 
         titleRepository.saveAllAndFlush(allByImdbIdIsIn);
 
@@ -504,7 +451,7 @@ public class TitleService {
 
     @Transactional
     public List<TitleViewDTO> getTop250TitleViewDTOs (){
-        List<TitleEntity> top250ImdbRatedMovies = this.findTop250ImdbRatedMovies();
+        List<TitleEntity> top250ImdbRatedMovies = this.findTop250ImdbList();
         return mapTitleViewDTOS(top250ImdbRatedMovies);
     }
 
@@ -531,7 +478,7 @@ public class TitleService {
         return mapTitleViewDTOS(allById);
     }
 
-    public void incrementPageViews(Long titleId, Integer count){
+    public void updateTitlePageViews(Long titleId, Integer count){
         try {
             TitleEntity titleById = this.findTitleById(titleId);
             titleById.setPageViews(titleById.getPageViews() == null ? count : titleById.getPageViews() + count);

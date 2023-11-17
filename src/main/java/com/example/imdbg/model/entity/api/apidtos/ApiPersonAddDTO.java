@@ -1,4 +1,4 @@
-package com.example.imdbg.model.entity.movies.apidtos;
+package com.example.imdbg.model.entity.api.apidtos;
 
 import lombok.AccessLevel;
 import lombok.Getter;

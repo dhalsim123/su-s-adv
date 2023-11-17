@@ -1,8 +1,8 @@
-package com.example.imdbg.web.controller.users.admin;
+package com.example.imdbg.web.controller.admin;
 
 import com.example.imdbg.model.entity.users.dto.view.UserSettingsDTO;
-import com.example.imdbg.service.movies.TitleService;
 import com.example.imdbg.service.users.UserService;
+import com.example.imdbg.service.admin.AdminService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
@@ -15,9 +15,11 @@ import java.util.List;
 public class AdminController {
 
     private final UserService userService;
+    private final AdminService adminService;
 
-    public AdminController(UserService userService) {
+    public AdminController(UserService userService, AdminService adminService) {
         this.userService = userService;
+        this.adminService = adminService;
     }
 
     @GetMapping("/panel")
@@ -55,7 +57,7 @@ public class AdminController {
     @PatchMapping("/users/{id}/remove-admin-role")
     public ModelAndView removeAdminRole(@PathVariable Long id, ModelAndView modelAndView, Principal principal){
 
-        userService.removeAdminRole(id, principal);
+        adminService.removeAdminRole(id, principal);
 
         modelAndView.setViewName("redirect:/admin/users/{id}");
 
@@ -65,7 +67,7 @@ public class AdminController {
     @PatchMapping("/users/{id}/add-admin-role")
     public ModelAndView addAdminRole(@PathVariable Long id, ModelAndView modelAndView, Principal principal){
 
-        userService.addAdminRole(id, principal);
+        adminService.addAdminRole(id, principal);
 
         modelAndView.setViewName("redirect:/admin/users/{id}");
 

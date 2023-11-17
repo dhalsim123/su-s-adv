@@ -1,6 +1,6 @@
-package com.example.imdbg.web.controller.users.admin;
+package com.example.imdbg.web.controller.admin;
 
-import com.example.imdbg.service.movies.TitleService;
+import com.example.imdbg.service.admin.FetchService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -10,12 +10,11 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("/admin/fetchIMDB")
 public class FetchController {
 
-    private final TitleService titleService;
-
+    private final FetchService fetchService;
     private Thread fetchThread;
 
-    public FetchController(TitleService titleService) {
-        this.titleService = titleService;
+    public FetchController(FetchService fetchService) {
+        this.fetchService = fetchService;
     }
 
     @GetMapping("/lists")
@@ -42,6 +41,22 @@ public class FetchController {
         return modelAndView;
     }
 
+    @GetMapping("/updates")
+    public ModelAndView getUpdateLists(ModelAndView modelAndView) {
+        modelAndView.setViewName("updateIMDBLists");
+        modelAndView.addObject("isThreadRunning", isThreadRunning());
+        modelAndView.addObject("fetchStatus", this.getStatusString());
+        return modelAndView;
+    }
+
+    @GetMapping("/updates/single")
+    public ModelAndView getUpdateSignle(ModelAndView modelAndView) {
+        modelAndView.setViewName("updateIMDBSingle");
+        modelAndView.addObject("isThreadRunning", isThreadRunning());
+        modelAndView.addObject("fetchStatus", this.getStatusString());
+        return modelAndView;
+    }
+
     @GetMapping("/status")
     public ResponseEntity<Boolean> getFetchStatus() {
         return ResponseEntity.ok(isThreadRunning());
@@ -52,22 +67,16 @@ public class FetchController {
         if (isThreadNull() || !isThreadRunning()){
             switch (method) {
                 case "top250" -> {
-                    fetchThread = new Thread(titleService::fetchTop250ImdbTitles);
+                    fetchThread = new Thread(fetchService::fetchTop250ImdbTitles);
                     fetchThread.start();
-                    titleService.clearThreadLog();
-                    titleService.getThreadLog().add("Top250 Fetch: ");
                 }
                 case "100MostPopular" -> {
-                    fetchThread = new Thread(titleService::fetch100MostPopularImdbTitles);
+                    fetchThread = new Thread(fetchService::fetch100MostPopularImdbTitles);
                     fetchThread.start();
-                    titleService.clearThreadLog();
-                    titleService.getThreadLog().add("100 Most Popular Fetch: ");
                 }
                 case "upcoming" -> {
-                    fetchThread = new Thread(titleService::fetchUpcomingImdbTitles);
+                    fetchThread = new Thread(fetchService::fetchUpcomingImdbTitles);
                     fetchThread.start();
-                    titleService.clearThreadLog();
-                    titleService.getThreadLog().add("Upcoming titles Fetch: ");
                 }
             }
         }
@@ -78,10 +87,8 @@ public class FetchController {
     @PostMapping("/start/single/{id}")
     public ModelAndView postStartSingleFetch(@PathVariable String id, ModelAndView modelAndView) {
         if (isThreadNull() || !isThreadRunning()){
-            fetchThread = new Thread(() -> titleService.fetchSingleImdbTitle(id));
+            fetchThread = new Thread(() -> fetchService.fetchSingleImdbTitle(id));
             fetchThread.start();
-            titleService.clearThreadLog();
-            titleService.getThreadLog().add("Single Title Fetch with id " + id + ": ");
         }
         modelAndView.setViewName("redirect:/admin/fetchIMDB/single");
         return modelAndView;
@@ -90,12 +97,38 @@ public class FetchController {
     @PostMapping("/start/pages/{pageNumber}")
     public ModelAndView postStartPageFetch(@PathVariable Integer pageNumber, ModelAndView modelAndView) {
         if (isThreadNull() || !isThreadRunning()){
-            fetchThread = new Thread(() -> titleService.fetch250Titles(pageNumber));
+            fetchThread = new Thread(() -> fetchService.fetch250Titles(pageNumber));
             fetchThread.start();
-            titleService.clearThreadLog();
-            titleService.getThreadLog().add("Page " + pageNumber + " Out of the Search Results: ");
         }
         modelAndView.setViewName("redirect:/admin/fetchIMDB/pages");
+        return modelAndView;
+    }
+
+    @PostMapping("/start/updates/{method}")
+    public ModelAndView postStartPageFetch(@PathVariable String method, ModelAndView modelAndView) {
+        if (isThreadNull() || !isThreadRunning()){
+            switch (method) {
+                case "100MostPopular" -> {
+                    fetchThread = new Thread(fetchService::updateImdbPopularityRanks100MostPopular);
+                    fetchThread.start();
+                }
+                case "top250" -> {
+                    fetchThread = new Thread(fetchService::updateImdbTop250);
+                    fetchThread.start();
+                }
+            }
+        }
+        modelAndView.setViewName("redirect:/admin/fetchIMDB/updates");
+        return modelAndView;
+    }
+
+    @PostMapping("/start/updates/single/{id}")
+    public ModelAndView postStartUpdateSingleFetch(@PathVariable String id, ModelAndView modelAndView) {
+        if (isThreadNull() || !isThreadRunning()){
+            fetchThread = new Thread(() -> fetchService.updateSingleTitle(id));
+            fetchThread.start();
+        }
+        modelAndView.setViewName("redirect:/admin/fetchIMDB/updates/single");
         return modelAndView;
     }
 
@@ -132,9 +165,9 @@ public class FetchController {
             return "Idle";
         }
         else if (isThreadRunning()){
-            return "Fetching. Check back-end for comprehensive info";
+            return "Fetching. Check back-end for more comprehensive info";
         }
-        return String.join("<br><br>", titleService.getThreadLog());
+        return String.join("<br><br>", fetchService.getFetchThreadLog());
     }
 
     private boolean isThreadRunning() {

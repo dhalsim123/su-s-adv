@@ -1,4 +1,4 @@
-package com.example.imdbg.model.entity.movies.apidtos;
+package com.example.imdbg.model.entity.api.apidtos;
 
 import com.google.gson.annotations.SerializedName;
 import lombok.AccessLevel;
@@ -52,7 +52,9 @@ public class ApiMovieAddDTO {
     @Getter(AccessLevel.NONE)
     private String metascore;
 
-
+    @SerializedName("votes")
+    @Getter(AccessLevel.NONE)
+    private String votes;
 
     @SerializedName("type")
     private String type;
@@ -72,6 +74,10 @@ public class ApiMovieAddDTO {
 
     public String getMetascore() {
         return metascore == null ? "0" : metascore;
+    }
+
+    public String getVotes() {
+        return votes == null ? "0" : votes;
     }
 
     public String getRuntime() {

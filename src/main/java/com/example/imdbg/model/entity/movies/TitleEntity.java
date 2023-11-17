@@ -4,6 +4,7 @@ import com.example.imdbg.model.entity.BaseEntity;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.Positive;
 import lombok.*;
 
 import java.time.LocalDate;
@@ -67,12 +68,21 @@ public class TitleEntity extends BaseEntity {
     @Max(100)
     private Integer metascore;
 
+    @Min(0)
+    private Integer imdbVotes;
+
+    @Column
+    private Integer imdbTop250Rank;
+
     @Column
     @Min(0)
     private Integer popularity;
 
+    @Column
     private String boxOfficeOpeningWeekend;
+    @Column
     private String boxOfficeGrossUsa;
+    @Column
     private String boxOfficeWorldwide;
 
     @OneToOne(cascade = CascadeType.ALL)

@@ -1,6 +1,6 @@
 package com.example.imdbg.service.api;
 
-import com.example.imdbg.model.entity.movies.apidtos.ApiMovieAddDTO;
+import com.example.imdbg.model.entity.api.apidtos.ApiMovieAddDTO;
 import com.example.imdbg.service.scrape.ImdbScrapeService;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;

@@ -1,11 +1,10 @@
 package com.example.imdbg.service.movies;
 
 import com.example.imdbg.model.entity.movies.PersonEntity;
-import com.example.imdbg.model.entity.movies.apidtos.ApiPersonAddDTO;
+import com.example.imdbg.model.entity.api.apidtos.ApiPersonAddDTO;
 import com.example.imdbg.model.entity.movies.dtos.view.person.PersonPageViewDTO;
 import com.example.imdbg.model.exceptions.ObjectNotFoundException;
 import com.example.imdbg.repository.movies.PersonRepository;
-import org.hibernate.Hibernate;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

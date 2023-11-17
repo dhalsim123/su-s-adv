@@ -31,17 +31,15 @@ public class UserService {
 
     private final RoleService roleService;
 
-    private final SessionRegistry sessionRegistry;
     private final PasswordEncoder passwordEncoder;
     private final ModelMapper modelMapper;
 
     @PersistenceContext
     private final EntityManager entityManager;
 
-    public UserService(UserRepository userRepository, RoleService roleService, SessionRegistry sessionRegistry, PasswordEncoder passwordEncoder, ModelMapper modelMapper, EntityManager entityManager) {
+    public UserService(UserRepository userRepository, RoleService roleService, PasswordEncoder passwordEncoder, ModelMapper modelMapper, EntityManager entityManager) {
         this.userRepository = userRepository;
         this.roleService = roleService;
-        this.sessionRegistry = sessionRegistry;
         this.passwordEncoder = passwordEncoder;
         this.modelMapper = modelMapper;
         this.entityManager = entityManager;
@@ -95,7 +93,7 @@ public class UserService {
     }
 
     public void saveUser(UserEntity user) {
-        userRepository.save(user);
+        userRepository.saveAndFlush(user);
     }
 
     public UserSettingsDTO getUserSettingsDTO(Principal principal) {
@@ -120,49 +118,6 @@ public class UserService {
     public UserSettingsDTO getUserSettingsDTOById(Long id) {
         UserEntity userByUsername = this.findUserById(id);
         return modelMapper.map(userByUsername, UserSettingsDTO.class);
-    }
-
-    public void removeAdminRole(Long id, Principal principal) {
-
-        UserEntity admin = this.findUserByUsername(principal.getName());
-
-        if (admin.getRoles().stream().anyMatch(roleEntity -> roleEntity.getRole().equals(RoleEnum.ADMIN))) {
-            UserEntity userById = this.findUserById(id);
-            userById.getRoles().removeIf(roleEntity -> roleEntity.getRole().equals(RoleEnum.ADMIN));
-
-            userRepository.saveAndFlush(userById);
-
-            this.expireUserSessions(userById);
-        }
-    }
-
-    public void addAdminRole(Long id, Principal principal) {
-
-        UserEntity admin = this.findUserByUsername(principal.getName());
-
-        if (admin.getRoles().stream().anyMatch(roleEntity -> roleEntity.getRole().equals(RoleEnum.ADMIN))) {
-            UserEntity userById = this.findUserById(id);
-            RoleEntity adminRole = roleService.findRoleByName(RoleEnum.ADMIN);
-            if (userById.getRoles().stream().noneMatch(roleEntity -> roleEntity.getRole().equals(RoleEnum.ADMIN))) {
-                userById.getRoles().add(adminRole);
-            }
-
-            userRepository.saveAndFlush(userById);
-
-            this.expireUserSessions(userById);
-        }
-    }
-
-    public void expireUserSessions(UserEntity user) {
-        for (Object principal : sessionRegistry.getAllPrincipals()) {
-            if (principal instanceof User) {
-                UserDetails userDetails = (UserDetails) principal;
-                if (userDetails.getUsername().equals(user.getUsername())) {
-                    sessionRegistry.getAllSessions(userDetails, false)
-                            .forEach(SessionInformation::expireNow);
-                }
-            }
-        }
     }
 
 

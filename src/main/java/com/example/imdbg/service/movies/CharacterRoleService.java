@@ -4,8 +4,6 @@ package com.example.imdbg.service.movies;
 import com.example.imdbg.model.entity.movies.CharacterRoleEntity;
 import com.example.imdbg.model.entity.movies.PersonEntity;
 import com.example.imdbg.model.entity.movies.TitleEntity;
-import com.example.imdbg.model.entity.movies.apidtos.ApiMovieAddDTO;
-import com.example.imdbg.model.entity.movies.apidtos.ApiPersonAddDTO;
 import com.example.imdbg.repository.movies.CharacterRoleRepository;
 import org.springframework.stereotype.Service;
 

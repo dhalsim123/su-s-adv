@@ -1,9 +1,5 @@
 package com.example.imdbg.service.movies;
 
-import com.example.imdbg.model.entity.movies.TitleEntity;
-import com.example.imdbg.service.movies.TitleService;
-import org.springframework.boot.context.event.ApplicationReadyEvent;
-import org.springframework.context.event.EventListener;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
@@ -36,7 +32,7 @@ public class PageViewService {
         if (!pageViews.isEmpty()) {
             pageViews.forEach((key, value) -> {
                 try {
-                    titleService.incrementPageViews(key, value.size());
+                    titleService.updateTitlePageViews(key, value.size());
                 } catch (Exception ignored) {
                 }
             });

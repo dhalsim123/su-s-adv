@@ -20,6 +20,7 @@ public class TitleViewDTO {
     private Integer year;
     private Long runtime;
     private float imdbRating;
+    private Integer imdbTop250Rank;
     private Integer metascore;
     private String mainPosterURLPhotoUrl;
     private String mainTrailerURLVideoImdbId;
