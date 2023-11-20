@@ -35,7 +35,6 @@ public class FetchService {
             String info = titleService.createNewTitlesWithIdsAndRatingsMap(top250IdsAndRatings);
             this.fetchThreadLog.add(info);
             LOGGER.info("Finished fetching the top 250 Imdb titles. " + info);
-            updateImdbTop250();
         }
         catch (Exception e){
             LOGGER.error("Couldn't fetch top250ImdbTitles because of this error:" + e);
@@ -50,7 +49,6 @@ public class FetchService {
             String info = titleService.createNewTitlesWithIdsAndRatingsMap(mostPopularIdsAndRatings);
             fetchThreadLog.add(info);
             LOGGER.info("Finished fetching the 100 most popular Imdb titles. " + info);
-            updateImdbPopularityRanks100MostPopular();
         }
         catch (Exception e){
             LOGGER.error("Couldn't fetch 100MostPopularImdbTitles because of this error: " + e);

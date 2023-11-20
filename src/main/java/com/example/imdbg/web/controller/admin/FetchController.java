@@ -18,44 +18,31 @@ public class FetchController {
     }
 
     @GetMapping("/lists")
-    public ModelAndView getFetch(ModelAndView modelAndView) {
-        modelAndView.setViewName("fetchIMDBLists");
-        modelAndView.addObject("isThreadRunning", isThreadRunning());
-        modelAndView.addObject("fetchStatus", this.getStatusString());
-        return modelAndView;
+    public ModelAndView getFetchLists(ModelAndView modelAndView) {
+        return getFetchMV(modelAndView, "fetchIMDBLists");
     }
 
     @GetMapping("/single")
     public ModelAndView getFetchSingle(ModelAndView modelAndView) {
-        modelAndView.setViewName("fetchIMDBSingle");
-        modelAndView.addObject("isThreadRunning", isThreadRunning());
-        modelAndView.addObject("fetchStatus", this.getStatusString());
-        return modelAndView;
+        return getFetchMV(modelAndView, "fetchIMDBSingle");
     }
 
     @GetMapping("/pages")
     public ModelAndView getFetchPages(ModelAndView modelAndView) {
-        modelAndView.setViewName("fetchIMDBPages");
-        modelAndView.addObject("isThreadRunning", isThreadRunning());
-        modelAndView.addObject("fetchStatus", this.getStatusString());
-        return modelAndView;
+        return getFetchMV(modelAndView, "fetchIMDBPages");
     }
 
     @GetMapping("/updates")
     public ModelAndView getUpdateLists(ModelAndView modelAndView) {
-        modelAndView.setViewName("updateIMDBLists");
-        modelAndView.addObject("isThreadRunning", isThreadRunning());
-        modelAndView.addObject("fetchStatus", this.getStatusString());
-        return modelAndView;
+        return getFetchMV(modelAndView, "updateIMDBLists");
     }
 
     @GetMapping("/updates/single")
-    public ModelAndView getUpdateSignle(ModelAndView modelAndView) {
-        modelAndView.setViewName("updateIMDBSingle");
-        modelAndView.addObject("isThreadRunning", isThreadRunning());
-        modelAndView.addObject("fetchStatus", this.getStatusString());
-        return modelAndView;
+    public ModelAndView getUpdateSingle(ModelAndView modelAndView) {
+        return getFetchMV(modelAndView, "updateIMDBSingle");
     }
+
+
 
     @GetMapping("/status")
     public ResponseEntity<Boolean> getFetchStatus() {
@@ -63,7 +50,7 @@ public class FetchController {
     }
 
     @PostMapping("/start/{method}")
-    public ModelAndView postStartFetch(@PathVariable String method, ModelAndView modelAndView) {
+    public ModelAndView postStartListFetch(@PathVariable String method, ModelAndView modelAndView) {
         if (isThreadNull() || !isThreadRunning()){
             switch (method) {
                 case "top250" -> {
@@ -134,31 +121,37 @@ public class FetchController {
 
     @PostMapping("/lists/stop")
     public ModelAndView postStopListsFetch(ModelAndView modelAndView) {
-        if (isThreadRunning()) {
-            fetchThread.interrupt();
-        }
-        modelAndView.setViewName("redirect:/admin/fetchIMDB/lists");
+        getStopFetchMV(modelAndView, "redirect:/admin/fetchIMDB/lists");
         return modelAndView;
     }
 
+
+
     @PostMapping("/single/stop")
     public ModelAndView postStopSingleFetch(ModelAndView modelAndView) {
-        if (isThreadRunning()) {
-            fetchThread.interrupt();
-        }
-        modelAndView.setViewName("redirect:/admin/fetchIMDB/single");
+        getStopFetchMV(modelAndView, "redirect:/admin/fetchIMDB/single");
         return modelAndView;
     }
 
     @PostMapping("/pages/stop")
     public ModelAndView postStopPageFetch(ModelAndView modelAndView) {
-        if (isThreadRunning()) {
-            fetchThread.interrupt();
-        }
-        modelAndView.setViewName("redirect:/admin/fetchIMDB/pages");
+        getStopFetchMV(modelAndView, "redirect:/admin/fetchIMDB/pages");
         return modelAndView;
     }
 
+    private ModelAndView getFetchMV(ModelAndView modelAndView, String fetchIMDBLists) {
+        modelAndView.setViewName(fetchIMDBLists);
+        modelAndView.addObject("isThreadRunning", isThreadRunning());
+        modelAndView.addObject("fetchStatus", this.getStatusString());
+        return modelAndView;
+    }
+
+    private void getStopFetchMV(ModelAndView modelAndView, String viewName) {
+        if (isThreadRunning()) {
+            fetchThread.interrupt();
+        }
+        modelAndView.setViewName(viewName);
+    }
 
     private String getStatusString(){
         if (isThreadNull()){

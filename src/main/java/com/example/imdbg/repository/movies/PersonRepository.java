@@ -11,7 +11,4 @@ import java.util.Optional;
 public interface PersonRepository extends JpaRepository<PersonEntity, Long> {
 
     Optional<PersonEntity> findPersonEntityByIdIMDB(String idIMDB);
-
-    @Query("SELECT p FROM PersonEntity p JOIN FETCH p.actedInTitles JOIN FETCH p.directedTitles JOIN FETCH p.writtenTitles WHERE p.id = :id")
-    Optional<PersonEntity> findPersonEntityByIdWithTitles(Long id);
 }

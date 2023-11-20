@@ -20,7 +20,7 @@ public class VideoService {
     public VideoEntity createNewTrailer(ApiTrailerAddDTO dto){
 
 
-        if (dto != null && !dto.getQualities().isEmpty()) {
+        if (dto != null && dto.getQualities() != null && !dto.getQualities().isEmpty()) {
 
             String regex = "(vi\\d+)";
 
@@ -32,6 +32,9 @@ public class VideoService {
 
             if (matcher.find()) {
                 videoId = matcher.group(1);
+            }
+            else {
+                return null;
             }
 
             return VideoEntity.builder()

@@ -14,7 +14,7 @@ import java.util.List;
 
 @Service
 public class PersonService {
-    private PersonRepository personRepository;
+    private final PersonRepository personRepository;
 
     private final ModelMapper modelMapper;
 
@@ -67,10 +67,6 @@ public class PersonService {
         return personRepository.findById(id).orElseThrow(() -> new ObjectNotFoundException("Person with Id " + id + " was not found"));
     }
 
-    public PersonEntity findPersonEntityByIdWithTitles(Long id){
-        return personRepository.findPersonEntityByIdWithTitles(id).orElseThrow(() -> new ObjectNotFoundException("Person with Id " + id + " was not found"));
-    }
-
     @Transactional
     public PersonPageViewDTO getPersonPageViewDTO(Long id){
         PersonEntity personEntity = this.findPersonEntityById(id);
@@ -82,23 +78,4 @@ public class PersonService {
 
         return personPageViewDTO;
     }
-
-//    private PersonEntity findOrCreatePersonEntityFromApiDataDTO(ApiPersonAddDTO dto){
-//
-//        Optional<PersonEntity> personEntityByIdIMDB = personRepository.findPersonEntityByIdIMDB(dto.getId());
-//
-//        PersonEntity personEntity = null;
-//
-//        if (personEntityByIdIMDB.isEmpty()) {
-//            personEntity = personRepository.saveAndFlush(PersonEntity.builder()
-//                    .name(dto.getName())
-//                    .idIMDB(dto.getId())
-//                    .photoUrl(dto.getUrlPhoto())
-//                    .build());
-//        }
-//
-//        return personEntity;
-//
-//
-//    }
 }

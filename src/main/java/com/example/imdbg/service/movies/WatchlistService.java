@@ -39,7 +39,7 @@ public class WatchlistService {
 
             userService.saveUser(userByUsername);
         }
-        catch (Exception ignored){
+            catch (Exception ignored){
         }
     }
 
