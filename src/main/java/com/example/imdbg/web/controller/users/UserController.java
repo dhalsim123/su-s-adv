@@ -1,12 +1,10 @@
 package com.example.imdbg.web.controller.users;
 
 import com.example.imdbg.model.entity.users.dto.binding.ChangeUsernameDTO;
-import com.example.imdbg.model.entity.users.dto.binding.UserRegisterDTO;
 import com.example.imdbg.model.entity.users.dto.view.UserSettingsDTO;
 import com.example.imdbg.service.users.UserService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
@@ -46,7 +44,7 @@ public class UserController {
     }
 
     @PatchMapping("/settings/change-username")
-    public ModelAndView postChangeUsername (@Validated ChangeUsernameDTO changeUsernameDTO,
+    public ModelAndView patchChangeUsername(@Validated ChangeUsernameDTO changeUsernameDTO,
                                             BindingResult bindingResult,
                                             RedirectAttributes redirectAttributes,
                                             Principal principal,

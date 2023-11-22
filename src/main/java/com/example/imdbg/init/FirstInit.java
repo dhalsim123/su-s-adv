@@ -1,11 +1,15 @@
 package com.example.imdbg.init;
 
 import com.example.imdbg.service.movies.GenreService;
+import com.example.imdbg.service.movies.TitleService;
 import com.example.imdbg.service.movies.TypeService;
 import com.example.imdbg.service.users.RoleService;
 import com.example.imdbg.service.users.UserService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+
+import javax.sql.DataSource;
+import java.sql.SQLException;
 
 @Component
 public class FirstInit implements CommandLineRunner {
@@ -13,12 +17,17 @@ public class FirstInit implements CommandLineRunner {
     private final RoleService roleService;
     private final GenreService genreService;
     private final TypeService typeService;
+    private final TitleService titleService;
 
-    public FirstInit(UserService userService, RoleService roleService, GenreService genreService, TypeService typeService) {
+    private final DataSource dataSource;
+
+    public FirstInit(UserService userService, RoleService roleService, GenreService genreService, TypeService typeService, TitleService titleService, DataSource dataSource) {
         this.userService = userService;
         this.roleService = roleService;
         this.genreService = genreService;
         this.typeService = typeService;
+        this.titleService = titleService;
+        this.dataSource = dataSource;
     }
 
 
@@ -29,5 +38,22 @@ public class FirstInit implements CommandLineRunner {
 
         genreService.initGenres();
         typeService.initTypes();
+
+        if (isTestDB()) {
+            titleService.initTitlesFromJson_TestDB();
+        }
+        else {
+            titleService.initTitlesFromJson();
+        }
+    }
+
+    private boolean isTestDB() throws SQLException {
+        try {
+            String dbName = dataSource.getConnection().getCatalog();
+            return dbName.contains("test");
+        }
+        catch (Exception e){
+            throw new RuntimeException(e);
+        }
     }
 }

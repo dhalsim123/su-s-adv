@@ -163,11 +163,11 @@ public class FetchController {
         return String.join("<br><br>", fetchService.getFetchThreadLog());
     }
 
-    private boolean isThreadRunning() {
+    public boolean isThreadRunning() {
         return fetchThread != null && fetchThread.isAlive();
     }
 
-    private boolean isThreadNull() {
+    public boolean isThreadNull() {
         return fetchThread == null;
     }
 }

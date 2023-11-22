@@ -23,7 +23,7 @@ public class AdminController {
     }
 
     @GetMapping("/panel")
-    public ModelAndView getAdmin(ModelAndView modelAndView){
+    public ModelAndView getAdminPanel(ModelAndView modelAndView){
 
         modelAndView.setViewName("adminPanel");
 
@@ -43,7 +43,7 @@ public class AdminController {
     }
 
     @GetMapping("/users/{id}")
-    public ModelAndView getAllUsers(@PathVariable Long id, ModelAndView modelAndView){
+    public ModelAndView getUserById(@PathVariable Long id, ModelAndView modelAndView){
 
         UserSettingsDTO userSettingsDTOById = userService.getUserSettingsDTOById(id);
 

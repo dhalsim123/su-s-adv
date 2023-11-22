@@ -13,5 +13,6 @@ public class TitleCarouselViewDTO {
     private Integer year;
     private String mainPosterURLPhotoUrl;
     private String mainTrailerURLVideoImdbId;
+    private Long mainTrailerURLId;
     private float imdbRating;
 }

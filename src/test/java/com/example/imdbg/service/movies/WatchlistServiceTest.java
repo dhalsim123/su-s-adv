@@ -10,6 +10,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 
 import java.security.Principal;
@@ -40,7 +41,7 @@ class WatchlistServiceTest {
 
         String testUsername = "testUser";
         testUser = new UserEntity();
-        testPrincipal = new UsernamePasswordAuthenticationToken(new User(testUsername, "", new ArrayList<>()), null);
+        testPrincipal = new UsernamePasswordAuthenticationToken(new User(testUsername, "", List.of(new SimpleGrantedAuthority("ROLE_USER"))), List.of(new SimpleGrantedAuthority("ROLE_USER")));
         testTitle = new TitleEntity();
         testTitle.setId(1L);
         testWatchlist = new ArrayList<>();
@@ -68,11 +69,7 @@ class WatchlistServiceTest {
 
         testUser.getWatchlist().add(testTitle);
 
-        toTest.addToWatchlist(1L, testPrincipal);
-
-        Mockito.verify(userService, Mockito.times(1)).findUserByUsernameForUpdate("testUser");
-        Mockito.verify(titleService, Mockito.times(1)).findTitleById(1L);
-        Mockito.verify(userService, Mockito.times(0)).saveUser(testUser);
+        assertThrows(RuntimeException.class, () -> toTest.addToWatchlist(1L, testPrincipal));
     }
 
     @Test
@@ -90,10 +87,8 @@ class WatchlistServiceTest {
     void removeFromWatchlist_DoesntSaveUser_WhenTitleIsntInTheWatchlist() {
         Mockito.when(userService.findUserByUsernameForUpdate("testUser")).thenReturn(testUser);
 
-        toTest.removeFromWatchlist(1L, testPrincipal);
+        assertThrows(RuntimeException.class, () -> toTest.removeFromWatchlist(1L, testPrincipal));
 
-        Mockito.verify(userService, Mockito.times(1)).findUserByUsernameForUpdate("testUser");
-        Mockito.verify(userService, Mockito.times(0)).saveUser(testUser);
     }
 
     @Test

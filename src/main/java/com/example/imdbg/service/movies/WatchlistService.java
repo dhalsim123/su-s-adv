@@ -25,7 +25,6 @@ public class WatchlistService {
     @Transactional
     public void addToWatchlist(Long id, Principal principal){
 
-        try {
             UserEntity userByUsername = userService.findUserByUsernameForUpdate(principal.getName());
             TitleEntity titleById = titleService.findTitleById(id);
 
@@ -38,15 +37,13 @@ public class WatchlistService {
             watchlist.add(titleById);
 
             userService.saveUser(userByUsername);
-        }
-            catch (Exception ignored){
-        }
+
     }
 
     @Transactional
     public void removeFromWatchlist(Long id, Principal principal){
 
-        try {
+
             UserEntity userByUsername = userService.findUserByUsernameForUpdate(principal.getName());
 
             List<TitleEntity> watchlist = userByUsername.getWatchlist();
@@ -56,9 +53,7 @@ public class WatchlistService {
             }
 
             userService.saveUser(userByUsername);
-        }
-        catch (Exception ignored){
-        }
+
     }
 
     @Transactional
