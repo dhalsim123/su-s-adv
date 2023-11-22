@@ -1,0 +1,233 @@
+[
+
+  {
+    "year": 2024,
+    "releaseDate": "20240214",
+    "directors": [
+      {
+        "id": "nm1237416",
+        "name": "S.J. Clarkson"
+      }
+    ],
+    "writers": [
+      {
+        "id": "nm1491771",
+        "name": "Claire Parker"
+      },
+      {
+        "id": "nm1237416",
+        "name": "S.J. Clarkson"
+      },
+      {
+        "id": "nm2596636",
+        "name": "Kerem Sanga"
+      }
+    ],
+    "countries": [
+      "United States"
+    ],
+    "languages": [
+      "English"
+    ],
+    "genres": [
+      "Action",
+      "Adventure",
+      "Sci-Fi"
+    ],
+    "plot": "\"Meanwhile, in another universe...\" In a switch from the typical genre, Madame Web tells the standalone origin story of one of Marvel's most enigmatic heroines. The thriller stars Dakota Johnson as Cassandra Webb, a paramedic in Manhattan who may have clairvoyant abilities. Forced to confront revelations about her past, she forges a relationship with three young women destined for powerful futures...if they can all survive a deadly present.",
+    "simplePlot": "Madame Web tells the standalone origin story of one of Marvel publishing's most enigmatic heroines.",
+    "actors": [
+      {
+        "character": "Julia Carpenter",
+        "urlCharacter": "https://www.imdb.com/title/tt11057302/characters/nm2858875",
+        "main": true,
+        "idIMDB": "nm2858875",
+        "name": "Sydney Sweeney",
+        "urlIMDB": "https://www.imdb.com/name/nm2858875/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BOTVjOTkxNjMtNDJiYS00YzEzLThmZTItZjJhM2E4NWQyM2Q2XkEyXkFqcGdeQXVyNzM1NTU0NA@@._V1_QL75_UX140_CR0,1,140,140_.jpg"
+      },
+      {
+        "character": "Anya Corazon",
+        "urlCharacter": "https://www.imdb.com/title/tt11057302/characters/nm5097044",
+        "main": true,
+        "idIMDB": "nm5097044",
+        "name": "Isabela Merced",
+        "urlIMDB": "https://www.imdb.com/name/nm5097044/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BZWExMzUxNTgtOTJiMS00NTQyLWI0OWItMmUwZDBkNTc1ZTllXkEyXkFqcGdeQXVyMTEzODcxOTE0._V1_QL75_UX140_CR0,12,140,140_.jpg"
+      },
+      {
+        "character": "Madame Web",
+        "urlCharacter": "https://www.imdb.com/title/tt11057302/characters/nm0424848",
+        "main": true,
+        "idIMDB": "nm0424848",
+        "name": "Dakota Johnson",
+        "urlIMDB": "https://www.imdb.com/name/nm0424848/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BODE1ODE5MzY5M15BMl5BanBnXkFtZTgwNDg1NDA4NTM@._V1_QL75_UX140_CR0,0,140,140_.jpg"
+      },
+      {
+        "character": "Mary Parker",
+        "urlCharacter": "https://www.imdb.com/title/tt11057302/characters/nm0731075",
+        "main": true,
+        "idIMDB": "nm0731075",
+        "name": "Emma Roberts",
+        "urlIMDB": "https://www.imdb.com/name/nm0731075/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BZDg3ODA5MmEtNjg0Ny00ZGU2LTljZjEtNDhiMGI3ZWI0NTcxXkEyXkFqcGdeQXVyODgzODAzODg@._V1_QL75_UX140_CR0,1,140,140_.jpg"
+      },
+      {
+        "character": "Ben Parker",
+        "urlCharacter": "https://www.imdb.com/title/tt11057302/characters/nm0004395",
+        "main": true,
+        "idIMDB": "nm0004395",
+        "name": "Adam Scott",
+        "urlIMDB": "https://www.imdb.com/name/nm0004395/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BOGUwZmFkODEtMWYwMi00NjE2LThhYzYtMmMxMTMyYTRhMzIxXkEyXkFqcGdeQXVyOTIyNzUwNjI@._V1_QL75_UX140_CR0,3,140,140_.jpg"
+      },
+      {
+        "character": "Ezekiel Sims",
+        "urlCharacter": "https://www.imdb.com/title/tt11057302/characters/nm2588665",
+        "main": true,
+        "idIMDB": "nm2588665",
+        "name": "Tahar Rahim",
+        "urlIMDB": "https://www.imdb.com/name/nm2588665/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTUxNDE0MDQyMl5BMl5BanBnXkFtZTgwNjcxMDk2NTE@._V1_QL75_UY140_CR30,0,140,140_.jpg"
+      },
+      {
+        "character": "Mattie Franklin",
+        "urlCharacter": "https://www.imdb.com/title/tt11057302/characters/nm9305936",
+        "main": true,
+        "idIMDB": "nm9305936",
+        "name": "Celeste O'Connor",
+        "urlIMDB": "https://www.imdb.com/name/nm9305936/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTBiZGMyZWQtYTAzMC00N2U0LWFiNjktYzc2ZDJhM2FmOWU5XkEyXkFqcGdeQXVyOTA5NzkzODc@._V1_QL75_UX140_CR0,12,140,140_.jpg"
+      },
+      {
+        "character": "Beautiful Woman",
+        "urlCharacter": "https://www.imdb.com/title/tt11057302/characters/nm0005007",
+        "main": true,
+        "idIMDB": "nm0005007",
+        "name": "Jill Hennessy",
+        "urlIMDB": "https://www.imdb.com/name/nm0005007/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTQ2MTcxNzAyNl5BMl5BanBnXkFtZTYwMzU4NTA0._V1_QL75_UX140_CR0,10,140,140_.jpg"
+      },
+      {
+        "main": true,
+        "idIMDB": "nm0541082",
+        "name": "Zosia Mamet",
+        "urlIMDB": "https://www.imdb.com/name/nm0541082/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BNmI5ZDdkY2UtMzMyNy00MzJlLTljYjAtODIyOWU3MmNhY2ZiXkEyXkFqcGdeQXVyOTE0NjgwMjY@._V1_QL75_UX140_CR0,2,140,140_.jpg"
+      },
+      {
+        "main": true,
+        "idIMDB": "nm0258402",
+        "name": "Mike Epps",
+        "urlIMDB": "https://www.imdb.com/name/nm0258402/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTY5MjEzOTQyNF5BMl5BanBnXkFtZTYwNjM1MjU0._V1_QL75_UX140_CR0,8,140,140_.jpg"
+      },
+      {
+        "character": "Paramedic",
+        "urlCharacter": "https://www.imdb.com/title/tt11057302/characters/nm14475792",
+        "main": true,
+        "idIMDB": "nm14475792",
+        "name": "Wes Meserve",
+        "urlIMDB": "https://www.imdb.com/name/nm14475792/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BYzc2OWYxNjItNWRkYS00YTM0LWJlNjQtZmVhODBiOTE0ZjYwXkEyXkFqcGdeQXVyMTQ5NjkzMTYw._V1_QL75_UX140_CR0,12,140,140_.jpg"
+      },
+      {
+        "character": "Teen Boy",
+        "urlCharacter": "https://www.imdb.com/title/tt11057302/characters/nm6605989",
+        "main": true,
+        "idIMDB": "nm6605989",
+        "name": "Austin J. Ryan",
+        "urlIMDB": "https://www.imdb.com/name/nm6605989/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMjgwMGFhZDMtZGM0MC00NmMxLWIxNTUtY2U4YWY0ODRjMDBjXkEyXkFqcGdeQXVyNjY0Mjc2NTM@._V1_QL75_UX140_CR0,12,140,140_.jpg"
+      },
+      {
+        "character": "Trucker",
+        "urlCharacter": "https://www.imdb.com/title/tt11057302/characters/nm4024589",
+        "main": true,
+        "idIMDB": "nm4024589",
+        "name": "Michael Malvesti",
+        "urlIMDB": "https://www.imdb.com/name/nm4024589/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BNTgzNDJjNWItNzJjMS00Mjk1LTk5MzctZmU3YjQyMGUzNTIxXkEyXkFqcGdeQXVyOTUwMTAwOA@@._V1_QL75_UY140_CR2,0,140,140_.jpg"
+      },
+      {
+        "main": true,
+        "idIMDB": "nm0989156",
+        "name": "Josh Drennen",
+        "urlIMDB": "https://www.imdb.com/name/nm0989156/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BYmEyMWUxODAtZjI0Yi00OTYwLTk3YzUtZWUzNThhNzY4YzcxXkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_QL75_UX140_CR0,1,140,140_.jpg"
+      },
+      {
+        "character": "Nurse",
+        "urlCharacter": "https://www.imdb.com/title/tt11057302/characters/nm13777981",
+        "main": true,
+        "idIMDB": "nm13777981",
+        "name": "Sarah Ismail",
+        "urlIMDB": "https://www.imdb.com/name/nm13777981/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BYTkwYzcxYTItNWM4ZS00MmJkLWI4ODItMjNhMjA5MDQwZmZhXkEyXkFqcGdeQXVyMTUzOTIyNDk3._V1_QL75_UX140_CR0,2,140,140_.jpg"
+      },
+      {
+        "character": "Pedestrian w",
+        "urlCharacter": "https://www.imdb.com/title/tt11057302/characters/nm10788827",
+        "main": true,
+        "idIMDB": "nm10788827",
+        "name": "Dennis Daniel",
+        "urlIMDB": "https://www.imdb.com/name/nm10788827/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMGNjZmZiNTMtNTAyNC00NjUxLWFiYTUtMGViMDU0ZjFiNmZjXkEyXkFqcGdeQXVyNjIzNDIxMzI@._V1_QL75_UX140_CR0,1,140,140_.jpg"
+      },
+      {
+        "character": "Paramedic",
+        "urlCharacter": "https://www.imdb.com/title/tt11057302/characters/nm11853182",
+        "main": true,
+        "idIMDB": "nm11853182",
+        "name": "Ilya Tsymbal",
+        "urlIMDB": "https://www.imdb.com/name/nm11853182/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMGFiYzljZmUtYTllYy00ZTVkLTgwZDgtYmYxM2Y0NDQwYjI1XkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_QL75_UX140_CR0,12,140,140_.jpg"
+      },
+      {
+        "character": "Businessman",
+        "urlCharacter": "https://www.imdb.com/title/tt11057302/characters/nm1488998",
+        "main": true,
+        "idIMDB": "nm1488998",
+        "name": "Mike Bash",
+        "urlIMDB": "https://www.imdb.com/name/nm1488998/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BZTY3M2JhYmMtOWY4Zi00YjIyLTkyMmMtZDc5YTgyZWFiNTUwXkEyXkFqcGdeQXVyMjg0MDE0NA@@._V1_QL75_UX140_CR0,0,140,140_.jpg"
+      }
+    ],
+    "rated": "",
+    "trailer": {
+      "description": "Spin-off from Spider-Man centering on a clairvoyant mutant named Madame Web.",
+      "type": "movie",
+      "duration": "183 ",
+      "qualities": [
+        {
+          "quality": "AUTO",
+          "videoURL": "https://imdb-video.media-imdb.com/vi1831388953/hls-1700059456241-master.m3u8?Expires=1700653954&Signature=rlfIFTn-6x7g1FmMOaKJthFtAF3xZItXo0eT-18nlb~rmPXbcSgVSHkDch~~JvXEfaCFSvcvyXtDel0M2z105xX7T47FL~QLjWQokGaAHc4Kw6E4EQ0gsrhMaGUyFo1CpPkh45Qe1TmY-39Zq-uYxYLpNpiX5Fr2IOS7XqFa8K0bIryDgRwnlWh4W2GjkH6omOldDsUqps7Fm8kLR33~wP3laX9hMl1fg1Ret1IStNjbCmUgfOotDpJKMD1PyYjg2qszNN3LNam0PLnecZ8UomDTIqkUHiOV01Yg--iZ7Cq-NIDl8J3vMSz4BxaihMBKdz0NAlZ6NjYH0ajNgJE3gw__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        },
+        {
+          "quality": "1080p",
+          "videoURL": "https://imdb-video.media-imdb.com/vi1831388953/1434659529640-260ouz-1700059456241.mp4?Expires=1700653954&Signature=mKZu0RUpbep1c6sltk4zgwPSw4~uouUwep2Exd5XNeTghtHMB-ioF0B3KfsCkazTHg3s0QYkKW0baVyJMDqhGWXac5I1n3pqaW~niQdIGzIs49vKGyGAxHp6A0jPorzyufK4HRB6B2G3W6YKQvMbb1eJzy2BHQnuXHRNQVFyI-sjVRtL1MnZ62udSiHd02dekjUi3BqMgytJmWvOLH7in0-oCt3Um5JwCLErKae1N-YjQxk79tUQW0JGo3~73MNGZyU206yVWhp7QvlzwEhCP3MhgoONzGd5I5Q2v09m4lfzVrfHDhTaRHLs4gLdY7mNOBRnC9ttgLh19BFmb1OjVw__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        },
+        {
+          "quality": "720p",
+          "videoURL": "https://imdb-video.media-imdb.com/vi1831388953/1434659379400-8cjq25-1700059456241.mp4?Expires=1700653954&Signature=mO7jgUoS7gU-ebBPuToVk8Gooy~BWcSl7euIaWVwpbYG9aVkrY0k17Pj-jT3Gor5nyS~sxE-toSXbUKmfWu8BjaaQ4UlUIr7jw5o6sDlZH-sGnzPphOsUQmxn-4k-qJdwF-aOgSHKmeMqNCHpyXeOZK1HIk0fTyuxAiVRuYSYXidvhCMojjeNqSfvZ0ooENlmDOlxmdtfe-rSuDRnRYo6OwBsk4nTBoKyH9iDlwAA5oxGroULzD3EbqV6V0YHeZO9PqX4RfEyQ41Y~~oo31UBHctkxcJfW~6m~8RD4j7ywwliReG56gy4YLI4cyr4zUaXQExVI7O2W6Zv1Al3t1wxw__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        },
+        {
+          "quality": "480p",
+          "videoURL": "https://imdb-video.media-imdb.com/vi1831388953/1434659607842-pgv4ql-1700059456241.mp4?Expires=1700653954&Signature=dAId6wd75it0ZiVz1MeUuNAaOvR7vOyLIMF9gavLoCIhe4zjs~0~DJdqgdnqMt48AVkqk9qfVGrJ6XHmnZY1yu~QIuItmCBGMsbcp1FIspONyp-QnM4AO-yNMje7kLIHMemaJ2pzBzJOpiVrxu3D5xW3ztAp8XL47wFqvpIQiJM9QJiA-orqJho4U9JGuLHRjh4UBO12JudDkqwH28SMSN11dwPjOeBaJ0D1TzTmeSG2IRHbnvywaALkw23ETW5meSJ067zokfsrx03tdT0~ESdZ2721ySAVSDIdRaWGrv10cFBYXSRsjUsZE3QbQlZ8GP7fbcoeqV~Y-PBiV0gOHA__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        },
+        {
+          "quality": "SD",
+          "videoURL": "https://imdb-video.media-imdb.com/vi1831388953/1434659454657-dx9ykf-1700059456241.mp4?Expires=1700653954&Signature=HA3hgSw-OLmykMCHLTSvUE~jIFNVrwf6tFEd8u5nqKkAtuIB9wZ2M-dZ8NK0ppC~zO68O8imu5Yz10xkLaneP4jiDf9By~Xe9aq2e~Us9mLixstALA2Is2q8xe-maVsgThAvR24oRWbPL2mEn3L5pdAMaAvPjA4lHbAjRODhFpqBQ9RTrBBFJeFw0HrvctZs2Y0zxbQtPc5fOprOzNKYOThqwh1yWQe8boYUTtNADACgFtf0DL~Bhgu-WgJBUDLLxpKyePx4jLu2WXOE4lxo535I0fx6w4vTy3mFCvdcGbwawP-Aahae44pLJvrrSmkqAAbIV4z-ta-wHs-zKRnA2w__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        }
+      ]
+    },
+    "votes": 0,
+    "type": "MOVIE",
+    "idIMDB": "tt11057302",
+    "title": "Madame Web",
+    "urlIMDB": "https://www.imdb.com/title/tt11057302/",
+    "urlPoster": "https://m.media-amazon.com/images/M/MV5BMTZjOGE2ODktY2EyZS00NDk3LWExYTYtZWNkNDc0NjJkMTU3XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1.jpg"
+  }
+
+]

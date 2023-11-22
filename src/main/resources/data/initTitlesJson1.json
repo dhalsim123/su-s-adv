@@ -1,0 +1,2603 @@
+[
+  {
+    "year": 1994,
+    "releaseDate": "19941014",
+    "directors": [
+      {
+        "id": "nm0001104",
+        "name": "Frank Darabont"
+      }
+    ],
+    "writers": [
+      {
+        "id": "nm0000175",
+        "name": "Stephen King"
+      },
+      {
+        "id": "nm0001104",
+        "name": "Frank Darabont"
+      }
+    ],
+    "runtime": 142,
+    "countries": [
+      "United States"
+    ],
+    "languages": [
+      "English"
+    ],
+    "genres": [
+      "Drama"
+    ],
+    "plot": "Chronicles the experiences of a formerly successful banker as a prisoner in the gloomy jailhouse of Shawshank after being found guilty of a crime he did not commit. The film portrays the man's unique way of dealing with his new, torturous life; along the way he befriends a number of fellow prisoners, most notably a wise long-term inmate named Red.",
+    "simplePlot": "Over the course of several years, two convicts form a friendship, seeking consolation and, eventually, redemption through basic compassion.",
+    "actors": [
+      {
+        "character": "Andy Dufresne",
+        "urlCharacter": "https://www.imdb.com/title/tt0111161/characters/nm0000209",
+        "main": true,
+        "idIMDB": "nm0000209",
+        "name": "Tim Robbins",
+        "urlIMDB": "https://www.imdb.com/name/nm0000209/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTI1OTYxNzAxOF5BMl5BanBnXkFtZTYwNTE5ODI4._V1_QL75_UX140_CR0,0,140,140_.jpg"
+      },
+      {
+        "character": "Ellis Boyd 'Red' Redding",
+        "urlCharacter": "https://www.imdb.com/title/tt0111161/characters/nm0000151",
+        "main": true,
+        "idIMDB": "nm0000151",
+        "name": "Morgan Freeman",
+        "urlIMDB": "https://www.imdb.com/name/nm0000151/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTc0MDMyMzI2OF5BMl5BanBnXkFtZTcwMzM2OTk1MQ@@._V1_QL75_UX140_CR0,12,140,140_.jpg"
+      },
+      {
+        "character": "Warden Norton",
+        "urlCharacter": "https://www.imdb.com/title/tt0111161/characters/nm0348409",
+        "main": true,
+        "idIMDB": "nm0348409",
+        "name": "Bob Gunton",
+        "urlIMDB": "https://www.imdb.com/name/nm0348409/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMjUyZDQ0NjktZmM5ZS00NzcxLTliMWYtNWUxNDcyMmExZjU0XkEyXkFqcGdeQXVyMTE1MjA4NzM@._V1_QL75_UX140_CR0,0,140,140_.jpg"
+      },
+      {
+        "character": "Heywood",
+        "urlCharacter": "https://www.imdb.com/title/tt0111161/characters/nm0006669",
+        "main": true,
+        "idIMDB": "nm0006669",
+        "name": "William Sadler",
+        "urlIMDB": "https://www.imdb.com/name/nm0006669/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTA1NjU3NDg1MTheQTJeQWpwZ15BbWU2MDI4OTcxMw@@._V1_QL75_UX140_CR0,0,140,140_.jpg"
+      },
+      {
+        "character": "Captain Hadley",
+        "urlCharacter": "https://www.imdb.com/title/tt0111161/characters/nm0000317",
+        "main": true,
+        "idIMDB": "nm0000317",
+        "name": "Clancy Brown",
+        "urlIMDB": "https://www.imdb.com/name/nm0000317/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTUxODY3NjAzMF5BMl5BanBnXkFtZTcwMTQ5MjYwNg@@._V1_QL75_UX140_CR0,8,140,140_.jpg"
+      },
+      {
+        "character": "Tommy",
+        "urlCharacter": "https://www.imdb.com/title/tt0111161/characters/nm0004743",
+        "main": true,
+        "idIMDB": "nm0004743",
+        "name": "Gil Bellows",
+        "urlIMDB": "https://www.imdb.com/name/nm0004743/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTgxMzc0MDAzNV5BMl5BanBnXkFtZTgwMzUzMTI0MzE@._V1_QL75_UX140_CR0,1,140,140_.jpg"
+      },
+      {
+        "character": "Bogs Diamond",
+        "urlCharacter": "https://www.imdb.com/title/tt0111161/characters/nm0001679",
+        "main": true,
+        "idIMDB": "nm0001679",
+        "name": "Mark Rolston",
+        "urlIMDB": "https://www.imdb.com/name/nm0001679/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BODE5NDRlZTctMjkzNC00NGY3LThhYTItNzUxZjgzYzFmMjQxXkEyXkFqcGdeQXVyNjUxMjc1OTM@._V1_QL75_UX140_CR0,0,140,140_.jpg"
+      },
+      {
+        "character": "Brooks Hatlen",
+        "urlCharacter": "https://www.imdb.com/title/tt0111161/characters/nm0926235",
+        "main": true,
+        "idIMDB": "nm0926235",
+        "name": "James Whitmore",
+        "urlIMDB": "https://www.imdb.com/name/nm0926235/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTg5MzkxMTkxOV5BMl5BanBnXkFtZTcwNTEzNTgxMw@@._V1_QL75_UX140_CR0,0,140,140_.jpg"
+      },
+      {
+        "character": "1946 D.A.",
+        "urlCharacter": "https://www.imdb.com/title/tt0111161/characters/nm0218810",
+        "main": true,
+        "idIMDB": "nm0218810",
+        "name": "Jeffrey DeMunn",
+        "urlIMDB": "https://www.imdb.com/name/nm0218810/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTQ0Mjc3NDA1OV5BMl5BanBnXkFtZTcwMTg3MDEyOA@@._V1_QL75_UX140_CR0,0,140,140_.jpg"
+      },
+      {
+        "character": "Skeet",
+        "urlCharacter": "https://www.imdb.com/title/tt0111161/characters/nm0104594",
+        "main": true,
+        "idIMDB": "nm0104594",
+        "name": "Larry Brandenburg",
+        "urlIMDB": "https://www.imdb.com/name/nm0104594/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BNDczZGZiZjMtZGRmMC00Y2I5LThiNzAtZGQzZWYzZWFiNzM0XkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_QL75_UX140_CR0,0,140,140_.jpg"
+      },
+      {
+        "character": "Jigger",
+        "urlCharacter": "https://www.imdb.com/title/tt0111161/characters/nm0321358",
+        "main": true,
+        "idIMDB": "nm0321358",
+        "name": "Neil Giuntoli",
+        "urlIMDB": "https://www.imdb.com/name/nm0321358/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMjI0OTUxNjIyNF5BMl5BanBnXkFtZTcwNDE0MDcwOA@@._V1_QL75_UX140_CR0,0,140,140_.jpg"
+      },
+      {
+        "character": "Floyd",
+        "urlCharacter": "https://www.imdb.com/title/tt0111161/characters/nm0508742",
+        "main": true,
+        "idIMDB": "nm0508742",
+        "name": "Brian Libby",
+        "urlIMDB": "https://www.imdb.com/name/nm0508742/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMjI2NDYwNzU0NV5BMl5BanBnXkFtZTcwMjYwMTcwOA@@._V1_QL75_UX140_CR0,5,140,140_.jpg"
+      },
+      {
+        "character": "Snooze",
+        "urlCharacter": "https://www.imdb.com/title/tt0111161/characters/nm0698998",
+        "main": true,
+        "idIMDB": "nm0698998",
+        "name": "David Proval",
+        "urlIMDB": "https://www.imdb.com/name/nm0698998/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMjE0MTU0NjU3Nl5BMl5BanBnXkFtZTYwNTgzNjY0._V1_QL75_UX140_CR0,9,140,140_.jpg"
+      },
+      {
+        "character": "Ernie",
+        "urlCharacter": "https://www.imdb.com/title/tt0111161/characters/nm0706554",
+        "main": true,
+        "idIMDB": "nm0706554",
+        "name": "Joseph Ragno",
+        "urlIMDB": "https://www.imdb.com/name/nm0706554/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTQyNzMyNTUwNV5BMl5BanBnXkFtZTcwNjQ2MTcwOA@@._V1_QL75_UX140_CR0,5,140,140_.jpg"
+      },
+      {
+        "character": "Guard Mert",
+        "urlCharacter": "https://www.imdb.com/title/tt0111161/characters/nm0161980",
+        "main": true,
+        "idIMDB": "nm0161980",
+        "name": "Jude Ciccolella",
+        "urlIMDB": "https://www.imdb.com/name/nm0161980/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMjZmOTU1ZDktNDdkZi00YjkxLWFiODYtMjUzZWVhYmFiYjIxXkEyXkFqcGdeQXVyMTI3MzAzOTM@._V1_QL75_UX140_CR0,1,140,140_.jpg"
+      },
+      {
+        "character": "Guard Trout",
+        "urlCharacter": "https://www.imdb.com/title/tt0111161/characters/nm0005204",
+        "main": true,
+        "idIMDB": "nm0005204",
+        "name": "Paul McCrane",
+        "urlIMDB": "https://www.imdb.com/name/nm0005204/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTI2Mjc1NzExN15BMl5BanBnXkFtZTYwNjUzMzQz._V1_QL75_UX140_CR0,10,140,140_.jpg"
+      },
+      {
+        "character": "Andy Dufresne's Wife",
+        "urlCharacter": "https://www.imdb.com/title/tt0111161/characters/nm0086169",
+        "main": true,
+        "idIMDB": "nm0086169",
+        "name": "Renee Blaine",
+        "urlIMDB": "https://www.imdb.com/name/nm0086169/"
+      },
+      {
+        "character": "Glenn Quentin",
+        "urlCharacter": "https://www.imdb.com/title/tt0111161/characters/nm0542957",
+        "main": true,
+        "idIMDB": "nm0542957",
+        "name": "Scott Mann",
+        "urlIMDB": "https://www.imdb.com/name/nm0542957/"
+      }
+    ],
+    "business": {
+      "budget": "$25,000,000 (estimated)",
+      "openingWeekend": "$727,327 Sep 25, 1994",
+      "grossUsa": "$28,767,189",
+      "worldwide": "$28,884,716"
+    },
+    "rating": 9.3,
+    "metascore": 82,
+    "rated": "R",
+    "trailer": {
+      "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.\r\n",
+      "type": "movie",
+      "duration": "131 ",
+      "qualities": [
+        {
+          "quality": "AUTO",
+          "videoURL": "https://imdb-video.media-imdb.com/vi3877612057/hls-1616202333253-master.m3u8?Expires=1700655426&Signature=rUDhXvEI2-v0f6IjKuXgk5SUR0~liSJNFvA9hNcbahZHu9uy6oTEpi-xgNAtngkb8S8wlWRu4BFNabROnngCCSufVyEYKQGFoaB5SplVsPcCrMs1kXNI85NV0XjDfgOAkA7veDIxGAz-8s6btgrlAxMSs7pA1TiZEZbRnh6y6ksJ15rn9t4jxpuXP5MX4gAdT-gl8Ntg2P8DosmTAjywAwKDYNDDCJOoisemv9oU1Mmi2GbyQgoVvj8-mQk9piMvOMs6Zg7nhdr7DOXEgLycC~O67jz~JUGC1osNV3dGDo2Cvih9NFf641RZMnR3GRqa78HRjVt4TETEIqI3gufGnA__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        },
+        {
+          "quality": "480p",
+          "videoURL": "https://imdb-video.media-imdb.com/vi3877612057/1434659607842-pgv4ql-1616202333253.mp4?Expires=1700655426&Signature=inI5qP-Sqzm5Qg2dylbPA~o1Vit9TKLQ7NsmeB9nMfkoT24zZgnf1tKgBSSRGw3sl75tXziEZfXV~BDo7-CeKeIyOCdDcWv8I3M0UTxx-cbHcy9qbMd1kw7-etYDTnRepKRqeXBI3EVSkkAqMFYFrUIDtqEZ3Oq8ZUkHIbUK8orQY552YrTn5Ec3so4QsP0vJ7obpGy6LcZ3s~az7rPBclL0O2bCszlBL7LNaTa2PKIz-yVmYm2N0cUDB5B5IRPx4jCmq01FU2HrLbCRgwtC~N1MdrKCiiQeDTCIWuO3H3lVTxOus3yUzz9iW6TOYCSUbox0x5ahi43Hj3FJE7tNBA__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        },
+        {
+          "quality": "SD",
+          "videoURL": "https://imdb-video.media-imdb.com/vi3877612057/1434659454657-dx9ykf-1616202333253.mp4?Expires=1700655426&Signature=AIW5DY7PXEg82QMPD6ieWvvM2pbIyYUn1L9CJB~r1Lfb3e9GgLkI~IQlEgVwkED9sHUY63zzbKPRxGpRXiga8eIOBmqcEDCaLWQO8Z4XyUw4fsfJ5eQH4rpAmDUNcAMW2iRpStvJ5jXyutvuLqtAh--BmukthoA2cOpXLyOl5jByRrbUp779aZvG0gvXhnh-SArYFcwd47dMcsIcqdqfwyYfKR48z3e1eBuaWC~cbYsW6~goX9hhXVx5kJWaAecYP4dJ5zhy4WxwqWEx-XNWuguxY~COXhI4yyUE3BmEAERU5Zs4WqH4djPFVtz2iZVWPHtvS7XVsvlE5ijBbKFz-Q__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        }
+      ]
+    },
+    "votes": 2821193,
+    "type": "MOVIE",
+    "idIMDB": "tt0111161",
+    "title": "The Shawshank Redemption",
+    "urlIMDB": "https://www.imdb.com/title/tt0111161/",
+    "urlPoster": "https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1.jpg"
+  },
+  {
+    "year": 1972,
+    "releaseDate": "19720324",
+    "directors": [
+      {
+        "id": "nm0000338",
+        "name": "Francis Ford Coppola"
+      }
+    ],
+    "writers": [
+      {
+        "id": "nm0701374",
+        "name": "Mario Puzo"
+      },
+      {
+        "id": "nm0000338",
+        "name": "Francis Ford Coppola"
+      }
+    ],
+    "runtime": 175,
+    "countries": [
+      "United States"
+    ],
+    "languages": [
+      "English",
+      "Italian",
+      "Latin"
+    ],
+    "genres": [
+      "Crime",
+      "Drama"
+    ],
+    "plot": "The Godfather \"Don\" Vito Corleone is the head of the Corleone mafia family in New York. He is at the event of his daughter's wedding. Michael, Vito's youngest son and a decorated WW II Marine is also present at the wedding. Michael seems to be uninterested in being a part of the family business. Vito is a powerful man, and is kind to all those who give him respect but is ruthless against those who do not. But when a powerful and treacherous rival wants to sell drugs and needs the Don's influence for the same, Vito refuses to do it. What follows is a clash between Vito's fading old values and the new ways which may cause Michael to do the thing he was most reluctant in doing and wage a mob war against all the other mafia families which could tear the Corleone family apart.",
+    "simplePlot": "Don Vito Corleone, head of a mafia family, decides to hand over his empire to his youngest son Michael. However, his decision unintentionally puts the lives of his loved ones in grave danger.",
+    "actors": [
+      {
+        "character": "Don Vito Corleone",
+        "urlCharacter": "https://www.imdb.com/title/tt0068646/characters/nm0000008",
+        "main": true,
+        "idIMDB": "nm0000008",
+        "name": "Marlon Brando",
+        "urlIMDB": "https://www.imdb.com/name/nm0000008/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTg3MDYyMDE5OF5BMl5BanBnXkFtZTcwNjgyNTEzNA@@._V1_QL75_UY140_CR21,0,140,140_.jpg"
+      },
+      {
+        "character": "Michael Corleone",
+        "urlCharacter": "https://www.imdb.com/title/tt0068646/characters/nm0000199",
+        "main": true,
+        "idIMDB": "nm0000199",
+        "name": "Al Pacino",
+        "urlIMDB": "https://www.imdb.com/name/nm0000199/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTQzMzg1ODAyNl5BMl5BanBnXkFtZTYwMjAxODQ1._V1_QL75_UX140_CR0,13,140,140_.jpg"
+      },
+      {
+        "character": "Sonny Corleone",
+        "urlCharacter": "https://www.imdb.com/title/tt0068646/characters/nm0001001",
+        "main": true,
+        "idIMDB": "nm0001001",
+        "name": "James Caan",
+        "urlIMDB": "https://www.imdb.com/name/nm0001001/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTI5NjkyNDQ3NV5BMl5BanBnXkFtZTcwNjY5NTQ0Mw@@._V1_QL75_UX140_CR0,12,140,140_.jpg"
+      },
+      {
+        "character": "Kay Adams",
+        "urlCharacter": "https://www.imdb.com/title/tt0068646/characters/nm0000473",
+        "main": true,
+        "idIMDB": "nm0000473",
+        "name": "Diane Keaton",
+        "urlIMDB": "https://www.imdb.com/name/nm0000473/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTY5NDI5OTEyOF5BMl5BanBnXkFtZTgwMzU4NDI1NzM@._V1_QL75_UX140_CR0,7,140,140_.jpg"
+      },
+      {
+        "character": "Clemenza",
+        "urlCharacter": "https://www.imdb.com/title/tt0068646/characters/nm0144710",
+        "main": true,
+        "idIMDB": "nm0144710",
+        "name": "Richard S. Castellano",
+        "urlIMDB": "https://www.imdb.com/name/nm0144710/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMjI2MzA3MjQ5N15BMl5BanBnXkFtZTcwMzY5NDYwOA@@._V1_QL75_UX140_CR0,9,140,140_.jpg"
+      },
+      {
+        "character": "Tom Hagen",
+        "urlCharacter": "https://www.imdb.com/title/tt0068646/characters/nm0000380",
+        "main": true,
+        "idIMDB": "nm0000380",
+        "name": "Robert Duvall",
+        "urlIMDB": "https://www.imdb.com/name/nm0000380/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMjk1MjA2Mjc2MF5BMl5BanBnXkFtZTcwOTE4MTUwMg@@._V1_QL75_UX140_CR0,5,140,140_.jpg"
+      },
+      {
+        "character": "Capt. McCluskey",
+        "urlCharacter": "https://www.imdb.com/title/tt0068646/characters/nm0001330",
+        "main": true,
+        "idIMDB": "nm0001330",
+        "name": "Sterling Hayden",
+        "urlIMDB": "https://www.imdb.com/name/nm0001330/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMjE0MTk1NjkzN15BMl5BanBnXkFtZTcwMzA1MjE1Mg@@._V1_QL75_UX140_CR0,18,140,140_.jpg"
+      },
+      {
+        "character": "Jack Woltz",
+        "urlCharacter": "https://www.imdb.com/title/tt0068646/characters/nm0549134",
+        "main": true,
+        "idIMDB": "nm0549134",
+        "name": "John Marley",
+        "urlIMDB": "https://www.imdb.com/name/nm0549134/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMjk0NjY1MjAyMl5BMl5BanBnXkFtZTcwNzY5NDYwOA@@._V1_QL75_UX140_CR0,0,140,140_.jpg"
+      },
+      {
+        "character": "Barzini",
+        "urlCharacter": "https://www.imdb.com/title/tt0068646/characters/nm0002017",
+        "main": true,
+        "idIMDB": "nm0002017",
+        "name": "Richard Conte",
+        "urlIMDB": "https://www.imdb.com/name/nm0002017/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BNzE0MzU0MzY3OF5BMl5BanBnXkFtZTcwMjE2MjYwOA@@._V1_QL75_UX140_CR0,0,140,140_.jpg"
+      },
+      {
+        "character": "Sollozzo",
+        "urlCharacter": "https://www.imdb.com/title/tt0068646/characters/nm0504803",
+        "main": true,
+        "idIMDB": "nm0504803",
+        "name": "Al Lettieri",
+        "urlIMDB": "https://www.imdb.com/name/nm0504803/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BOWUxYTJkY2MtYmZmZi00ZjBmLWJmM2ItMmU3YWI2YzBhZDUwXkEyXkFqcGdeQXVyNjUxMjc1OTM@._V1_QL75_UX140_CR0,10,140,140_.jpg"
+      },
+      {
+        "character": "Sal Tessio",
+        "urlCharacter": "https://www.imdb.com/title/tt0068646/characters/nm0001820",
+        "main": true,
+        "idIMDB": "nm0001820",
+        "name": "Abe Vigoda",
+        "urlIMDB": "https://www.imdb.com/name/nm0001820/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMjE1MDk5NzMyN15BMl5BanBnXkFtZTYwMjA4Mjg1._V1_QL75_UX140_CR0,3,140,140_.jpg"
+      },
+      {
+        "character": "Connie Corleone Rizzi",
+        "urlCharacter": "https://www.imdb.com/title/tt0068646/characters/nm0001735",
+        "main": true,
+        "idIMDB": "nm0001735",
+        "name": "Talia Shire",
+        "urlIMDB": "https://www.imdb.com/name/nm0001735/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTkwMzc0NjQzNV5BMl5BanBnXkFtZTYwNzM0NTk3._V1_QL75_UX140_CR0,6,140,140_.jpg"
+      },
+      {
+        "character": "Carlo Rizzi",
+        "urlCharacter": "https://www.imdb.com/title/tt0068646/characters/nm0751625",
+        "main": true,
+        "idIMDB": "nm0751625",
+        "name": "Gianni Russo",
+        "urlIMDB": "https://www.imdb.com/name/nm0751625/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BNTgyMTgxODM4MV5BMl5BanBnXkFtZTcwNDg5NDYwOA@@._V1_QL75_UX140_CR0,13,140,140_.jpg"
+      },
+      {
+        "character": "Fredo Corleone",
+        "urlCharacter": "https://www.imdb.com/title/tt0068646/characters/nm0001030",
+        "main": true,
+        "idIMDB": "nm0001030",
+        "name": "John Cazale",
+        "urlIMDB": "https://www.imdb.com/name/nm0001030/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTUzMTM1MjI5NV5BMl5BanBnXkFtZTcwMTM5NTM1Mw@@._V1_QL75_UX140_CR0,11,140,140_.jpg"
+      },
+      {
+        "character": "Cuneo",
+        "urlCharacter": "https://www.imdb.com/title/tt0068646/characters/nm0094036",
+        "main": true,
+        "idIMDB": "nm0094036",
+        "name": "Rudy Bond",
+        "urlIMDB": "https://www.imdb.com/name/nm0094036/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BNWY2ZGQxMDctNWUyYS00NzYyLTk0MjMtZWY4MWY2YzQ1ZGRiXkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_QL75_UX140_CR0,1,140,140_.jpg"
+      },
+      {
+        "character": "Johnny Fontane",
+        "urlCharacter": "https://www.imdb.com/title/tt0068646/characters/nm0553887",
+        "main": true,
+        "idIMDB": "nm0553887",
+        "name": "Al Martino",
+        "urlIMDB": "https://www.imdb.com/name/nm0553887/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMjMyMDk4MzYyMl5BMl5BanBnXkFtZTcwNzg5NDYwOA@@._V1_QL75_UX140_CR0,0,140,140_.jpg"
+      },
+      {
+        "character": "Mama Corleone",
+        "urlCharacter": "https://www.imdb.com/title/tt0068646/characters/nm0455088",
+        "main": true,
+        "idIMDB": "nm0455088",
+        "name": "Morgana King",
+        "urlIMDB": "https://www.imdb.com/name/nm0455088/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BODg5OTAxNDQzMl5BMl5BanBnXkFtZTgwOTM3ODIxNjM@._V1_QL75_UY140_CR1,0,140,140_.jpg"
+      },
+      {
+        "character": "Luca Brasi",
+        "urlCharacter": "https://www.imdb.com/title/tt0068646/characters/nm0598926",
+        "main": true,
+        "idIMDB": "nm0598926",
+        "name": "Lenny Montana",
+        "urlIMDB": "https://www.imdb.com/name/nm0598926/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMjFmMjQ4ODMtNDZmZC00NzQ3LTlmODEtOTBlMGIzMzUxY2Q4XkEyXkFqcGdeQXVyNjUxMjc1OTM@._V1_QL75_UX140_CR0,0,140,140_.jpg"
+      }
+    ],
+    "business": {
+      "budget": "$6,000,000 (estimated)",
+      "openingWeekend": "$302,393 Mar 19, 1972",
+      "grossUsa": "$136,381,073",
+      "worldwide": "$250,341,816"
+    },
+    "rating": 9.2,
+    "metascore": 100,
+    "rated": "R",
+    "trailer": {
+      "description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+      "type": "movie",
+      "duration": "76 ",
+      "qualities": [
+        {
+          "quality": "AUTO",
+          "videoURL": "https://imdb-video.media-imdb.com/vi1348706585/hls-1616202346191-master.m3u8?Expires=1700570000&Signature=obFBZMtyiqeL07rS7iDv7eHJ5KSm9W3wBu4Qmgl2qZMuGoZnP7WNLS2eaKtRgvUUVWqKq6hd~Da3K1rbZ60l3HvQXF~yAgH4JwAVPExoS1ok4TDj9xv6K5~-DbGRltaqVDbmdox2DkbRKrVdgnnMKmlQ8dGjrFWXkZ-YLBOo3zloDu5aDCmLI77Vf9guWOSplhjx8gNO~NOBzjiDtf5aUTtPfx3jOB1LqEeXqfPtc-Y~vs1KFJoDhA4mHL1zXhnhT-vCkr9yWk7ywJIjI2ejnVqpMgxKopXSGakjabP~k2wx-6Ep1vOoCkTjhbjGu-cfNlWyi1BcTEgwbWrMvOlu5w__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        },
+        {
+          "quality": "1080p",
+          "videoURL": "https://imdb-video.media-imdb.com/vi1348706585/1434659529640-260ouz-1616202346191.mp4?Expires=1700570000&Signature=YQjss83FWpv6YzCMyFPpBlB7EGXDLoiRnwRk-Ot54C3FJYxxQzQPK0~8CGQSXZdkgkmuNppnkcSwp~YUNojHaqOooF58jdQ~qVDuC-OCjKNwb-fc-xhL8yoVShcDtAkvR57400yaU8qHswXPxDQPT4~7Ddoec-K6WeBdPznIZ85R1IDykjvoqpZQRMB3oshUXl69wNcx8pg24P~Cshe7dM5IpB0qyUUkcRj9nVecbPqP~QlTakAUbK52fzY-dWCGBDQ3P5H675WOhMLZj9lR9oUOlrf9-lCnAfk6zmcEQ-ONCYU4EVpmPwTCC7Z2YCvklXIm9ejP9C9mSgRLsxpZvw__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        },
+        {
+          "quality": "720p",
+          "videoURL": "https://imdb-video.media-imdb.com/vi1348706585/1434659379400-8cjq25-1616202346191.mp4?Expires=1700570000&Signature=MsGJwUp8RZ7v86Q-NPjfyDLddpXx-fu9hWzWh5kjO1~XhrCzjqjS7wez7PEgYhyEaVEU4cSPZxzz4kbI-TU7VxlvIPa0BzHDQwTLeKgQLITL17uicxQqEjGaUmY1veiosPMGKldhhKPumqxf3ugEqKkI51D3WRX~FkXIEw-RzcUKGl~acVo4Q-3B59lxpRj2lRLZ0MO403ZYVcbjwDyHf-oMGOpNqZpbd1zCIB9lMW2mZt5zudbZfNWtfxrdb4JWA056SBXYQwSfPIolOQSP5Mn-uSCwdFC5~ufMgGgx-Yd1OciY5M8Oowsbs3X4Xyk8drdmz7OVg5oPecJBjdYsVQ__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        },
+        {
+          "quality": "480p",
+          "videoURL": "https://imdb-video.media-imdb.com/vi1348706585/1434659607842-pgv4ql-1616202346191.mp4?Expires=1700570000&Signature=ijYfpNy9y8-ldgoMEmTsflGqKNRepu3iWUCxNtOB6w06r0TgujFZuwvz79f05M-efctSk0xnuAHvz1G-Uho~Bx35FjBIJxLT0Tj-kZHBxTbkPE7I2JGvW0ckwzOCXv4FJsY47mDt7Ai8xOPGyPyE23xcGpX4et4H8O7jy9eMOhtUBIvTPVDHlhqjJ0-s~~WJbAtQQUxBqNK8D1sZiR3t9pEIvGxXMoSqVqbqMAkQefJe68FT-2h6W7eVpEVFwSLQw1MKhOx7FJ1FaZ6kd422GwV2XMiiTfqdDaBFbvZI5LGCMU6v1hNkZZ9FEIWPnaw-jO6iim-HkXMHNCM0WWbikw__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        },
+        {
+          "quality": "SD",
+          "videoURL": "https://imdb-video.media-imdb.com/vi1348706585/1434659454657-dx9ykf-1616202346191.mp4?Expires=1700570000&Signature=TXpxRuS3Cgz7uMBxDHD6o5XOM5F~kCXhoFTZCMEWUWqqJMde6CaHPBua6JMMrIq31x51tO90ZWOuSm9enrWSM2PwkVHIAvqqz6-mrrVhlJ0aU~c5aNeckrGNVTGosKhT1dyMW2T-ARI95nhlXBBnCu0i9vdXQNBVCiCZllC4yveplg-uinTSvBOsjrqV5pD7P1P3GFN3Y95jzNcXYOicobsOhnhPm~5uTxhioMs-Zu9HceGAAHGQIW~1Ts4aw1~CX4thXSSrkiPX~7E59JSvd7PDgw053bTtJctfiFCCjwwYE6N7XyR-5FOAy2qk1zmXdx6Qwugn7vVNib4iMzb5AQ__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        }
+      ]
+    },
+    "votes": 1966071,
+    "type": "MOVIE",
+    "idIMDB": "tt0068646",
+    "title": "The Godfather",
+    "urlIMDB": "https://www.imdb.com/title/tt0068646/",
+    "urlPoster": "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1.jpg"
+  },
+  {
+    "year": 2008,
+    "releaseDate": "20080718",
+    "directors": [
+      {
+        "id": "nm0634240",
+        "name": "Christopher Nolan"
+      }
+    ],
+    "writers": [
+      {
+        "id": "nm0634300",
+        "name": "Jonathan Nolan"
+      },
+      {
+        "id": "nm0634240",
+        "name": "Christopher Nolan"
+      },
+      {
+        "id": "nm0275286",
+        "name": "David S. Goyer"
+      }
+    ],
+    "runtime": 152,
+    "countries": [
+      "United States",
+      "United Kingdom"
+    ],
+    "languages": [
+      "English",
+      "Mandarin"
+    ],
+    "genres": [
+      "Action",
+      "Crime",
+      "Drama"
+    ],
+    "plot": "Set within a year after the events of Batman Begins (2005), Batman, Lieutenant James Gordon, and new District Attorney Harvey Dent successfully begin to round up the criminals that plague Gotham City, until a mysterious and sadistic criminal mastermind known only as \"The Joker\" appears in Gotham, creating a new wave of chaos. Batman's struggle against The Joker becomes deeply personal, forcing him to \"confront everything he believes\" and improve his technology to stop him. A love triangle develops between Bruce Wayne, Dent, and Rachel Dawes.",
+    "simplePlot": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
+    "actors": [
+      {
+        "character": "Bruce Wayne",
+        "urlCharacter": "https://www.imdb.com/title/tt0468569/characters/nm0000288",
+        "main": true,
+        "idIMDB": "nm0000288",
+        "name": "Christian Bale",
+        "urlIMDB": "https://www.imdb.com/name/nm0000288/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTkxMzk4MjQ4MF5BMl5BanBnXkFtZTcwMzExODQxOA@@._V1_QL75_UX140_CR0,12,140,140_.jpg"
+      },
+      {
+        "character": "Joker",
+        "urlCharacter": "https://www.imdb.com/title/tt0468569/characters/nm0005132",
+        "main": true,
+        "idIMDB": "nm0005132",
+        "name": "Heath Ledger",
+        "urlIMDB": "https://www.imdb.com/name/nm0005132/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTI2NTY0NzA4MF5BMl5BanBnXkFtZTYwMjE1MDE0._V1_QL75_UX140_CR0,12,140,140_.jpg"
+      },
+      {
+        "character": "Harvey Dent",
+        "urlCharacter": "https://www.imdb.com/title/tt0468569/characters/nm0001173",
+        "main": true,
+        "idIMDB": "nm0001173",
+        "name": "Aaron Eckhart",
+        "urlIMDB": "https://www.imdb.com/name/nm0001173/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTc4MTAyNzMzNF5BMl5BanBnXkFtZTcwMzQ5MzQzMg@@._V1_QL75_UX140_CR0,5,140,140_.jpg"
+      },
+      {
+        "character": "Alfred",
+        "urlCharacter": "https://www.imdb.com/title/tt0468569/characters/nm0000323",
+        "main": true,
+        "idIMDB": "nm0000323",
+        "name": "Michael Caine",
+        "urlIMDB": "https://www.imdb.com/name/nm0000323/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMjAwNzIwNTQ4Ml5BMl5BanBnXkFtZTYwMzE1MTUz._V1_QL75_UX140_CR0,4,140,140_.jpg"
+      },
+      {
+        "character": "Rachel",
+        "urlCharacter": "https://www.imdb.com/title/tt0468569/characters/nm0350454",
+        "main": true,
+        "idIMDB": "nm0350454",
+        "name": "Maggie Gyllenhaal",
+        "urlIMDB": "https://www.imdb.com/name/nm0350454/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTM1MjY3NzA4NF5BMl5BanBnXkFtZTcwNzE4MjMyMw@@._V1_QL75_UX140_CR0,13,140,140_.jpg"
+      },
+      {
+        "character": "Gordon",
+        "urlCharacter": "https://www.imdb.com/title/tt0468569/characters/nm0000198",
+        "main": true,
+        "idIMDB": "nm0000198",
+        "name": "Gary Oldman",
+        "urlIMDB": "https://www.imdb.com/name/nm0000198/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTc3NTM4MzQ5MV5BMl5BanBnXkFtZTcwOTE4MDczNw@@._V1_QL75_UX140_CR0,10,140,140_.jpg"
+      },
+      {
+        "character": "Lucius Fox",
+        "urlCharacter": "https://www.imdb.com/title/tt0468569/characters/nm0000151",
+        "main": true,
+        "idIMDB": "nm0000151",
+        "name": "Morgan Freeman",
+        "urlIMDB": "https://www.imdb.com/name/nm0000151/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTc0MDMyMzI2OF5BMl5BanBnXkFtZTcwMzM2OTk1MQ@@._V1_QL75_UX140_CR0,12,140,140_.jpg"
+      },
+      {
+        "character": "Ramirez",
+        "urlCharacter": "https://www.imdb.com/title/tt0468569/characters/nm1010931",
+        "main": true,
+        "idIMDB": "nm1010931",
+        "name": "Monique Gabriela Curnen",
+        "urlIMDB": "https://www.imdb.com/name/nm1010931/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BNDYzNGFlYTgtM2U0MS00YWQzLTgxZGUtZTIzMzkzNjdhODk1XkEyXkFqcGdeQXVyMTI4MzU0Mg@@._V1_QL75_UY140_CR55,0,140,140_.jpg"
+      },
+      {
+        "character": "Wuertz",
+        "urlCharacter": "https://www.imdb.com/title/tt0468569/characters/nm0212939",
+        "main": true,
+        "idIMDB": "nm0212939",
+        "name": "Ron Dean",
+        "urlIMDB": "https://www.imdb.com/name/nm0212939/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTM5MTc5MjE3OF5BMl5BanBnXkFtZTcwNzg1MjQyOA@@._V1_QL75_UX140_CR0,15,140,140_.jpg"
+      },
+      {
+        "character": "Scarecrow",
+        "urlCharacter": "https://www.imdb.com/title/tt0468569/characters/nm0614165",
+        "main": true,
+        "idIMDB": "nm0614165",
+        "name": "Cillian Murphy",
+        "urlIMDB": "https://www.imdb.com/name/nm0614165/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMDUxY2M1NTQtNzcwNC00ZDljLTk4YjctYzJjZGNiYTc0YTE1XkEyXkFqcGdeQXVyMTY5MDA5MDc3._V1_QL75_UX140_CR0,12,140,140_.jpg"
+      },
+      {
+        "character": "Lau",
+        "urlCharacter": "https://www.imdb.com/title/tt0468569/characters/nm1977856",
+        "main": true,
+        "idIMDB": "nm1977856",
+        "name": "Chin Han",
+        "urlIMDB": "https://www.imdb.com/name/nm1977856/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BNDA5NDc1NTAwNV5BMl5BanBnXkFtZTgwNDA4Mjk5MjE@._V1_QL75_UX140_CR0,9,140,140_.jpg"
+      },
+      {
+        "character": "Mayor",
+        "urlCharacter": "https://www.imdb.com/title/tt0468569/characters/nm0004801",
+        "main": true,
+        "idIMDB": "nm0004801",
+        "name": "Nestor Carbonell",
+        "urlIMDB": "https://www.imdb.com/name/nm0004801/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMjg5NGIwZDMtNTkwMy00MjVlLWI4OWUtNWEzYWY2NmRkNGVlXkEyXkFqcGdeQXVyMTk3MzM4NDU@._V1_QL75_UX140_CR0,23,140,140_.jpg"
+      },
+      {
+        "character": "Maroni",
+        "urlCharacter": "https://www.imdb.com/title/tt0468569/characters/nm0000616",
+        "main": true,
+        "idIMDB": "nm0000616",
+        "name": "Eric Roberts",
+        "urlIMDB": "https://www.imdb.com/name/nm0000616/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTQ2MTk3OTgwM15BMl5BanBnXkFtZTcwODE1OTIwMw@@._V1_QL75_UX140_CR0,4,140,140_.jpg"
+      },
+      {
+        "character": "Chechen",
+        "urlCharacter": "https://www.imdb.com/title/tt0468569/characters/nm0182662",
+        "main": true,
+        "idIMDB": "nm0182662",
+        "name": "Ritchie Coster",
+        "urlIMDB": "https://www.imdb.com/name/nm0182662/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTMxMjE2MTU5M15BMl5BanBnXkFtZTYwNTM2ODM0._V1_QL75_UX140_CR0,5,140,140_.jpg"
+      },
+      {
+        "character": "Engel",
+        "urlCharacter": "https://www.imdb.com/title/tt0468569/characters/nm0001309",
+        "main": true,
+        "idIMDB": "nm0001309",
+        "name": "Anthony Michael Hall",
+        "urlIMDB": "https://www.imdb.com/name/nm0001309/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BOTdhZmJlMmUtZjdhYi00MDVjLWFhZmMtNTY4MDU5OWIyMTU5XkEyXkFqcGdeQXVyODUwMjgxNDU@._V1_QL75_UX140_CR0,32,140,140_.jpg"
+      },
+      {
+        "character": "Stephens",
+        "urlCharacter": "https://www.imdb.com/title/tt0468569/characters/nm0843775",
+        "main": true,
+        "idIMDB": "nm0843775",
+        "name": "Keith Szarabajka",
+        "urlIMDB": "https://www.imdb.com/name/nm0843775/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BODlkNjRlODYtMzNkNi00YzdmLTlmMGItNzUxNGI0MTgyZTAyXkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_QL75_UX140_CR0,8,140,140_.jpg"
+      },
+      {
+        "character": "Loeb",
+        "urlCharacter": "https://www.imdb.com/title/tt0468569/characters/nm0568801",
+        "main": true,
+        "idIMDB": "nm0568801",
+        "name": "Colin McFarlane",
+        "urlIMDB": "https://www.imdb.com/name/nm0568801/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTIzNDI4NzQzMF5BMl5BanBnXkFtZTYwMDQyNDcy._V1_QL75_UX140_CR0,0,140,140_.jpg"
+      },
+      {
+        "character": "Reese",
+        "urlCharacter": "https://www.imdb.com/title/tt0468569/characters/nm0367176",
+        "main": true,
+        "idIMDB": "nm0367176",
+        "name": "Joshua Harto",
+        "urlIMDB": "https://www.imdb.com/name/nm0367176/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BYjVlMDk3MTMtMDc0Ni00ZmQxLTg1MWQtYTUzYWNhMWU2NjdjXkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_QL75_UY140_CR35,0,140,140_.jpg"
+      }
+    ],
+    "business": {
+      "budget": "$185,000,000 (estimated)",
+      "openingWeekend": "$158,411,483 Jul 20, 2008",
+      "grossUsa": "$534,987,076",
+      "worldwide": "$1,007,336,937"
+    },
+    "metascore": 84,
+    "rated": "PG-13",
+    "trailer": {
+      "description": "Trailer for Blu-ray/DVD release of most recent Batman installment",
+      "type": "movie",
+      "duration": "33 ",
+      "qualities": [
+        {
+          "quality": "AUTO",
+          "videoURL": "https://imdb-video.media-imdb.com/vi324468761/hls-1563712918369-master.m3u8?Expires=1700655429&Signature=fK1pCsLBWiICwARsnuY98oO~FinWe~KEfFbRHfOYj6CwP-dbUhpfhHayhVwNhLfj7d3JfM9Ml1-depH3X1rw7UMsEAJoBxCrgZl~bmEjt-B3FsbornQB9GC5cDRDXl-cfIDKYglFsXvWWnQzryF29a4ZKra2SlQrejLTSXkGs2~obIW5Mn4UOu1Cs-aQisfmDKnFyNPNQ9aAT436Sr1NcG26VZk2jD1pf8KN9K3QCsW1Hz9-R6WZXRkhwmxiuQqH6NWKQJiU3pi0aIL4A02696DBA8vllyzcOJfQazZo4k0635Kr45s9Pxs4Nf85P1OamsIfMtCG~OwIIq8jpZqEvQ__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        },
+        {
+          "quality": "480p",
+          "videoURL": "https://imdb-video.media-imdb.com/vi324468761/1434659607842-pgv4ql-1563712918369.mp4?Expires=1700655429&Signature=iEI0vRtlHK1xqiQ~i0o-HoUuaZH7KgaMKekXPQzl~0x~KRNksclXrYqH6PR0VSjy3C8Koega36yfwuMkPCy7Uo5ZAfThe1LJtjwTFCxjQy77h6~Mq6nyidDdyH48vpChOhmU2-ykXKaYXeIiCBwm37g8N2niByAiSV4-~UotZRd5l-MlKx2VpawXW4o3cYucVlRXuxwtk0Or~F4MAEN2DwJr7kc0aSir0vcdkYpyf6WJPRVd36z3oFb2AqtXHqD7cJkc1ZY9njIQ~VebfDSCdqXIY7UOz5nGqh-HzDDGluSuVocMTUorCSrHZm3JLbaN8xcbpWm31-XQPzqxOjmB9w__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        },
+        {
+          "quality": "SD",
+          "videoURL": "https://imdb-video.media-imdb.com/vi324468761/1434659454657-dx9ykf-1563712918369.mp4?Expires=1700655429&Signature=l8jR8VjGU~EZEzNlzwxjqizm~slBz0i-HYJyXvrFLrYXaG0S6P23qS7xaMMUkc3ttI9sdA0apj-WvJ3vrCiGkWyFt4BJD0cYsDv6ciq0fM5O6IMpQ7R24VyeVtXLCYrrWgf1IF64Bx9ba7Oy1gAD4BG~PtfMbSLHprycBnzZ~fJtFCk1z8GUKZhL3urEYGBR9NG6cQj808ezN6PkznkIxxuf3~pFbNfX1K~gRbfycVDMKy~6Oj6wM0sWaxZcl6uk0jfQF29GU7A~Hdp31wPmXM668KYHCQcvHPR7UoOYh-qlOxWXDDXVO1F6ll3rdfy3l9qrIsVoc~IhGOqWhIbUoQ__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        }
+      ]
+    },
+    "votes": 2802739,
+    "type": "MOVIE",
+    "idIMDB": "tt0468569",
+    "title": "The Dark Knight",
+    "urlIMDB": "https://www.imdb.com/title/tt0468569/",
+    "urlPoster": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1.jpg"
+  },
+  {
+    "year": 1974,
+    "releaseDate": "19741218",
+    "directors": [
+      {
+        "id": "nm0000338",
+        "name": "Francis Ford Coppola"
+      }
+    ],
+    "writers": [
+      {
+        "id": "nm0000338",
+        "name": "Francis Ford Coppola"
+      },
+      {
+        "id": "nm0701374",
+        "name": "Mario Puzo"
+      }
+    ],
+    "runtime": 202,
+    "countries": [
+      "United States"
+    ],
+    "languages": [
+      "English",
+      "Italian",
+      "Spanish",
+      "Latin",
+      "Sicilian"
+    ],
+    "genres": [
+      "Crime",
+      "Drama"
+    ],
+    "plot": "The continuing saga of the Corleone crime family tells the story of a young Vito Corleone growing up in Sicily and in 1910s New York; and follows Michael Corleone in the 1950s as he attempts to expand the family business into Las Vegas, Hollywood and Cuba.",
+    "simplePlot": "The early life and career of Vito Corleone in 1920s New York City is portrayed, while his son, Michael, expands and tightens his grip on the family crime syndicate.",
+    "actors": [
+      {
+        "character": "Michael",
+        "urlCharacter": "https://www.imdb.com/title/tt0071562/characters/nm0000199",
+        "main": true,
+        "idIMDB": "nm0000199",
+        "name": "Al Pacino",
+        "urlIMDB": "https://www.imdb.com/name/nm0000199/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTQzMzg1ODAyNl5BMl5BanBnXkFtZTYwMjAxODQ1._V1_QL75_UX140_CR0,13,140,140_.jpg"
+      },
+      {
+        "character": "Vito Corleone",
+        "urlCharacter": "https://www.imdb.com/title/tt0071562/characters/nm0000134",
+        "main": true,
+        "idIMDB": "nm0000134",
+        "name": "Robert De Niro",
+        "urlIMDB": "https://www.imdb.com/name/nm0000134/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMjAwNDU3MzcyOV5BMl5BanBnXkFtZTcwMjc0MTIxMw@@._V1_QL75_UX140_CR0,0,140,140_.jpg"
+      },
+      {
+        "character": "Tom Hagen",
+        "urlCharacter": "https://www.imdb.com/title/tt0071562/characters/nm0000380",
+        "main": true,
+        "idIMDB": "nm0000380",
+        "name": "Robert Duvall",
+        "urlIMDB": "https://www.imdb.com/name/nm0000380/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMjk1MjA2Mjc2MF5BMl5BanBnXkFtZTcwOTE4MTUwMg@@._V1_QL75_UX140_CR0,5,140,140_.jpg"
+      },
+      {
+        "character": "Kay",
+        "urlCharacter": "https://www.imdb.com/title/tt0071562/characters/nm0000473",
+        "main": true,
+        "idIMDB": "nm0000473",
+        "name": "Diane Keaton",
+        "urlIMDB": "https://www.imdb.com/name/nm0000473/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTY5NDI5OTEyOF5BMl5BanBnXkFtZTgwMzU4NDI1NzM@._V1_QL75_UX140_CR0,7,140,140_.jpg"
+      },
+      {
+        "character": "Fredo Corleone",
+        "urlCharacter": "https://www.imdb.com/title/tt0071562/characters/nm0001030",
+        "main": true,
+        "idIMDB": "nm0001030",
+        "name": "John Cazale",
+        "urlIMDB": "https://www.imdb.com/name/nm0001030/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTUzMTM1MjI5NV5BMl5BanBnXkFtZTcwMTM5NTM1Mw@@._V1_QL75_UX140_CR0,11,140,140_.jpg"
+      },
+      {
+        "character": "Connie Corleone",
+        "urlCharacter": "https://www.imdb.com/title/tt0071562/characters/nm0001735",
+        "main": true,
+        "idIMDB": "nm0001735",
+        "name": "Talia Shire",
+        "urlIMDB": "https://www.imdb.com/name/nm0001735/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTkwMzc0NjQzNV5BMl5BanBnXkFtZTYwNzM0NTk3._V1_QL75_UX140_CR0,6,140,140_.jpg"
+      },
+      {
+        "character": "Hyman Roth",
+        "urlCharacter": "https://www.imdb.com/title/tt0071562/characters/nm0833448",
+        "main": true,
+        "idIMDB": "nm0833448",
+        "name": "Lee Strasberg",
+        "urlIMDB": "https://www.imdb.com/name/nm0833448/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BNTkzNDM2OTA4N15BMl5BanBnXkFtZTcwMDg2MzY2OQ@@._V1_QL75_UX140_CR0,0,140,140_.jpg"
+      },
+      {
+        "character": "Frankie Pentangeli",
+        "urlCharacter": "https://www.imdb.com/title/tt0071562/characters/nm0311155",
+        "main": true,
+        "idIMDB": "nm0311155",
+        "name": "Michael V. Gazzo",
+        "urlIMDB": "https://www.imdb.com/name/nm0311155/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTY0NTkwNDYxNl5BMl5BanBnXkFtZTcwMDc1ODcwOA@@._V1_QL75_UX140_CR0,16,140,140_.jpg"
+      },
+      {
+        "character": "Sen. Pat Geary",
+        "urlCharacter": "https://www.imdb.com/title/tt0071562/characters/nm0819525",
+        "main": true,
+        "idIMDB": "nm0819525",
+        "name": "G.D. Spradlin",
+        "urlIMDB": "https://www.imdb.com/name/nm0819525/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTY2NjM5ODQyMF5BMl5BanBnXkFtZTcwNjgzOTIxNg@@._V1_QL75_UX140_CR0,13,140,140_.jpg"
+      },
+      {
+        "character": "Al Neri",
+        "urlCharacter": "https://www.imdb.com/title/tt0071562/characters/nm0109175",
+        "main": true,
+        "idIMDB": "nm0109175",
+        "name": "Richard Bright",
+        "urlIMDB": "https://www.imdb.com/name/nm0109175/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMzkwNjZlNzEtNWQ2NS00ZmQ3LThiN2ItOGY2YmUzOGIyNDc4XkEyXkFqcGdeQXVyMTI3MDk3MzQ@._V1_QL75_UY140_CR60,0,140,140_.jpg"
+      },
+      {
+        "character": "Fanucci",
+        "urlCharacter": "https://www.imdb.com/title/tt0071562/characters/nm0608311",
+        "main": true,
+        "idIMDB": "nm0608311",
+        "name": "Gastone Moschin",
+        "urlIMDB": "https://www.imdb.com/name/nm0608311/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BOWI2ZmEyNWUtYTliZi00NTVmLTg3ZTEtNzY4Mzc3ZTZmNWM5XkEyXkFqcGdeQXVyMjUyNDk2ODc@._V1_QL75_UY140_CR60,0,140,140_.jpg"
+      },
+      {
+        "character": "Rocco Lampone",
+        "urlCharacter": "https://www.imdb.com/title/tt0071562/characters/nm0743159",
+        "main": true,
+        "idIMDB": "nm0743159",
+        "name": "Tom Rosqui",
+        "urlIMDB": "https://www.imdb.com/name/nm0743159/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BOTdkMTJmNjktZjE3NS00NjJlLTk3NTEtMGQyOGQ2ZjU1ZTliXkEyXkFqcGdeQXVyMTcyODY2NDQ@._V1_QL75_UY140_CR22,0,140,140_.jpg"
+      },
+      {
+        "character": "Young Clemenza",
+        "urlCharacter": "https://www.imdb.com/title/tt0071562/characters/nm0456124",
+        "main": true,
+        "idIMDB": "nm0456124",
+        "name": "Bruno Kirby",
+        "urlIMDB": "https://www.imdb.com/name/nm0456124/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTI4NTQ4NTU0OV5BMl5BanBnXkFtZTcwNTA2MDAxMw@@._V1_QL75_UX140_CR0,0,140,140_.jpg"
+      },
+      {
+        "character": "Genco",
+        "urlCharacter": "https://www.imdb.com/title/tt0071562/characters/nm0803370",
+        "main": true,
+        "idIMDB": "nm0803370",
+        "name": "Frank Sivero",
+        "urlIMDB": "https://www.imdb.com/name/nm0803370/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTkzNDQxMTcxMF5BMl5BanBnXkFtZTcwNTU0NDgyMQ@@._V1_QL75_UX140_CR0,14,140,140_.jpg"
+      },
+      {
+        "character": "Young Mama Corleone",
+        "urlCharacter": "https://www.imdb.com/title/tt0071562/characters/nm0211495",
+        "main": true,
+        "idIMDB": "nm0211495",
+        "name": "Francesca De Sapio",
+        "urlIMDB": "https://www.imdb.com/name/nm0211495/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BZWMxZjYxOGUtOTEzMi00OTJlLThlMTQtNGMxMzU5NjcxOGRkXkEyXkFqcGdeQXVyNjA2MDUzNTI@._V1_QL75_UX140_CR0,0,140,140_.jpg"
+      },
+      {
+        "character": "Mama Corleone",
+        "urlCharacter": "https://www.imdb.com/title/tt0071562/characters/nm0455088",
+        "main": true,
+        "idIMDB": "nm0455088",
+        "name": "Morgana King",
+        "urlIMDB": "https://www.imdb.com/name/nm0455088/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BODg5OTAxNDQzMl5BMl5BanBnXkFtZTgwOTM3ODIxNjM@._V1_QL75_UY140_CR1,0,140,140_.jpg"
+      },
+      {
+        "character": "Deanna Corleone",
+        "urlCharacter": "https://www.imdb.com/title/tt0071562/characters/nm0384494",
+        "main": true,
+        "idIMDB": "nm0384494",
+        "name": "Marianna Hill",
+        "urlIMDB": "https://www.imdb.com/name/nm0384494/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BYjM3M2FkZTktNWM1MC00M2JlLThhOWEtYjE0MTQyNDNhZjQzXkEyXkFqcGdeQXVyMDc2NTEzMw@@._V1_QL75_UX140_CR0,13,140,140_.jpg"
+      },
+      {
+        "character": "Signor Roberto",
+        "urlCharacter": "https://www.imdb.com/title/tt0071562/characters/nm0872689",
+        "main": true,
+        "idIMDB": "nm0872689",
+        "name": "Leopoldo Trieste",
+        "urlIMDB": "https://www.imdb.com/name/nm0872689/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BNmNkOTc4ZmUtZjI3NC00MmI2LWI1N2EtY2MwN2QxZmNkMmUxXkEyXkFqcGdeQXVyMjUyNDk2ODc@._V1_QL75_UY140_CR55,0,140,140_.jpg"
+      }
+    ],
+    "business": {
+      "budget": "$13,000,000 (estimated)",
+      "openingWeekend": "$171,417 Nov 10, 2019",
+      "grossUsa": "$47,834,595",
+      "worldwide": "$47,961,919"
+    },
+    "metascore": 90,
+    "rated": "R",
+    "trailer": {
+      "description": "Trailer for The Godfather: Part II",
+      "type": "movie",
+      "duration": "199 ",
+      "qualities": [
+        {
+          "quality": "AUTO",
+          "videoURL": "https://imdb-video.media-imdb.com/vi696162841/hls-1564159556048-master.m3u8?Expires=1700655431&Signature=TM7-gm~RK~BQ-UoUeJ5clEDzGz~5SkmxzuPGPfFA4nlyQSpoNvSj1V4yRo1-yetFliqJ~Twr6QRazGkQ7CS-3qXCi0-LGyytnAI7kK~AnkQdtZ6MwytrzrHse9~e6gjxvfWaPT7tsuDt7tfjwXrDC3K4HDkGYRt~L1ZqH66LMiM2asfSTO4SmU7I6QMzsQWntYWDm8Ohv3SiJC1yECIbwyGKjuF7nwZ8jx40I-m~NdrZhPZ5ENaTNcneFp8JVstHX9k4E8Ufpwc8DZ~Zwr7QYuQg~bcC6I8uRelG3hOSgDLKuYFyQKqYE0gNBhkrgB3wJOLTaroyjuhna7iMjMtmqg__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        },
+        {
+          "quality": "1080p",
+          "videoURL": "https://imdb-video.media-imdb.com/vi696162841/1434659529640-260ouz-1564159556047.mp4?Expires=1700655431&Signature=CzXuPXjK2in4Bbod9~nvau4wdRTtvNqzezIngbw6aJAc2BW2fVxUPV51DVoK3oaQgbQUuwJ~WMT00qF7FptdjIQaUr0pYKn5QWYdVAZZrKx5cx-kZ2we1cxyDh4khqS~DJ76zxZ06nQYVeq9GGFMjP8s8dT6pVtLB3iiA3eIf5DycuUoJqXgfOFvdURKOOR5KN-uo7kXFV74g3-CdZbw~R4DUj43zZ8jsPiyVA6aNrf8y4j~Yg1Ra758iwGjyoE~~A-pykZF4NAIoWjeh~MBMnGO05Z0ZY4qb-y9RyBnrjNmA6zedNQBHZaIQC4VmWPZoMiEpqwWWAzcqjROl8OwEA__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        },
+        {
+          "quality": "720p",
+          "videoURL": "https://imdb-video.media-imdb.com/vi696162841/1434659379400-8cjq25-1564159556047.mp4?Expires=1700655431&Signature=qmowY8WsAMw7KxV86TPqSu3Mu96j5L7n2Hkhhz92g6H4SokHdO5UZ8HMPqBhvRJWV-nyquDeX26ksy2M3wU-Y7VFSsAnx5-UsAiq4oqSxa0yMsQ6FXX0u89YxL-6UhLLgl4g~QPFoaWQEWBhq2RgrHDgkVmT-2yiH1ukoodKMNSgmQwc0Y0~-HPDykS3JxE-wdja5FHiPfGIVUooGk68nXRqG10pro5146RURUkgnAVLkLXeiU3rG-uaW4TBjifP3y-uIFeDtmqSLX1e3F~YcT0n1RiLogsVeYFQqVZktYDjxD-bwwZok8kfSvw8zy9a78V7bLwpXwcvfuKJb9brsA__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        },
+        {
+          "quality": "480p",
+          "videoURL": "https://imdb-video.media-imdb.com/vi696162841/1434659607842-pgv4ql-1564159556047.mp4?Expires=1700655431&Signature=g2u4wSm0vze7xXe~rQAkK8ZRV4HdE9IbEOQ9BQxaPelD50f~CDZHKbKqxLT1BcGqDKni8FmKoPv3ahf9rkQfkbq3ffFqziqT9LpIZs7Yt4RU6DIwdS432oLbRVlqiF0cvWjiet-o5HISh2VlsFx4YKMl62o3OMlKbXIrqs1YmWVKO-qF0tiVNT8WqjpFK2jBNT612IGvMs3P5YKlroYTDlf8M1~1t0SRrA9XIbdWiClidNTy3RxKXOZ1~0zhmBwqLyicEGlhHF5PVJYJi7trEumN3oEh9ONqyWStPBP9Njed7okcnvESVsjChObvDlUh0QhANgGvOKU2ODWcNOWVVA__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        },
+        {
+          "quality": "SD",
+          "videoURL": "https://imdb-video.media-imdb.com/vi696162841/1434659454657-dx9ykf-1564159556047.mp4?Expires=1700655431&Signature=CznqXB6e23YOA59gEOHZu8ZXj8SILQKUWveK5vayTDnARNNBCKGPYSzzjAMW6KBnheu8bY7oC9oZmjvUDv6E3kTUm-6zIMDOVF-NgA0kzDulFDOCPzoXVt0Bcmi5ixs8HUm9aDQZ8oB3zyETDGoVj0Ka3O5mSxumUlDrLzoocvMINCPtwbgRR8FULL233xqqLPuTsQrvzOxqwIl0ZWQqTfInbOOKBQUeXZ48bNOwMwxxb7mfm9CKrR5LRTd4RwsieYJY5GAdmJFHRlSe5f3IuJYC4ZrwwErIws01eCtVviS6R3~1Q8uCkBEo5cHRml5fP45ko3Kc3F836STkocKB1g__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        }
+      ]
+    },
+    "votes": 1334823,
+    "type": "MOVIE",
+    "idIMDB": "tt0071562",
+    "title": "The Godfather Part II",
+    "urlIMDB": "https://www.imdb.com/title/tt0071562/",
+    "urlPoster": "https://m.media-amazon.com/images/M/MV5BMWMwMGQzZTItY2JlNC00OWZiLWIyMDctNDk2ZDQ2YjRjMWQ0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1.jpg"
+  },
+  {
+    "year": 1957,
+    "releaseDate": "19570410",
+    "directors": [
+      {
+        "id": "nm0001486",
+        "name": "Sidney Lumet"
+      }
+    ],
+    "writers": [
+      {
+        "id": "nm0741627",
+        "name": "Reginald Rose"
+      }
+    ],
+    "runtime": 96,
+    "countries": [
+      "United States"
+    ],
+    "languages": [
+      "English"
+    ],
+    "genres": [
+      "Crime",
+      "Drama"
+    ],
+    "plot": "The defense and the prosecution have rested, and the jury is filing into the jury room to decide if a young man is guilty or innocent of murdering his father. What begins as an open-and-shut case of murder soon becomes a detective story that presents a succession of clues creating doubt, and a mini-drama of each of the jurors' prejudices and preconceptions about the trial, the accused, AND each other. Based on the play, all of the action takes place on the stage of the jury room.",
+    "simplePlot": "The jury in a New York City murder trial is frustrated by a single member whose skeptical caution forces them to more carefully consider the evidence before jumping to a hasty verdict.",
+    "actors": [
+      {
+        "character": "Juror 8",
+        "urlCharacter": "https://www.imdb.com/title/tt0050083/characters/nm0000020",
+        "main": true,
+        "idIMDB": "nm0000020",
+        "name": "Henry Fonda",
+        "urlIMDB": "https://www.imdb.com/name/nm0000020/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BOTEwNjQ2ODQ4Nl5BMl5BanBnXkFtZTYwMzEwMTM2._V1_QL75_UX140_CR0,0,140,140_.jpg"
+      },
+      {
+        "character": "Juror 3",
+        "urlCharacter": "https://www.imdb.com/title/tt0050083/characters/nm0002011",
+        "main": true,
+        "idIMDB": "nm0002011",
+        "name": "Lee J. Cobb",
+        "urlIMDB": "https://www.imdb.com/name/nm0002011/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BNDc3MTM0MDQyMF5BMl5BanBnXkFtZTYwMTczMTg2._V1_QL75_UX140_CR0,15,140,140_.jpg"
+      },
+      {
+        "character": "Juror 1",
+        "urlCharacter": "https://www.imdb.com/title/tt0050083/characters/nm0000842",
+        "main": true,
+        "idIMDB": "nm0000842",
+        "name": "Martin Balsam",
+        "urlIMDB": "https://www.imdb.com/name/nm0000842/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTQwOTE4MjMxM15BMl5BanBnXkFtZTcwMDc5MDg5Nw@@._V1_QL75_UX140_CR0,0,140,140_.jpg"
+      },
+      {
+        "character": "Juror 2",
+        "urlCharacter": "https://www.imdb.com/title/tt0050083/characters/nm0275835",
+        "main": true,
+        "idIMDB": "nm0275835",
+        "name": "John Fiedler",
+        "urlIMDB": "https://www.imdb.com/name/nm0275835/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTc1Njg3NDg1OF5BMl5BanBnXkFtZTcwMjY2MTYxOA@@._V1_QL75_UX140_CR0,13,140,140_.jpg"
+      },
+      {
+        "character": "Juror 4",
+        "urlCharacter": "https://www.imdb.com/title/tt0050083/characters/nm0550855",
+        "main": true,
+        "idIMDB": "nm0550855",
+        "name": "E.G. Marshall",
+        "urlIMDB": "https://www.imdb.com/name/nm0550855/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BM2ZlZGU2MmItNGE4Zi00ZmFmLTliOGQtNDBkZTc5ZTA4ODg3XkEyXkFqcGdeQXVyMDc2NTEzMw@@._V1_QL75_UX140_CR0,0,140,140_.jpg"
+      },
+      {
+        "character": "Juror 5",
+        "urlCharacter": "https://www.imdb.com/title/tt0050083/characters/nm0001430",
+        "main": true,
+        "idIMDB": "nm0001430",
+        "name": "Jack Klugman",
+        "urlIMDB": "https://www.imdb.com/name/nm0001430/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTkwMDIzOTg0N15BMl5BanBnXkFtZTYwODg0NDE2._V1_QL75_UX140_CR0,19,140,140_.jpg"
+      },
+      {
+        "character": "Juror 6",
+        "urlCharacter": "https://www.imdb.com/title/tt0050083/characters/nm0083081",
+        "main": true,
+        "idIMDB": "nm0083081",
+        "name": "Edward Binns",
+        "urlIMDB": "https://www.imdb.com/name/nm0083081/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BNzAwODU2Njk2Ml5BMl5BanBnXkFtZTcwMjkxODUxOA@@._V1_QL75_UX140_CR0,0,140,140_.jpg"
+      },
+      {
+        "character": "Juror 7",
+        "urlCharacter": "https://www.imdb.com/title/tt0050083/characters/nm0912001",
+        "main": true,
+        "idIMDB": "nm0912001",
+        "name": "Jack Warden",
+        "urlIMDB": "https://www.imdb.com/name/nm0912001/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTc1Mjk3Njc5MV5BMl5BanBnXkFtZTcwMDk2MzUzMQ@@._V1_QL75_UX140_CR0,5,140,140_.jpg"
+      },
+      {
+        "character": "Juror 9",
+        "urlCharacter": "https://www.imdb.com/title/tt0050083/characters/nm0842137",
+        "main": true,
+        "idIMDB": "nm0842137",
+        "name": "Joseph Sweeney",
+        "urlIMDB": "https://www.imdb.com/name/nm0842137/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BNTJhYzExYTQtYjc5My00Yzc2LWFlM2EtMjMyYzJiZTIwNzA0XkEyXkFqcGdeQXVyNzgyODM3NjM@._V1_QL75_UY140_CR23,0,140,140_.jpg"
+      },
+      {
+        "character": "Juror 10",
+        "urlCharacter": "https://www.imdb.com/title/tt0050083/characters/nm0003225",
+        "main": true,
+        "idIMDB": "nm0003225",
+        "name": "Ed Begley",
+        "urlIMDB": "https://www.imdb.com/name/nm0003225/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTQwMTM0Njg2N15BMl5BanBnXkFtZTcwNzgzNzg1MQ@@._V1_QL75_UX140_CR0,3,140,140_.jpg"
+      },
+      {
+        "character": "Juror 11",
+        "urlCharacter": "https://www.imdb.com/title/tt0050083/characters/nm0903667",
+        "main": true,
+        "idIMDB": "nm0903667",
+        "name": "George Voskovec",
+        "urlIMDB": "https://www.imdb.com/name/nm0903667/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTU1NDcyMjg0M15BMl5BanBnXkFtZTcwMTY2MzAyOA@@._V1_QL75_UX140_CR0,24,140,140_.jpg"
+      },
+      {
+        "character": "Juror 12",
+        "urlCharacter": "https://www.imdb.com/title/tt0050083/characters/nm0916434",
+        "main": true,
+        "idIMDB": "nm0916434",
+        "name": "Robert Webber",
+        "urlIMDB": "https://www.imdb.com/name/nm0916434/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTM2MTA3NzYxNl5BMl5BanBnXkFtZTcwMTM0OTUwOA@@._V1_QL75_UX140_CR0,0,140,140_.jpg"
+      },
+      {
+        "character": "Judge",
+        "urlCharacter": "https://www.imdb.com/title/tt0050083/characters/nm0094036",
+        "main": true,
+        "idIMDB": "nm0094036",
+        "name": "Rudy Bond",
+        "urlIMDB": "https://www.imdb.com/name/nm0094036/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BNWY2ZGQxMDctNWUyYS00NzYyLTk0MjMtZWY4MWY2YzQ1ZGRiXkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_QL75_UX140_CR0,1,140,140_.jpg"
+      },
+      {
+        "character": "Stenographer",
+        "urlCharacter": "https://www.imdb.com/title/tt0050083/characters/nm0331131",
+        "main": true,
+        "idIMDB": "nm0331131",
+        "name": "Tom Gorman",
+        "urlIMDB": "https://www.imdb.com/name/nm0331131/"
+      },
+      {
+        "character": "Guard",
+        "urlCharacter": "https://www.imdb.com/title/tt0050083/characters/nm0446450",
+        "main": true,
+        "idIMDB": "nm0446450",
+        "name": "James Kelly",
+        "urlIMDB": "https://www.imdb.com/name/nm0446450/"
+      },
+      {
+        "character": "Court Clerk",
+        "urlCharacter": "https://www.imdb.com/title/tt0050083/characters/nm0625180",
+        "main": true,
+        "idIMDB": "nm0625180",
+        "name": "Billy Nelson",
+        "urlIMDB": "https://www.imdb.com/name/nm0625180/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTA5Mzg0MTQtMzdmNC00NzY0LTk0ZTUtOTY3MjYxNjJiNDhlXkEyXkFqcGdeQXVyMTk2MzI2Ng@@._V1_QL75_UY140_CR24,0,140,140_.jpg"
+      },
+      {
+        "character": "The Accused",
+        "urlCharacter": "https://www.imdb.com/title/tt0050083/characters/nm0767847",
+        "main": true,
+        "idIMDB": "nm0767847",
+        "name": "John Savoca",
+        "urlIMDB": "https://www.imdb.com/name/nm0767847/"
+      },
+      {
+        "character": "Man Waiting for Elevator",
+        "urlCharacter": "https://www.imdb.com/title/tt0050083/characters/nm0830818",
+        "main": true,
+        "idIMDB": "nm0830818",
+        "name": "Walter Stocker",
+        "urlIMDB": "https://www.imdb.com/name/nm0830818/"
+      }
+    ],
+    "business": {
+      "budget": "$350,000 (estimated)",
+      "worldwide": "$955"
+    },
+    "metascore": 97,
+    "rated": "Approved",
+    "trailer": {
+      "description": "The jury in a New York City murder trial is frustrated by a single member whose skeptical caution forces them to more carefully consider the evidence before jumping to a hasty verdict.",
+      "type": "movie",
+      "duration": "134 ",
+      "qualities": [
+        {
+          "quality": "AUTO",
+          "videoURL": "https://imdb-video.media-imdb.com/vi2924462873/hls-1648342297628-master.m3u8?Expires=1700655433&Signature=jHg6-cMUCSECbBynYt8z8HpEmoArfpdS91SR5aPcQkoCQvtlbNDPHf86Puc5v2j6PyckFrQ0U5YBac7xdjZlRUGKdv6nOjZzdFNaidOmKJhgaLLxmQLKu6A8ultjDlnQ1G9Cp9Dnowum9d~nWVVgcLg-s-Wg3kZe4G8gF9~CE1Mk4Bg8bKqJjm4CFZQ3USYflcJf6l8EovrNThoqoQ0EyNVxBisAKOspFcHc0VW2VTUai0lsz7xDrAIwSrUFTCys3Ln7XNzo9rZ-ghL7Gx4XqK5b~8wp5Umep2~Wne6Qan6NXsXLMSZq3mT30ldRJx8l4E614V6IrT58vwKMfqfuiA__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        },
+        {
+          "quality": "1080p",
+          "videoURL": "https://imdb-video.media-imdb.com/vi2924462873/1434659529640-260ouz-1648342297628.mp4?Expires=1700655433&Signature=FGSGijdUjKXiyhOe2KnZ1IFUQrWXzKxqxFOjuXtwn49lDnyYAXHGY2rGOl-un8vDtQRf5KVx2OQT-0rTOXT9moYgmmFW6T7l6ZPX4VOUJD0x~sMtNCarSdtWiAfIexZxAG6phXU07Mimv~2GIiMLz1bDZ3YpREIURYV-fwGKQSpjvVzAR-eSdwhn9zFMzoprxPU70orvul1U6-9zNouIBwfYb2B2pDCq~3azP~c3FkW2InX5gn6uyKTSRxsH~07kXAr3AIKYh2zeTUa2~aL06LL74ktZ0AKHzwR9zR2X4h0aVsR0iwAIX2rztEHOSMf5aZJVyK0Bf14C2E9IcMuPHQ__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        },
+        {
+          "quality": "720p",
+          "videoURL": "https://imdb-video.media-imdb.com/vi2924462873/1434659379400-8cjq25-1648342297628.mp4?Expires=1700655433&Signature=l2G-ilJCvPS1DcxoywNdCVMQ9SA8y8ieqkE3wWQXFnIeUg55Wdw~PrXyOJrwiqnvM1wmtqOGhIFM2gDDqBpuvnwDYg-fL4Ty9DGjQwjecOdaMiSDf~NREx2bANPanIRBhnOzN44Rc056ciHnTDbtnORBWdDi7kVSvF6khbLJo-9BM-O6EbPko5a~niQegSsY0hIqOW0XcK21l7JnigXhSRGsFKkxIfMrihknfP3Db8cpwUwXEF81reS7JhPY9~P76ZwRPW~7tMZ8Ie300J97ayy2Zx0SGyJdZr0baVwzWBzs-~1zWCfqvb563ULbwIRzkeC4JiL0BKrFWg50uOinBQ__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        },
+        {
+          "quality": "480p",
+          "videoURL": "https://imdb-video.media-imdb.com/vi2924462873/1434659607842-pgv4ql-1648342297628.mp4?Expires=1700655433&Signature=TQxTV~e7ccsPl67XnTyInUW~2IeFl46Lyoc29BxKRe7dqNMc~GaHMkTcfZ4IDv6Rs-2sgM1b4WtIdJrMWUarPQI34vkJXSRJk8oHEqpX7YnRq013IRboK4Tnlsuk-v3fqVPJ5PGwzhHTuBmEy9tIqLgNf-NmfJrTABc~b1ptDgQoUrZ9fkSFAyV7GD3iXPIBVkOd17Wqckb7YaS5PLHqbh6jXCrLzeTWqyeYB6qpUMrqV7eWPlsaY8pQKRXBMpz~thY51nhC6G333nNWF4MbLaEw0LAyK43ApXfBfpEb7X0gownAvDvtvqRQUKDoLKbda7XevHQ1cwrdWIvG-fkllw__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        },
+        {
+          "quality": "SD",
+          "videoURL": "https://imdb-video.media-imdb.com/vi2924462873/1434659454657-dx9ykf-1648342297628.mp4?Expires=1700655433&Signature=r6lxCqmizKugFGrClPzJdeI3pjcBDRVkasYQnT0YYP~k6qx~0ILwQR8j70fmLU2OH13JD34nKuFNIucUpbqFDDMtMmrMxBmbLsxwu2Qo4xSO223EOHPihWi5kRDdcrDq8mZa~eUrdX7x~1pB0963XzShuMCAOO4RhoyWgxFzbRuwgVAS-51fd0afVuHufoz0NaAbeAnrT~HmGRAOOVU9kHq0FeAqJZ4eXsgn~FWNp5RGjllw8Tx8g8UqfxwWWE0Am3mj00lAlimUzOCUga1f915RrpN9l5BMIAiIYKBEDK7qVKQRKZCPoDGfOjdz-1d-TQuZY0wegW2f1Rc4g6PQVQ__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        }
+      ]
+    },
+    "votes": 840964,
+    "type": "MOVIE",
+    "idIMDB": "tt0050083",
+    "title": "12 Angry Men",
+    "urlIMDB": "https://www.imdb.com/title/tt0050083/",
+    "urlPoster": "https://m.media-amazon.com/images/M/MV5BMWU4N2FjNzYtNTVkNC00NzQ0LTg0MjAtYTJlMjFhNGUxZDFmXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1.jpg"
+  },
+  {
+    "year": 1993,
+    "releaseDate": "19940204",
+    "directors": [
+      {
+        "id": "nm0000229",
+        "name": "Steven Spielberg"
+      }
+    ],
+    "writers": [
+      {
+        "id": "nm0447745",
+        "name": "Thomas Keneally"
+      },
+      {
+        "id": "nm0001873",
+        "name": "Steven Zaillian"
+      }
+    ],
+    "runtime": 195,
+    "countries": [
+      "United States"
+    ],
+    "languages": [
+      "English",
+      "Hebrew",
+      "German",
+      "Polish",
+      "Latin"
+    ],
+    "genres": [
+      "Biography",
+      "Drama",
+      "History"
+    ],
+    "plot": "Oskar Schindler is a vain and greedy German businessman who becomes an unlikely humanitarian amid the barbaric German Nazi reign when he feels compelled to turn his factory into a refuge for Jews. Based on the true story of Oskar Schindler who managed to save about 1100 Jews from being gassed at the Auschwitz concentration camp, it is a testament to the good in all of us.",
+    "simplePlot": "In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.",
+    "actors": [
+      {
+        "character": "Oskar Schindler",
+        "urlCharacter": "https://www.imdb.com/title/tt0108052/characters/nm0000553",
+        "main": true,
+        "idIMDB": "nm0000553",
+        "name": "Liam Neeson",
+        "urlIMDB": "https://www.imdb.com/name/nm0000553/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMjA1MTQ3NzU1MV5BMl5BanBnXkFtZTgwMDE3Mjg0MzE@._V1_QL75_UY140_CR0,0,140,140_.jpg"
+      },
+      {
+        "character": "Amon Goeth",
+        "urlCharacter": "https://www.imdb.com/title/tt0108052/characters/nm0000146",
+        "main": true,
+        "idIMDB": "nm0000146",
+        "name": "Ralph Fiennes",
+        "urlIMDB": "https://www.imdb.com/name/nm0000146/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMzc5MjE1NDgyN15BMl5BanBnXkFtZTcwNzg2ODgwNA@@._V1_QL75_UX140_CR0,0,140,140_.jpg"
+      },
+      {
+        "character": "Itzhak Stern",
+        "urlCharacter": "https://www.imdb.com/title/tt0108052/characters/nm0001426",
+        "main": true,
+        "idIMDB": "nm0001426",
+        "name": "Ben Kingsley",
+        "urlIMDB": "https://www.imdb.com/name/nm0001426/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BOTU2Njg2NzM4M15BMl5BanBnXkFtZTgwNjYwNjQwMTI@._V1_QL75_UX140_CR0,2,140,140_.jpg"
+      },
+      {
+        "character": "Emilie Schindler",
+        "urlCharacter": "https://www.imdb.com/title/tt0108052/characters/nm0328751",
+        "main": true,
+        "idIMDB": "nm0328751",
+        "name": "Caroline Goodall",
+        "urlIMDB": "https://www.imdb.com/name/nm0328751/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BOTU2MDE0NzMxOV5BMl5BanBnXkFtZTcwNjE2OTg1OA@@._V1_QL75_UX140_CR0,4,140,140_.jpg"
+      },
+      {
+        "character": "Poldek Pfefferberg",
+        "urlCharacter": "https://www.imdb.com/title/tt0108052/characters/nm0755974",
+        "main": true,
+        "idIMDB": "nm0755974",
+        "name": "Jonathan Sagall",
+        "urlIMDB": "https://www.imdb.com/name/nm0755974/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BOGM4ZDg2MWMtNGNjNC00NWQ3LWE0NzktYWE3NjNiNWVkYWFjXkEyXkFqcGdeQXVyMjMyMzI4MzY@._V1_QL75_UX140_CR0,0,140,140_.jpg"
+      },
+      {
+        "character": "Helen Hirsch",
+        "urlCharacter": "https://www.imdb.com/title/tt0108052/characters/nm0001110",
+        "main": true,
+        "idIMDB": "nm0001110",
+        "name": "Embeth Davidtz",
+        "urlIMDB": "https://www.imdb.com/name/nm0001110/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTcyNTUyOTU5OV5BMl5BanBnXkFtZTcwMjE5MjQ1Nw@@._V1_QL75_UX140_CR0,5,140,140_.jpg"
+      },
+      {
+        "character": "Wiktoria Klonowska",
+        "urlCharacter": "https://www.imdb.com/title/tt0108052/characters/nm0311343",
+        "main": true,
+        "idIMDB": "nm0311343",
+        "name": "Malgorzata Gebel",
+        "urlIMDB": "https://www.imdb.com/name/nm0311343/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMzE0ZmZhMjQtY2RhYS00MjNjLWJmYzctMGNjNTViZWFlMDIzXkEyXkFqcGdeQXVyNjUxMjc1OTM@._V1_QL75_UY140_CR59,0,140,140_.jpg"
+      },
+      {
+        "character": "Wilek Chilowicz",
+        "urlCharacter": "https://www.imdb.com/title/tt0108052/characters/nm0506616",
+        "main": true,
+        "idIMDB": "nm0506616",
+        "name": "Shmuel Levy",
+        "urlIMDB": "https://www.imdb.com/name/nm0506616/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BYmYxZjFjYTgtYWQ4MS00MTU2LWI5NjEtMzRjMzBlZGU5ODgwL2ltYWdlXkEyXkFqcGdeQXVyMjMyMzI4MzY@._V1_QL75_UY140_CR2,0,140,140_.jpg"
+      },
+      {
+        "character": "Marcel Goldberg",
+        "urlCharacter": "https://www.imdb.com/title/tt0108052/characters/nm0411980",
+        "main": true,
+        "idIMDB": "nm0411980",
+        "name": "Mark Ivanir",
+        "urlIMDB": "https://www.imdb.com/name/nm0411980/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTc5MDM1NjI0Nl5BMl5BanBnXkFtZTcwOTYxMDkxNw@@._V1_QL75_UX140_CR0,7,140,140_.jpg"
+      },
+      {
+        "character": "Ingrid",
+        "urlCharacter": "https://www.imdb.com/title/tt0108052/characters/nm0534151",
+        "main": true,
+        "idIMDB": "nm0534151",
+        "name": "Béatrice Macola",
+        "urlIMDB": "https://www.imdb.com/name/nm0534151/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMzljODA2YmYtNzI1OC00ZGJmLWFkYjQtOWVlMjczODQyNWYyXkEyXkFqcGdeQXVyNjUxMjc1OTM@._V1_QL75_UY140_CR26,0,140,140_.jpg"
+      },
+      {
+        "character": "Julian Scherner",
+        "urlCharacter": "https://www.imdb.com/title/tt0108052/characters/nm0786614",
+        "main": true,
+        "idIMDB": "nm0786614",
+        "name": "Andrzej Seweryn",
+        "urlIMDB": "https://www.imdb.com/name/nm0786614/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BYTA2MGE2MDYtYzMwYy00MmI5LWJlYzgtMDMzY2M5MWY4NTA4XkEyXkFqcGdeQXVyMTc4MzI2NQ@@._V1_QL75_UX140_CR0,0,140,140_.jpg"
+      },
+      {
+        "character": "Rolf Czurda",
+        "urlCharacter": "https://www.imdb.com/title/tt0108052/characters/nm0903110",
+        "main": true,
+        "idIMDB": "nm0903110",
+        "name": "Friedrich von Thun",
+        "urlIMDB": "https://www.imdb.com/name/nm0903110/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTYwMzU4MjY3NF5BMl5BanBnXkFtZTYwODAzNjky._V1_QL75_UX140_CR0,7,140,140_.jpg"
+      },
+      {
+        "character": "Herman Toffel",
+        "urlCharacter": "https://www.imdb.com/title/tt0108052/characters/nm0525181",
+        "main": true,
+        "idIMDB": "nm0525181",
+        "name": "Krzysztof Luft",
+        "urlIMDB": "https://www.imdb.com/name/nm0525181/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BNzMyMjA5NjYtZmNlZC00OGVmLTljYmEtY2Q2ZTc2NWY4ZDRmXkEyXkFqcGdeQXVyMTc4MzI2NQ@@._V1_QL75_UY140_CR31,0,140,140_.jpg"
+      },
+      {
+        "character": "Leo John",
+        "urlCharacter": "https://www.imdb.com/title/tt0108052/characters/nm0624582",
+        "main": true,
+        "idIMDB": "nm0624582",
+        "name": "Harry Nehring",
+        "urlIMDB": "https://www.imdb.com/name/nm0624582/"
+      },
+      {
+        "character": "Albert Hujar",
+        "urlCharacter": "https://www.imdb.com/title/tt0108052/characters/nm0919256",
+        "main": true,
+        "idIMDB": "nm0919256",
+        "name": "Norbert Weisser",
+        "urlIMDB": "https://www.imdb.com/name/nm0919256/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BZjI1NWI1YWEtZWJiNi00Njk3LWEyZjgtMmM1MjMwNDMwNDMyXkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_QL75_UY140_CR18,0,140,140_.jpg"
+      },
+      {
+        "character": "Mila Pfefferberg",
+        "urlCharacter": "https://www.imdb.com/title/tt0108052/characters/nm0633058",
+        "main": true,
+        "idIMDB": "nm0633058",
+        "name": "Adi Nitzan",
+        "urlIMDB": "https://www.imdb.com/name/nm0633058/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMzA2MjAzYjAtNWY2OS00YjY2LTljZWQtMGM4MzEzZWRlMmYyXkEyXkFqcGdeQXVyNjUxMjc1OTM@._V1_QL75_UY140_CR35,0,140,140_.jpg"
+      },
+      {
+        "character": "Juda Dresner",
+        "urlCharacter": "https://www.imdb.com/title/tt0108052/characters/nm0773946",
+        "main": true,
+        "idIMDB": "nm0773946",
+        "name": "Michael Schneider",
+        "urlIMDB": "https://www.imdb.com/name/nm0773946/"
+      },
+      {
+        "character": "Chaja Dresner",
+        "urlCharacter": "https://www.imdb.com/title/tt0108052/characters/nm0264577",
+        "main": true,
+        "idIMDB": "nm0264577",
+        "name": "Miri Fabian",
+        "urlIMDB": "https://www.imdb.com/name/nm0264577/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BOWFmOGNhMDYtMzE2Mi00YzFiLWJjMzQtZmQwNGY0YmVmZjFiXkEyXkFqcGdeQXVyMjMyMzI4MzY@._V1_QL75_UX140_CR0,17,140,140_.jpg"
+      }
+    ],
+    "business": {
+      "budget": "$22,000,000 (estimated)",
+      "openingWeekend": "$656,636 Dec 19, 1993",
+      "grossUsa": "$96,898,818",
+      "worldwide": "$322,161,245"
+    },
+    "metascore": 95,
+    "rated": "R",
+    "trailer": {
+      "description": "25th Anniversary Release Trailer",
+      "type": "movie",
+      "duration": "158 ",
+      "qualities": [
+        {
+          "quality": "AUTO",
+          "videoURL": "https://imdb-video.media-imdb.com/vi1158527769/hls-1564710232826-master.m3u8?Expires=1700655436&Signature=dcs58pStPJDY5zVD5x9Gkkljbinq4-CU~hrQ4S~jWZCAt8Ze-PHa9oCTTFSBhfh1gKR5WsQ1mccuQawxHp9W3EDOmhXMReVZB5DQ2MuVYjhw7GF2qs~m6idesFQXT7PQWnThayRmeW~i9-2h2iMq0tU7aqv5tjjFyiefpz301qyagJHU2CUBWtHRQtxM0gt3O7OF1LXwzp-Ztvd2OsNvQVItoTHZSCT-WlWNRcT3miSIoZfUrI6jEl49Oi6uTpaPAQMcfrmo58h6bp4g3Zz-u635PFEkte9Bsb3-jDaBSj8ZrxP0BuQ0DAeikM8lrcOl8OC5Xr8NEHUer5zPJjHuhQ__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        },
+        {
+          "quality": "1080p",
+          "videoURL": "https://imdb-video.media-imdb.com/vi1158527769/1434659529640-260ouz-1564710232825.mp4?Expires=1700655436&Signature=qbJCkiDu9f5o7-6LbiZPTD8D96F0G7Jh1bUL0Ya5nkPNBeQHWqDY69pUEXSpumMvQ5oBO82TIMTOLLfHrWGPdWCVOU8bi3QRPr8gjgtU7tDt-Xb8RXTIpgnYXfXGNQFi~gdg71eg7JakSTSnwoxw18vqSrHMAZmrMs5GgwFJmlnYcGISGJPRP9jNxqQwRCWDE70v2OkKjf8xvbLtvDck8dl7QiKITM7uib9RNCANXVsotcJJCfVNGchJJIK5dcn~pruScTlmYCuwQwaQsTgK2LeqXYAUUJo6cpOiGIGcR2aze20O04Rdqa3IMp7Z5D528bfm0VpBbiAXTwXsYQI6Qw__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        },
+        {
+          "quality": "720p",
+          "videoURL": "https://imdb-video.media-imdb.com/vi1158527769/1434659379400-8cjq25-1564710232825.mp4?Expires=1700655436&Signature=W-poe7l87yetHK6reSas2fBmg9A~1jeOHboLuviuVY2uAQfkThrfRq3mPeAGC6lnd8d1IyyPV3YMFpUd6Ps-g2yvFDStorMWNC49zoq5CPrsTNjhxBr-A9NKQxopngDx7pTl1pgb6eklC0y3FujL-vPbovi7JSnOrdOCWywqExgW0ytmsOltiCbnPc-SktAu1P3yBiUfhfpGR3ZN4VpiSm48TI2H-dWkWGzUZYhCAYnj30snXzKf8EgoqzgpaHYTn1CDGB4PAaIquXIqVu69yvqMnPTHurAWQ8Ecyuz5ADm-gYAR~2dYJRWOyHdvqKfKYh2UpqsKpTW7TJYq6d6hmw__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        },
+        {
+          "quality": "480p",
+          "videoURL": "https://imdb-video.media-imdb.com/vi1158527769/1434659607842-pgv4ql-1564710232825.mp4?Expires=1700655436&Signature=Nn5-ufQW5PFjzdTuYGCfebElDd~k6NX3jtPf2L5kcZCnOX8b90-anEfd8ZmxvVu-~FdqJsJlVkgTGcSeJ7j6RVQdoIwoQjVLgoy0Em8lk6oYs7BJ2lz073YKlJa7GA3cKL8eQMudnjdNho8UlYsJ6-z~1eEJqBM06uqGYQVnEaTS73Y6IG4QkUf2x9H~8qq-lElbS2pyfEvaKkilC5ceEn1RrB3ba7TYbdq~QbIM~ECd2G-vc~WH2rQQFFEWMWdMBzSd~fV8VorXievXukIZG1mzHbDY7rvSMW3QHa5GNeAqwqBDVnui1uOknoiO-xUMG37jG8P2pnRdqbWqjPiXYA__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        },
+        {
+          "quality": "SD",
+          "videoURL": "https://imdb-video.media-imdb.com/vi1158527769/1434659454657-dx9ykf-1564710232825.mp4?Expires=1700655436&Signature=vGysRfWdBlCDS9GvF6Hm~JPQLTyXOirJg8NHkjPZ67BqziB5S7m5QLzdoSj8TaWsSdXlTt394yMfoWEb3jxHs9lr2S5M0IX9IAYDrwBSWO0D06C6LoPLBOpAvJk8~oBc1U~o~RZn59FAkc5~Gn6Tjge-TOStsQ~-9ssr1uOP2NFXyVoLQlHCGylTvrdUhm9XC4dYlBnBEort5BHckvtlXFkNHBG24eikV5mlIMA2EHhhCGp5l-8qdKkBaHReADFp6A8ni7A1TSmNO379rS9Ye~mmP~~26PCd9WKa1dA1R5kn08sD2A1DJuB2ZBGMu5TKF2TNEK4bMqceuUbwpgAT9Q__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        }
+      ]
+    },
+    "votes": 1417988,
+    "type": "MOVIE",
+    "idIMDB": "tt0108052",
+    "title": "Schindler's List",
+    "urlIMDB": "https://www.imdb.com/title/tt0108052/",
+    "urlPoster": "https://m.media-amazon.com/images/M/MV5BNDE4OTMxMTctNmRhYy00NWE2LTg3YzItYTk3M2UwOTU5Njg4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1.jpg"
+  },
+  {
+    "year": 2003,
+    "releaseDate": "20031217",
+    "directors": [
+      {
+        "id": "nm0001392",
+        "name": "Peter Jackson"
+      }
+    ],
+    "writers": [
+      {
+        "id": "nm0866058",
+        "name": "J.R.R. Tolkien"
+      },
+      {
+        "id": "nm0909638",
+        "name": "Fran Walsh"
+      },
+      {
+        "id": "nm0101991",
+        "name": "Philippa Boyens"
+      }
+    ],
+    "runtime": 201,
+    "countries": [
+      "New Zealand",
+      "United States"
+    ],
+    "languages": [
+      "English",
+      "Quenya",
+      "Old English",
+      "Sindarin"
+    ],
+    "genres": [
+      "Action",
+      "Adventure",
+      "Drama"
+    ],
+    "plot": "The final confrontation between the forces of good and evil fighting for control of the future of Middle-earth. Frodo and Sam reach Mordor in their quest to destroy the One Ring, while Aragorn leads the forces of good against Sauron's evil army at the stone city of Minas Tirith.",
+    "simplePlot": "Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring.",
+    "actors": [
+      {
+        "character": "Frodo",
+        "urlCharacter": "https://www.imdb.com/title/tt0167260/characters/nm0000704",
+        "main": true,
+        "idIMDB": "nm0000704",
+        "name": "Elijah Wood",
+        "urlIMDB": "https://www.imdb.com/name/nm0000704/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTM0NDIxMzQ5OF5BMl5BanBnXkFtZTcwNzAyNTA4Nw@@._V1_QL75_UX140_CR0,12,140,140_.jpg"
+      },
+      {
+        "character": "Aragorn",
+        "urlCharacter": "https://www.imdb.com/title/tt0167260/characters/nm0001557",
+        "main": true,
+        "idIMDB": "nm0001557",
+        "name": "Viggo Mortensen",
+        "urlIMDB": "https://www.imdb.com/name/nm0001557/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BNDQzOTg4NzA2Nl5BMl5BanBnXkFtZTcwMzkwNjkxMg@@._V1_QL75_UX140_CR0,11,140,140_.jpg"
+      },
+      {
+        "character": "Gandalf",
+        "urlCharacter": "https://www.imdb.com/title/tt0167260/characters/nm0005212",
+        "main": true,
+        "idIMDB": "nm0005212",
+        "name": "Ian McKellen",
+        "urlIMDB": "https://www.imdb.com/name/nm0005212/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTQ2MjgyNjk3MV5BMl5BanBnXkFtZTcwNTA3NTY5Mg@@._V1_QL75_UX140_CR0,2,140,140_.jpg"
+      },
+      {
+        "character": "Legolas",
+        "urlCharacter": "https://www.imdb.com/title/tt0167260/characters/nm0089217",
+        "main": true,
+        "idIMDB": "nm0089217",
+        "name": "Orlando Bloom",
+        "urlIMDB": "https://www.imdb.com/name/nm0089217/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMjE1MDkxMjQ3NV5BMl5BanBnXkFtZTcwMzQ3Mjc4MQ@@._V1_QL75_UX140_CR0,3,140,140_.jpg"
+      },
+      {
+        "character": "Everard Proudfoot",
+        "urlCharacter": "https://www.imdb.com/title/tt0167260/characters/nm0032370",
+        "main": true,
+        "idIMDB": "nm0032370",
+        "name": "Noel Appleby",
+        "urlIMDB": "https://www.imdb.com/name/nm0032370/"
+      },
+      {
+        "character": "Elanor Gamgee",
+        "urlCharacter": "https://www.imdb.com/title/tt0167260/characters/nm0040012",
+        "main": true,
+        "idIMDB": "nm0040012",
+        "name": "Ali Astin",
+        "urlIMDB": "https://www.imdb.com/name/nm0040012/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BOTgzYTMzZmEtOWY4ZS00MGQwLTkyMzQtZWEwYmNkOTQ3ZTEwXkEyXkFqcGdeQXVyMTA5MzMyMTEx._V1_QL75_UX140_CR0,12,140,140_.jpg"
+      },
+      {
+        "character": "Sam",
+        "urlCharacter": "https://www.imdb.com/title/tt0167260/characters/nm0000276",
+        "main": true,
+        "idIMDB": "nm0000276",
+        "name": "Sean Astin",
+        "urlIMDB": "https://www.imdb.com/name/nm0000276/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMjEzMjczOTQ1NF5BMl5BanBnXkFtZTcwMzI2NzYyMQ@@._V1_QL75_UX140_CR0,5,140,140_.jpg"
+      },
+      {
+        "character": "Gondorian Soldier 3",
+        "urlCharacter": "https://www.imdb.com/title/tt0167260/characters/nm0040058",
+        "main": true,
+        "idIMDB": "nm0040058",
+        "name": "David Aston",
+        "urlIMDB": "https://www.imdb.com/name/nm0040058/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMjA2Njc4Nzk2OV5BMl5BanBnXkFtZTcwMjExODIwOA@@._V1_QL75_UX140_CR0,0,140,140_.jpg"
+      },
+      {
+        "character": "Madril",
+        "urlCharacter": "https://www.imdb.com/title/tt0167260/characters/nm0045324",
+        "main": true,
+        "idIMDB": "nm0045324",
+        "name": "John Bach",
+        "urlIMDB": "https://www.imdb.com/name/nm0045324/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTg1Mjg2MzM0OV5BMl5BanBnXkFtZTcwMDQ2NzMwOA@@._V1_QL75_UX140_CR0,5,140,140_.jpg"
+      },
+      {
+        "character": "Boromir",
+        "urlCharacter": "https://www.imdb.com/title/tt0167260/characters/nm0000293",
+        "main": true,
+        "idIMDB": "nm0000293",
+        "name": "Sean Bean",
+        "urlIMDB": "https://www.imdb.com/name/nm0000293/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTkzMzc4MDk5OF5BMl5BanBnXkFtZTcwODg3MjUxNw@@._V1_QL75_UX140_CR0,4,140,140_.jpg"
+      },
+      {
+        "character": "Galadriel",
+        "urlCharacter": "https://www.imdb.com/title/tt0167260/characters/nm0000949",
+        "main": true,
+        "idIMDB": "nm0000949",
+        "name": "Cate Blanchett",
+        "urlIMDB": "https://www.imdb.com/name/nm0000949/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTc1MDI0MDg1NV5BMl5BanBnXkFtZTgwMDM3OTAzMTE@._V1_QL75_UX140_CR0,8,140,140_.jpg"
+      },
+      {
+        "character": "Pippin",
+        "urlCharacter": "https://www.imdb.com/title/tt0167260/characters/nm0101710",
+        "main": true,
+        "idIMDB": "nm0101710",
+        "name": "Billy Boyd",
+        "urlIMDB": "https://www.imdb.com/name/nm0101710/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTQzOTEyMTQ3OF5BMl5BanBnXkFtZTYwNzkzMDk1._V1_QL75_UX140_CR0,11,140,140_.jpg"
+      },
+      {
+        "character": "Eldarion",
+        "urlCharacter": "https://www.imdb.com/title/tt0167260/characters/nm1480092",
+        "main": true,
+        "idIMDB": "nm1480092",
+        "name": "Sadwyn Brophy",
+        "urlIMDB": "https://www.imdb.com/name/nm1480092/"
+      },
+      {
+        "character": "Damrod",
+        "urlCharacter": "https://www.imdb.com/title/tt0167260/characters/nm0115143",
+        "main": true,
+        "idIMDB": "nm0115143",
+        "name": "Alistair Browning",
+        "urlIMDB": "https://www.imdb.com/name/nm0115143/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BYjhmMzUwMWQtZGEzOC00YzM2LWFhYmEtNDBiOTZmYThiYmEyXkEyXkFqcGdeQXVyMTExNDQ2MTI@._V1_QL75_UX140_CR0,0,140,140_.jpg"
+      },
+      {
+        "character": "Celeborn",
+        "urlCharacter": "https://www.imdb.com/title/tt0167260/characters/nm0190744",
+        "main": true,
+        "idIMDB": "nm0190744",
+        "name": "Marton Csokas",
+        "urlIMDB": "https://www.imdb.com/name/nm0190744/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMjQxOTcyNDEyMV5BMl5BanBnXkFtZTgwMjMzMzYyNTE@._V1_QL75_UX140_CR0,7,140,140_.jpg"
+      },
+      {
+        "character": "Gondorian Soldier 1",
+        "urlCharacter": "https://www.imdb.com/title/tt0167260/characters/nm1480102",
+        "main": true,
+        "idIMDB": "nm1480102",
+        "name": "Richard Edge",
+        "urlIMDB": "https://www.imdb.com/name/nm1480102/"
+      },
+      {
+        "character": "Uruk 2",
+        "urlCharacter": "https://www.imdb.com/title/tt0167260/characters/nm1480106",
+        "main": true,
+        "idIMDB": "nm1480106",
+        "name": "Jason Fitch",
+        "urlIMDB": "https://www.imdb.com/name/nm1480106/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTkyMjAzMDM3Nl5BMl5BanBnXkFtZTgwODUyNzA4OTE@._V1_QL75_UY140_CR35,0,140,140_.jpg"
+      },
+      {
+        "character": "Theoden",
+        "urlCharacter": "https://www.imdb.com/title/tt0167260/characters/nm0384060",
+        "main": true,
+        "idIMDB": "nm0384060",
+        "name": "Bernard Hill",
+        "urlIMDB": "https://www.imdb.com/name/nm0384060/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMjA0MTI3MzE1M15BMl5BanBnXkFtZTYwODgzMDk1._V1_QL75_UX140_CR0,11,140,140_.jpg"
+      }
+    ],
+    "business": {
+      "budget": "$94,000,000 (estimated)",
+      "openingWeekend": "$72,629,713 Dec 21, 2003",
+      "grossUsa": "$379,427,292",
+      "worldwide": "$1,155,870,721"
+    },
+    "metascore": 94,
+    "rated": "PG-13",
+    "trailer": {
+      "description": "Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring.",
+      "type": "movie",
+      "duration": "101 ",
+      "qualities": [
+        {
+          "quality": "AUTO",
+          "videoURL": "https://imdb-video.media-imdb.com/vi718127897/hls-1640007041064-master.m3u8?Expires=1700655438&Signature=r~N~PighhIEqfPlFuRDlhdH3S1OAfYHHCUUmG9U8Jawxz2c74d0gp5A-dXp6H5clYsAx4HRPcjiIVwPh55a6UPPG39cw2LSO9SP1rx-2D3Yedq-Im7dnInR2rLvqOEwQ4oAT6ymZaZBj6V~k1xnTPHgK~DBvO9B7xBBEIiwvYsjIKiKDfe1b7hJrrkH1qGX97prZzSdUL-MbAictjixtOfl5FyijFYOmuG6DLfVlfmeuNmyQZ38uLM7zaaafZc28GpBinW1ByTakFKGoFNkXfR4W0axZN0WqgD4~NUJL2ocjsdMHppnLm11swNf70tghdH~lisAtKtLbfAdfnEZJuA__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        },
+        {
+          "quality": "1080p",
+          "videoURL": "https://imdb-video.media-imdb.com/vi718127897/1434659529640-260ouz-1640007041064.mp4?Expires=1700655438&Signature=MMMMBZuUqEHcZpshV0-LfMIrhFcKb9f-iKu12kc1KMFCmqg2KjsJcCYiTkvowuyWqYkEVKE71Ee-JunCQWuk92Y6zQMzarraDQ5Myc38pVbmgB2O9R8iO99OK7lXTA46Pc775a3rLomkmiPWR7LzZJnUGpJQS4M0TQuwnjhoW8R1ULz0VirBWjxc898STIMdFP05lMtd4euMNVVak9AU~a32MktsztPNVHZV9gMQHsFkx2A2NvAnSlrsbgy8~V07sIoV65wBQ-FHb91UPyYtoGnyEoFb8DdddgMHPylvja~KTvEwsbEYiacZX97XetSNAbcIHPddiwub3ml3sxbMIw__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        },
+        {
+          "quality": "720p",
+          "videoURL": "https://imdb-video.media-imdb.com/vi718127897/1434659379400-8cjq25-1640007041064.mp4?Expires=1700655438&Signature=B7UH4m7uv8p6wdR5FzaaQ3UGrR8oYwwKTbZygwsZ88LUp3cYzQlczrXwYXce2C-471R6f9pzcwKD0rM4bMR8mIK3FrEPK0AHo-5SVUuza~sdVvJlTBhtvDWJDq41~7kwZIn9j76tyJi9CLUm7-BZOwxP6DrX0JU3VALGw-y1azdOmWGAXXBmwbfMXo5SPS8kpyeRL8LHoVIN3txV-KM55l6tdxhT5anNwpNyWmp1cXS421Md8uBtudI46qDrt3tKynDAQl-EUJxR9W2TliFuXmpVl0i1aBb5~bIh8j-FASbYVsxnuIhCTYTxTuF1NnyHLpZQ~OB-A8jnOMIsbRUreg__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        },
+        {
+          "quality": "480p",
+          "videoURL": "https://imdb-video.media-imdb.com/vi718127897/1434659607842-pgv4ql-1640007041064.mp4?Expires=1700655438&Signature=vMPYGEkbSsHfzrkV9HUSqzswOnQqFdCLZ-3GmdnuHGHfFMf7mgresJ7FYC1kOUyTXRR4jexe~B8MyAVOUbn7sVhfR~lL7KM2LCWWEdhqRckgpvWzjPPYKZOxzmDYhV4J9ZB4fT82gPd0~8SxhGGLj-oJmWfT5t~MUujumZkG~e5ByNdv5NndeOoGqXwUS5x5xMNmi3ywVOjboSbSNBu71Pv6tecPCHgfbvM9Bpta-5EJVjOY618U8UuIZZ7lQIGHPyQTbDwek681cEo9JVpwmd58h3f71OenFvhVKVRRmOqJL2WOgLCQP8sPCJ0kEIP6KvLIybmtDOGOMwl64SWTeQ__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        },
+        {
+          "quality": "SD",
+          "videoURL": "https://imdb-video.media-imdb.com/vi718127897/1434659454657-dx9ykf-1640007041064.mp4?Expires=1700655438&Signature=kHyrh2dkvIbZpO5sI2c7GizcVcuGuMAlOmldX8P5hc3XQ9BvFhIymya-iQ5vlrqP7pl5k~53GRh7QbTTmg6FWwS25VWhQk2uNpIQXNFtW9CKARZuRZMzKPMDFoyekMiKtq1EaEU~~mVkHRL8L5wgGUuacEsfiu8ARpgG1Lw~4tdN9MjshiudcR8PmsPPaaZyGYcw3Teqiq0eHGzfJedUmxKtaJvYPUOI6iGYSIcGqrrZVjVvcvhhig0CZzxHH5Xg04p8juoVFHC4JaT04kPBO2U8UnB4rkCtq0jG8W~uZBFscgWXDv-BcXbFRtrpZXgQG9eQhNHDlRKJ5T9sLulqyQ__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        }
+      ]
+    },
+    "votes": 1931949,
+    "type": "MOVIE",
+    "idIMDB": "tt0167260",
+    "title": "The Lord of the Rings: The Return of the King",
+    "urlIMDB": "https://www.imdb.com/title/tt0167260/",
+    "urlPoster": "https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1.jpg"
+  },
+  {
+    "year": 1994,
+    "releaseDate": "19941014",
+    "directors": [
+      {
+        "id": "nm0000233",
+        "name": "Quentin Tarantino"
+      }
+    ],
+    "writers": [
+      {
+        "id": "nm0000233",
+        "name": "Quentin Tarantino"
+      },
+      {
+        "id": "nm0000812",
+        "name": "Roger Avary"
+      }
+    ],
+    "runtime": 154,
+    "countries": [
+      "United States"
+    ],
+    "languages": [
+      "English",
+      "Spanish",
+      "French"
+    ],
+    "genres": [
+      "Crime",
+      "Drama"
+    ],
+    "plot": "Jules Winnfield (Samuel L. Jackson) and Vincent Vega (John Travolta) are two hit men who are out to retrieve a suitcase stolen from their employer, mob boss Marsellus Wallace (Ving Rhames). Wallace has also asked Vincent to take his wife Mia (Uma Thurman) out a few days later when Wallace himself will be out of town. Butch Coolidge (Bruce Willis) is an aging boxer who is paid by Wallace to lose his fight. The lives of these seemingly unrelated people are woven together comprising of a series of funny, bizarre and uncalled-for incidents.",
+    "simplePlot": "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+    "actors": [
+      {
+        "character": "Vincent Vega",
+        "urlCharacter": "https://www.imdb.com/title/tt0110912/characters/nm0000237",
+        "main": true,
+        "idIMDB": "nm0000237",
+        "name": "John Travolta",
+        "urlIMDB": "https://www.imdb.com/name/nm0000237/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTMyMjZlYzgtZWRjMC00OTRmLTllZTktMmM1ODVmNjljMTQyXkEyXkFqcGdeQXVyMTExNzQ3MzAw._V1_QL75_UX140_CR0,0,140,140_.jpg"
+      },
+      {
+        "character": "Mia Wallace",
+        "urlCharacter": "https://www.imdb.com/title/tt0110912/characters/nm0000235",
+        "main": true,
+        "idIMDB": "nm0000235",
+        "name": "Uma Thurman",
+        "urlIMDB": "https://www.imdb.com/name/nm0000235/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMjMxNzk1MTQyMl5BMl5BanBnXkFtZTgwMDIzMDEyMTE@._V1_QL75_UX140_CR0,12,140,140_.jpg"
+      },
+      {
+        "character": "Jules Winnfield",
+        "urlCharacter": "https://www.imdb.com/title/tt0110912/characters/nm0000168",
+        "main": true,
+        "idIMDB": "nm0000168",
+        "name": "Samuel L. Jackson",
+        "urlIMDB": "https://www.imdb.com/name/nm0000168/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTQ1NTQwMTYxNl5BMl5BanBnXkFtZTYwMjA1MzY1._V1_QL75_UX140_CR0,13,140,140_.jpg"
+      },
+      {
+        "character": "Butch Coolidge",
+        "urlCharacter": "https://www.imdb.com/title/tt0110912/characters/nm0000246",
+        "main": true,
+        "idIMDB": "nm0000246",
+        "name": "Bruce Willis",
+        "urlIMDB": "https://www.imdb.com/name/nm0000246/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMjA0MjMzMTE5OF5BMl5BanBnXkFtZTcwMzQ2ODE3Mw@@._V1_QL75_UX140_CR0,0,140,140_.jpg"
+      },
+      {
+        "character": "Pumpkin",
+        "urlCharacter": "https://www.imdb.com/title/tt0110912/characters/nm0000619",
+        "main": true,
+        "idIMDB": "nm0000619",
+        "name": "Tim Roth",
+        "urlIMDB": "https://www.imdb.com/name/nm0000619/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMjA5NTA3MDQyOV5BMl5BanBnXkFtZTcwODM4NDE3Mw@@._V1_QL75_UX140_CR0,0,140,140_.jpg"
+      },
+      {
+        "character": "Honey Bunny",
+        "urlCharacter": "https://www.imdb.com/title/tt0110912/characters/nm0001625",
+        "main": true,
+        "idIMDB": "nm0001625",
+        "name": "Amanda Plummer",
+        "urlIMDB": "https://www.imdb.com/name/nm0001625/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMjAzNDczNzUzMV5BMl5BanBnXkFtZTcwOTQwNTQ1NA@@._V1_QL75_UY140_CR35,0,140,140_.jpg"
+      },
+      {
+        "character": "Waitress",
+        "urlCharacter": "https://www.imdb.com/title/tt0110912/characters/nm0522503",
+        "main": true,
+        "idIMDB": "nm0522503",
+        "name": "Laura Lovelace",
+        "urlIMDB": "https://www.imdb.com/name/nm0522503/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BZDVhMTc0YjktODg0OS00MzBhLWIzMTMtYzE3MWZkNTUxMjg5XkEyXkFqcGdeQXVyNjUxMjc1OTM@._V1_QL75_UY140_CR95,0,140,140_.jpg"
+      },
+      {
+        "character": "Marvin",
+        "urlCharacter": "https://www.imdb.com/title/tt0110912/characters/nm0482851",
+        "main": true,
+        "idIMDB": "nm0482851",
+        "name": "Phil LaMarr",
+        "urlIMDB": "https://www.imdb.com/name/nm0482851/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMjU5ZWU2YzItZDU5Ny00NmFiLTljY2UtMmQyMDBjM2FkMjJjXkEyXkFqcGdeQXVyMjM2NTI3MA@@._V1_QL75_UX140_CR0,0,140,140_.jpg"
+      },
+      {
+        "character": "Brett",
+        "urlCharacter": "https://www.imdb.com/title/tt0110912/characters/nm0001844",
+        "main": true,
+        "idIMDB": "nm0001844",
+        "name": "Frank Whaley",
+        "urlIMDB": "https://www.imdb.com/name/nm0001844/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BNzkyODAyMDA1N15BMl5BanBnXkFtZTcwOTEyNDk0OQ@@._V1_QL75_UX140_CR0,0,140,140_.jpg"
+      },
+      {
+        "character": "Roger",
+        "urlCharacter": "https://www.imdb.com/title/tt0110912/characters/nm0824882",
+        "main": true,
+        "idIMDB": "nm0824882",
+        "name": "Burr Steers",
+        "urlIMDB": "https://www.imdb.com/name/nm0824882/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMjEwMjYyNjEwN15BMl5BanBnXkFtZTcwMTI1Nzc2Mw@@._V1_QL75_UX140_CR0,9,140,140_.jpg"
+      },
+      {
+        "character": "Marsellus Wallace",
+        "urlCharacter": "https://www.imdb.com/title/tt0110912/characters/nm0000609",
+        "main": true,
+        "idIMDB": "nm0000609",
+        "name": "Ving Rhames",
+        "urlIMDB": "https://www.imdb.com/name/nm0000609/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTMwMTgyMzc4MV5BMl5BanBnXkFtZTYwNjE5Mjk1._V1_QL75_UX140_CR0,13,140,140_.jpg"
+      },
+      {
+        "character": "Paul",
+        "urlCharacter": "https://www.imdb.com/title/tt0110912/characters/nm0129538",
+        "main": true,
+        "idIMDB": "nm0129538",
+        "name": "Paul Calderon",
+        "urlIMDB": "https://www.imdb.com/name/nm0129538/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BZGRkMTM1Y2YtNjkxNC00ZmYzLTlkMTItNTI3YThkNTFhYTAzXkEyXkFqcGdeQXVyMTM5Mjc3NTY0._V1_QL75_UX140_CR0,0,140,140_.jpg"
+      },
+      {
+        "character": "Trudi",
+        "urlCharacter": "https://www.imdb.com/title/tt0110912/characters/nm0302345",
+        "main": true,
+        "idIMDB": "nm0302345",
+        "name": "Bronagh Gallagher",
+        "urlIMDB": "https://www.imdb.com/name/nm0302345/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMjE4OTc2MTM4OF5BMl5BanBnXkFtZTcwMTY3MjQ1Mw@@._V1_QL75_UX140_CR0,13,140,140_.jpg"
+      },
+      {
+        "character": "Jody",
+        "urlCharacter": "https://www.imdb.com/title/tt0110912/characters/nm0000275",
+        "main": true,
+        "idIMDB": "nm0000275",
+        "name": "Rosanna Arquette",
+        "urlIMDB": "https://www.imdb.com/name/nm0000275/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BNTI0MjYxMzQ0OF5BMl5BanBnXkFtZTcwMTk0OTE3NQ@@._V1_QL75_UX140_CR0,12,140,140_.jpg"
+      },
+      {
+        "character": "Lance",
+        "urlCharacter": "https://www.imdb.com/title/tt0110912/characters/nm0000655",
+        "main": true,
+        "idIMDB": "nm0000655",
+        "name": "Eric Stoltz",
+        "urlIMDB": "https://www.imdb.com/name/nm0000655/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTc1Njc5MjQyOF5BMl5BanBnXkFtZTYwNzQzNzgz._V1_QL75_UX140_CR0,5,140,140_.jpg"
+      },
+      {
+        "character": "Ed Sullivan",
+        "urlCharacter": "https://www.imdb.com/title/tt0110912/characters/nm0387533",
+        "main": true,
+        "idIMDB": "nm0387533",
+        "name": "Jerome Patrick Hoban",
+        "urlIMDB": "https://www.imdb.com/name/nm0387533/"
+      },
+      {
+        "character": "Phillip Morris Page",
+        "urlCharacter": "https://www.imdb.com/title/tt0110912/characters/nm0318402",
+        "main": true,
+        "idIMDB": "nm0318402",
+        "name": "Michael Gilden",
+        "urlIMDB": "https://www.imdb.com/name/nm0318402/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTQ4MjQyMzcyNl5BMl5BanBnXkFtZTYwOTI1OTYy._V1_QL75_UY140_CR7,0,140,140_.jpg"
+      },
+      {
+        "character": "Ricky Nelson",
+        "urlCharacter": "https://www.imdb.com/title/tt0110912/characters/nm0794967",
+        "main": true,
+        "idIMDB": "nm0794967",
+        "name": "Gary Shorelle",
+        "urlIMDB": "https://www.imdb.com/name/nm0794967/"
+      }
+    ],
+    "business": {
+      "budget": "$8,000,000 (estimated)",
+      "openingWeekend": "$9,311,882 Oct 16, 1994",
+      "grossUsa": "$107,928,762",
+      "worldwide": "$213,928,762"
+    },
+    "rating": 8.9,
+    "metascore": 95,
+    "rated": "R",
+    "trailer": {
+      "description": "The lives of two mob hit men, a boxer, a gangster's wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+      "type": "movie",
+      "duration": "81 ",
+      "qualities": [
+        {
+          "quality": "AUTO",
+          "videoURL": "https://imdb-video.media-imdb.com/vi2620371481/hls-1450205469045-master.m3u8?Expires=1700655650&Signature=prT-wnyOfQR5-oFUt-WZPZ9iTRu9cbc-Z-Ah6socrBgKZAXHozH2XlhXj5lT4c7o~kCBfcLBqydtn0pwQKBX8-EfOapzWoS0bU5jXg8wpqy25mwwr1hgchJiDKeMb8rHGl6Whb3xujLdeeIki0uPDEIv1QkSHrDpaBl1lv6rO6nzwvjGhMohmuJ50jsyWxTYy3cBq2hZ4kR1wr19ZSTh3S2V9NrXjDjGI5d6LlNskU8~NwXI-0kjSBYHspgUFOTyfr19R6G2KHkYkU3BhPzbK22hg7vbfDfpuHb6xpLnsc6jPK3Dco2XLuV8Rs484UbbGrRZ7HWrmyHdGQuujItJNQ__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        },
+        {
+          "quality": "720p",
+          "videoURL": "https://imdb-video.media-imdb.com/vi2620371481/1434659379400-8cjq25-1450205469045.mp4?Expires=1700655650&Signature=jJKsvohP~YhVI5Z28iajkTDUt0MpVhKMfwzutHoiJ8ia0XeMdU9ibkqQZtdL1eDSt3vL1vLxg671Tds4QI4E4PWChA5jId0ECzc4lrvxzlylAwy6yxf-dhe7-Ctn3S08wxuYZ5ltHHLUX~tV8Xc2QjLXO2xRxxKpW7pzm7e2F6E1mr8O8FfSqnbuV0tFfJjwWBTVn~efMRZtvC4jZjfu-cTJfEA9~7dR4EK9UetFuONRyODi4p01Y1moROVQtP7EVxaDGrZj6T06tSPLWtLWyDXY4Obu6gYJtDd~42Hx4dL1SLhITZdzHlrVpxw63d81SC9Q26TfCWprwJGvoqSC3g__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        },
+        {
+          "quality": "480p",
+          "videoURL": "https://imdb-video.media-imdb.com/vi2620371481/1434659607842-pgv4ql-1450205469045.mp4?Expires=1700655650&Signature=n7HWfHfzdhAHlPq--5WNQhUsoTz89zVJ5F6TxyMGFTjSnN-ver17qVSiT02SDjdG3VfFbfI8AnlbyP5Oy4lFLsYTVOt8zpjc7PR5RVoZ2iYr6Asv6elEnb8m194I-iUnDX4KM7~3wb6fLcGtB1WHMB1LXN08hOI9DPgms-9zYvL5yPH0Bgb6QGqnVfmkbh2KZ~pviMF1DC2gFxInfgi7kRqSlYL3pq9xKoAxP2jSXK7n~afIejUh1CDb4cuq29QokIlwkBH6Qu2TsQ69s5HVinqG1DW3vsmfeYHG53eWMIPXz71sc-3DvPwm2jrSm-Qo0gQ~bGjWAPnl-WRtEVBGRg__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        },
+        {
+          "quality": "SD",
+          "videoURL": "https://imdb-video.media-imdb.com/vi2620371481/1434659454657-dx9ykf-1450205469045.mp4?Expires=1700655650&Signature=DSQnbm4rZKxL6EfS5QiICrN3GX~sFwl7Y8kFyIiJEcedZbAHIDLn3t-TEJ-lh5o0k1zUqCQjE8~Dv9GdA4pduzTO6HqgxZyRVhM5WHab6d7n6P-Xj4BzendYGzGebhX6bBUj52-zStNjw7q2EtBBFGJ6ZWmPc6jUoKc80ynCGSYt3DWDZ-4G7MVElKGZNQr9x12fVGjwoqoeLfR8bpOS15apmwPCxA2rp-ioGBK5PTLwEkyrc0D3CGroiAbcsEARJ907O4wfwaMig-fyyc3D1ruApU3KYteRoDMM997rVNN80PyASOX-6YL2cEd8UpIt4gu6Ldn-~I~JmU7yWIV3bw__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        }
+      ]
+    },
+    "votes": 2163381,
+    "type": "MOVIE",
+    "idIMDB": "tt0110912",
+    "title": "Pulp Fiction",
+    "urlIMDB": "https://www.imdb.com/title/tt0110912/",
+    "urlPoster": "https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1.jpg"
+  },
+  {
+    "year": 2001,
+    "releaseDate": "20011219",
+    "directors": [
+      {
+        "id": "nm0001392",
+        "name": "Peter Jackson"
+      }
+    ],
+    "writers": [
+      {
+        "id": "nm0866058",
+        "name": "J.R.R. Tolkien"
+      },
+      {
+        "id": "nm0909638",
+        "name": "Fran Walsh"
+      },
+      {
+        "id": "nm0101991",
+        "name": "Philippa Boyens"
+      }
+    ],
+    "runtime": 178,
+    "countries": [
+      "New Zealand",
+      "United States"
+    ],
+    "languages": [
+      "English",
+      "Sindarin"
+    ],
+    "genres": [
+      "Action",
+      "Adventure",
+      "Drama"
+    ],
+    "plot": "An ancient Ring thought lost for centuries has been found, and through a strange twist of fate has been given to a small Hobbit named Frodo. When Gandalf discovers the Ring is in fact the One Ring of the Dark Lord Sauron, Frodo must make an epic quest to the Cracks of Doom in order to destroy it. However, he does not go alone. He is joined by Gandalf, Legolas the elf, Gimli the Dwarf, Aragorn, Boromir, and his three Hobbit friends Merry, Pippin, and Samwise. Through mountains, snow, darkness, forests, rivers and plains, facing evil and danger at every corner the Fellowship of the Ring must go. Their quest to destroy the One Ring is the only hope for the end of the Dark Lords reign.",
+    "simplePlot": "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.",
+    "actors": [
+      {
+        "character": "Frodo",
+        "urlCharacter": "https://www.imdb.com/title/tt0120737/characters/nm0000704",
+        "main": true,
+        "idIMDB": "nm0000704",
+        "name": "Elijah Wood",
+        "urlIMDB": "https://www.imdb.com/name/nm0000704/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTM0NDIxMzQ5OF5BMl5BanBnXkFtZTcwNzAyNTA4Nw@@._V1_QL75_UX140_CR0,12,140,140_.jpg"
+      },
+      {
+        "character": "Gandalf",
+        "urlCharacter": "https://www.imdb.com/title/tt0120737/characters/nm0005212",
+        "main": true,
+        "idIMDB": "nm0005212",
+        "name": "Ian McKellen",
+        "urlIMDB": "https://www.imdb.com/name/nm0005212/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTQ2MjgyNjk3MV5BMl5BanBnXkFtZTcwNTA3NTY5Mg@@._V1_QL75_UX140_CR0,2,140,140_.jpg"
+      },
+      {
+        "character": "Legolas",
+        "urlCharacter": "https://www.imdb.com/title/tt0120737/characters/nm0089217",
+        "main": true,
+        "idIMDB": "nm0089217",
+        "name": "Orlando Bloom",
+        "urlIMDB": "https://www.imdb.com/name/nm0089217/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMjE1MDkxMjQ3NV5BMl5BanBnXkFtZTcwMzQ3Mjc4MQ@@._V1_QL75_UX140_CR0,3,140,140_.jpg"
+      },
+      {
+        "character": "Boromir",
+        "urlCharacter": "https://www.imdb.com/title/tt0120737/characters/nm0000293",
+        "main": true,
+        "idIMDB": "nm0000293",
+        "name": "Sean Bean",
+        "urlIMDB": "https://www.imdb.com/name/nm0000293/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTkzMzc4MDk5OF5BMl5BanBnXkFtZTcwODg3MjUxNw@@._V1_QL75_UX140_CR0,4,140,140_.jpg"
+      },
+      {
+        "character": "Voice of the Ring",
+        "urlCharacter": "https://www.imdb.com/title/tt0120737/characters/nm0397102",
+        "main": true,
+        "idIMDB": "nm0397102",
+        "name": "Alan Howard",
+        "urlIMDB": "https://www.imdb.com/name/nm0397102/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTQyMDYwNzY3OF5BMl5BanBnXkFtZTcwMDYxMTUwOA@@._V1_QL75_UX140_CR0,0,140,140_.jpg"
+      },
+      {
+        "character": "Everard Proudfoot",
+        "urlCharacter": "https://www.imdb.com/title/tt0120737/characters/nm0032370",
+        "main": true,
+        "idIMDB": "nm0032370",
+        "name": "Noel Appleby",
+        "urlIMDB": "https://www.imdb.com/name/nm0032370/"
+      },
+      {
+        "character": "Sam",
+        "urlCharacter": "https://www.imdb.com/title/tt0120737/characters/nm0000276",
+        "main": true,
+        "idIMDB": "nm0000276",
+        "name": "Sean Astin",
+        "urlIMDB": "https://www.imdb.com/name/nm0000276/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMjEzMjczOTQ1NF5BMl5BanBnXkFtZTcwMzI2NzYyMQ@@._V1_QL75_UX140_CR0,5,140,140_.jpg"
+      },
+      {
+        "character": "Sauron",
+        "urlCharacter": "https://www.imdb.com/title/tt0120737/characters/nm1019674",
+        "main": true,
+        "idIMDB": "nm1019674",
+        "name": "Sala Baker",
+        "urlIMDB": "https://www.imdb.com/name/nm1019674/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BNTI0M2E4NzctNzY1OC00ZDYwLWI4MTAtMTliNTVkODhlODY0XkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_QL75_UX140_CR0,12,140,140_.jpg"
+      },
+      {
+        "character": "Pippin",
+        "urlCharacter": "https://www.imdb.com/title/tt0120737/characters/nm0101710",
+        "main": true,
+        "idIMDB": "nm0101710",
+        "name": "Billy Boyd",
+        "urlIMDB": "https://www.imdb.com/name/nm0101710/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTQzOTEyMTQ3OF5BMl5BanBnXkFtZTYwNzkzMDk1._V1_QL75_UX140_CR0,11,140,140_.jpg"
+      },
+      {
+        "character": "Gollum",
+        "urlCharacter": "https://www.imdb.com/title/tt0120737/characters/nm0785227",
+        "main": true,
+        "idIMDB": "nm0785227",
+        "name": "Andy Serkis",
+        "urlIMDB": "https://www.imdb.com/name/nm0785227/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BYTgwYmM0ZjgtMWRmZC00YTc1LWIwYWEtYTFjMTZiMDNjNWRkXkEyXkFqcGdeQXVyNjcwMjczMzE@._V1_QL75_UX140_CR0,12,140,140_.jpg"
+      },
+      {
+        "character": "Celeborn",
+        "urlCharacter": "https://www.imdb.com/title/tt0120737/characters/nm0190744",
+        "main": true,
+        "idIMDB": "nm0190744",
+        "name": "Marton Csokas",
+        "urlIMDB": "https://www.imdb.com/name/nm0190744/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMjQxOTcyNDEyMV5BMl5BanBnXkFtZTgwMjMzMzYyNTE@._V1_QL75_UX140_CR0,7,140,140_.jpg"
+      },
+      {
+        "character": "Aragorn",
+        "urlCharacter": "https://www.imdb.com/title/tt0120737/characters/nm0001557",
+        "main": true,
+        "idIMDB": "nm0001557",
+        "name": "Viggo Mortensen",
+        "urlIMDB": "https://www.imdb.com/name/nm0001557/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BNDQzOTg4NzA2Nl5BMl5BanBnXkFtZTcwMzkwNjkxMg@@._V1_QL75_UX140_CR0,11,140,140_.jpg"
+      },
+      {
+        "character": "Mrs. Proudfoot",
+        "urlCharacter": "https://www.imdb.com/title/tt0120737/characters/nm1104283",
+        "main": true,
+        "idIMDB": "nm1104283",
+        "name": "Megan Edwards",
+        "urlIMDB": "https://www.imdb.com/name/nm1104283/"
+      },
+      {
+        "character": "Gondorian Archivist",
+        "urlCharacter": "https://www.imdb.com/title/tt0120737/characters/nm1096480",
+        "main": true,
+        "idIMDB": "nm1096480",
+        "name": "Michael Elsworth",
+        "urlIMDB": "https://www.imdb.com/name/nm1096480/"
+      },
+      {
+        "character": "Galadriel",
+        "urlCharacter": "https://www.imdb.com/title/tt0120737/characters/nm0000949",
+        "main": true,
+        "idIMDB": "nm0000949",
+        "name": "Cate Blanchett",
+        "urlIMDB": "https://www.imdb.com/name/nm0000949/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTc1MDI0MDg1NV5BMl5BanBnXkFtZTgwMDM3OTAzMTE@._V1_QL75_UX140_CR0,8,140,140_.jpg"
+      },
+      {
+        "character": "Gil-galad",
+        "urlCharacter": "https://www.imdb.com/title/tt0120737/characters/nm0272527",
+        "main": true,
+        "idIMDB": "nm0272527",
+        "name": "Mark Ferguson",
+        "urlIMDB": "https://www.imdb.com/name/nm0272527/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTY2NzM1MTcxN15BMl5BanBnXkFtZTcwOTg4MDkwOA@@._V1_QL75_UX140_CR0,12,140,140_.jpg"
+      },
+      {
+        "character": "Bilbo",
+        "urlCharacter": "https://www.imdb.com/title/tt0120737/characters/nm0000453",
+        "main": true,
+        "idIMDB": "nm0000453",
+        "name": "Ian Holm",
+        "urlIMDB": "https://www.imdb.com/name/nm0000453/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTI0ODA2MjM2NF5BMl5BanBnXkFtZTYwNDg5NDIz._V1_QL75_UX140_CR0,13,140,140_.jpg"
+      },
+      {
+        "character": "Saruman",
+        "urlCharacter": "https://www.imdb.com/title/tt0120737/characters/nm0000489",
+        "main": true,
+        "idIMDB": "nm0000489",
+        "name": "Christopher Lee",
+        "urlIMDB": "https://www.imdb.com/name/nm0000489/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTMzMjU5NDA0NV5BMl5BanBnXkFtZTYwMTUwMzI0._V1_QL75_UX140_CR0,11,140,140_.jpg"
+      }
+    ],
+    "business": {
+      "budget": "$93,000,000 (estimated)",
+      "openingWeekend": "$47,211,490 Dec 23, 2001",
+      "grossUsa": "$316,115,420",
+      "worldwide": "$898,523,656"
+    },
+    "rating": 8.8,
+    "metascore": 92,
+    "rated": "PG-13",
+    "trailer": {
+      "description": "A shy young hobbit named Frodo Baggins inherits a simple gold ring. He knows the ring has power, but not that he alone holds the secret to the survival--or enslavement--of the entire world. Now Frodo, accompanied by a wizard, an elf, a dwarf, two men and three loyal hobbit friends, must become the greatest hero the world has ever known to save the land and the people he loves.",
+      "type": "movie",
+      "duration": "114 ",
+      "qualities": [
+        {
+          "quality": "AUTO",
+          "videoURL": "https://imdb-video.media-imdb.com/vi684573465/hls-1640006590845-master.m3u8?Expires=1700655652&Signature=ueu8fM08qNzhytGz~T~rY3awLoqi2n0WeMt3akW24bM4lC0EOUjuMT8CpQ8PdVwKbHzu-sNB9ciGley167RAqHkXYq177MvaqSzH8deBuNi8k~pQn2sl~-nsEtjqKxn~yBLoH7HdjrZ0HYEpWhFrT8bnKP43NffNLUTpCK96Vv6~JSsswLKe2o6dnnaP9z~0sVaGOPuvEenOzxkpdZbeqRbfM4qYXeHtkk-T7bCpTWJirjppXbs6i6-iVGbhuwFPF1kuHCi0GzpSy8q8FaQ4tbTbr0qXkuSwfP4ZdBc~srTiqbx-fcw9g3bDqMeEaTpAyVkbVJ570ihl0vrxiUeBbQ__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        },
+        {
+          "quality": "1080p",
+          "videoURL": "https://imdb-video.media-imdb.com/vi684573465/1434659529640-260ouz-1640006590845.mp4?Expires=1700655652&Signature=o-0TEKBFhK-AMqnGIDkPc1rubOlLS9C8NDtc1xWhZDBTt7NeUSl79jXqe5ZRipgkiEsHDpwwd8jpGS23YaVmtfZp16wHjQQvuL8fGzDu48d2OrBhh~TJ2kivRVX2tVlNy35Rd99jAsV6sCZuCXQlGtyWaW7cGyvkKrOfoDnmah6~UlI3Axi6yuOk1SNhGcPoth16CrJgzgYcB9S1Ub4P2WPe329Tog294f~DdFKU30FJL-JmDNC2aKlg2~mzeZDUSkG6FnCgimJ~TbNBwbjLfKGb34u6L8nyWI-m-FL1iErXKxOgeZ6HxBv9moafVkx0t2NlBRrt7iK0i4ZEMtI1TA__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        },
+        {
+          "quality": "720p",
+          "videoURL": "https://imdb-video.media-imdb.com/vi684573465/1434659379400-8cjq25-1640006590845.mp4?Expires=1700655652&Signature=RVuC~6B3AbM6oWqw~XFy~yrIVxNwLAj5Fm-HmXtfKvP-Y9Wejm7ObnxRFuC48sVlX5Iz7VM34lgcQwIZXbhKL2Ny7UfKGwl8WcyFShX2jSZo4ncC4oxezUz6vzbGUA~MKKoVY851ntT0AZCqmihBF2TffwD~h9DskjMwGa9mAMM~QkUv4yJLNbmKmpEiqKddzQMH2DwPNaDI1vFSc6iqBVZcC3Zczyv6iFhR1ccGYJvMeGRfPOKS8k5cGiduW5IztdU7x~U2~cwptZBRNQ8op4eqfushVBguA-ZvkbU98bdALAwJFc9TUXIRgNkPifb0pmuWp4hVdvhhKPG7UjdRcg__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        },
+        {
+          "quality": "480p",
+          "videoURL": "https://imdb-video.media-imdb.com/vi684573465/1434659607842-pgv4ql-1640006590845.mp4?Expires=1700655652&Signature=jWHilYpxGT8ViJTiAXZhC5PEtXGJMGg4T3nDuBiSHn6-lGZQJzLgGayO3yeM1nEZ9SebkxjjrNcSBgr7jEHI-wPe37HwlJ4jMPrQOQsssBBK7u1rpePx1xv16krIvqFm9jYkxEHXvoQ3LKz003IGq7g19VRK5uo795cygI3aTdCvHUq0-iyiHAFnO1FYbKCs0YVa-8aNFf8KpBjG-uJCpZLAgKUXNb9xrKiUACUuNLvSsx9b4LuiocBJ6pL8Po9hXW~CNrFb6MffNdnv-IRPy~7F4OFoCAaRPEhWAtB8orRr9YXmFwjbQsN6Utwm4CgvVyEZgOZFIjODeB7djeKXDg__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        },
+        {
+          "quality": "SD",
+          "videoURL": "https://imdb-video.media-imdb.com/vi684573465/1434659454657-dx9ykf-1640006590845.mp4?Expires=1700655652&Signature=lQWG40iGnANKC0ylBaOMgG4iCGkcFFEMnk6~wLPe6LZU0JaqfDtP~tL4ftRQTd-DeFYco3Gr0oCjiRR6cgdOBkf76yfvVgKQVootifdT58w3dvlmMVZGmMmJoApbdOy-1HVyGpV0Oa5gVB0PWjqsBsP-7CRk2ycTJ6VnecuhrjTB1LWNHuVEbxRsnIVGdANdXgoy2xLDYUZ68bpm4qnfJrsfF1nI2kcEQb-bhiNQCipNpnEMFa0OEdC9DrZ54PkQlHkg8zb2WvxKtlALjlS1QkMZlJIh-CToDxxaXFL~C8eDFX5bdOgbG1YYCAGHgl67jXBpH1jOaq6RTU0DzwpTQw__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        }
+      ]
+    },
+    "votes": 1958924,
+    "type": "MOVIE",
+    "idIMDB": "tt0120737",
+    "title": "The Lord of the Rings: The Fellowship of the Ring",
+    "urlIMDB": "https://www.imdb.com/title/tt0120737/",
+    "urlPoster": "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1.jpg"
+  },
+  {
+    "originalTitle": "Il buono, il brutto, il cattivo",
+    "year": 1966,
+    "releaseDate": "19671229",
+    "directors": [
+      {
+        "id": "nm0001466",
+        "name": "Sergio Leone"
+      }
+    ],
+    "writers": [
+      {
+        "id": "nm0898812",
+        "name": "Luciano Vincenzoni"
+      },
+      {
+        "id": "nm0001466",
+        "name": "Sergio Leone"
+      },
+      {
+        "id": "nm0408488",
+        "name": "Agenore Incrocci"
+      }
+    ],
+    "runtime": 178,
+    "countries": [
+      "Italy",
+      "Spain",
+      "West Germany"
+    ],
+    "languages": [
+      "Italian"
+    ],
+    "genres": [
+      "Adventure",
+      "Western"
+    ],
+    "plot": "Blondie, The Good (Clint Eastwood), is a professional gunslinger who is out trying to earn a few dollars. Angel Eyes, The Bad (Lee Van Cleef), is a hitman who always commits to a task and sees it through--as long as he's paid to do so. And Tuco, The Ugly (Eli Wallach), is a wanted outlaw trying to take care of his own hide. Tuco and Blondie share a partnership making money off of Tuco's bounty, but when Blondie unties the partnership, Tuco tries to hunt down Blondie. When Blondie and Tuco come across a horse carriage loaded with dead bodies, they soon learn from the only survivor, Bill Carson (Antonio Casale), that he and a few other men have buried a stash of gold in a cemetery. Unfortunately, Carson dies and Tuco only finds out the name of the cemetery, while Blondie finds out the name on the grave. Now the two must keep each other alive in order to find the gold. Angel Eyes (who had been looking for Bill Carson) discovers that Tuco and Blondie met with Carson and knows they know where the gold is; now he needs them to lead him to it. Now The Good, the Bad, and the Ugly must all battle it out to get their hands on $200,000.00 worth of gold.",
+    "simplePlot": "A bounty hunting scam joins two men in an uneasy alliance against a third in a race to find a fortune in gold buried in a remote cemetery.",
+    "actors": [
+      {
+        "character": "Blondie",
+        "urlCharacter": "https://www.imdb.com/title/tt0060196/characters/nm0000142",
+        "main": true,
+        "idIMDB": "nm0000142",
+        "name": "Clint Eastwood",
+        "urlIMDB": "https://www.imdb.com/name/nm0000142/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTg3MDc0MjY0OV5BMl5BanBnXkFtZTcwNzU1MDAxOA@@._V1_QL75_UX140_CR0,2,140,140_.jpg"
+      },
+      {
+        "character": "Tuco",
+        "urlCharacter": "https://www.imdb.com/title/tt0060196/characters/nm0908919",
+        "main": true,
+        "idIMDB": "nm0908919",
+        "name": "Eli Wallach",
+        "urlIMDB": "https://www.imdb.com/name/nm0908919/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BNjk1NzcyZTItMjZkOC00MjM2LThiYWUtZDE5NGZlZDliYmViXkEyXkFqcGdeQXVyMDc2NTEzMw@@._V1_QL75_UX140_CR0,11,140,140_.jpg"
+      },
+      {
+        "character": "Sentenza",
+        "urlCharacter": "https://www.imdb.com/title/tt0060196/characters/nm0001812",
+        "main": true,
+        "idIMDB": "nm0001812",
+        "name": "Lee Van Cleef",
+        "urlIMDB": "https://www.imdb.com/name/nm0001812/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTY0ODU1NjY5N15BMl5BanBnXkFtZTcwNTI0NzEyMw@@._V1_QL75_UY140_CR26,0,140,140_.jpg"
+      },
+      {
+        "character": "Alcoholic Union Captain",
+        "urlCharacter": "https://www.imdb.com/title/tt0060196/characters/nm0321294",
+        "main": true,
+        "idIMDB": "nm0321294",
+        "name": "Aldo Giuffrè",
+        "urlIMDB": "https://www.imdb.com/name/nm0321294/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BNTBhYjI5NmEtMjc4OS00YTM4LWE2NTEtOGEwYzNmOGNmOGI0XkEyXkFqcGdeQXVyMzI5NDcxNzI@._V1_QL75_UX140_CR0,1,140,140_.jpg"
+      },
+      {
+        "character": "Father Pablo Ramirez",
+        "urlCharacter": "https://www.imdb.com/title/tt0060196/characters/nm0685559",
+        "main": true,
+        "idIMDB": "nm0685559",
+        "name": "Luigi Pistilli",
+        "urlIMDB": "https://www.imdb.com/name/nm0685559/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTM2MzM4MDI5OV5BMl5BanBnXkFtZTcwNjU2NzEyMw@@._V1_QL75_UY140_CR20,0,140,140_.jpg"
+      },
+      {
+        "character": "Maria",
+        "urlCharacter": "https://www.imdb.com/title/tt0060196/characters/nm0711502",
+        "main": true,
+        "idIMDB": "nm0711502",
+        "name": "Rada Rassimov",
+        "urlIMDB": "https://www.imdb.com/name/nm0711502/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BYmE5NzEwOGUtNGIzNy00NDk5LWFkOGUtZjJhNzc2MjYzODEyXkEyXkFqcGdeQXVyMjUyNDk2ODc@._V1_QL75_UY140_CR1,0,140,140_.jpg"
+      },
+      {
+        "character": "Storekeeper",
+        "urlCharacter": "https://www.imdb.com/title/tt0060196/characters/nm0677654",
+        "main": true,
+        "idIMDB": "nm0677654",
+        "name": "Enzo Petito",
+        "urlIMDB": "https://www.imdb.com/name/nm0677654/"
+      },
+      {
+        "character": "Mexican Peon",
+        "urlCharacter": "https://www.imdb.com/title/tt0060196/characters/nm0769116",
+        "main": true,
+        "idIMDB": "nm0769116",
+        "name": "Claudio Scarchilli",
+        "urlIMDB": "https://www.imdb.com/name/nm0769116/"
+      },
+      {
+        "character": "Sheriff",
+        "urlCharacter": "https://www.imdb.com/title/tt0060196/characters/nm0058384",
+        "main": true,
+        "idIMDB": "nm0058384",
+        "name": "John Bartha",
+        "urlIMDB": "https://www.imdb.com/name/nm0058384/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMzlhZWQwZTktYmM4MS00NThjLWE0NjktODNhNDU2Yzc2ZGM5XkEyXkFqcGdeQXVyNTc0NjY1ODk@._V1_QL75_UY140_CR62,0,140,140_.jpg"
+      },
+      {
+        "character": "Baker",
+        "urlCharacter": "https://www.imdb.com/title/tt0060196/characters/nm0520859",
+        "main": true,
+        "idIMDB": "nm0520859",
+        "name": "Livio Lorenzon",
+        "urlIMDB": "https://www.imdb.com/name/nm0520859/"
+      },
+      {
+        "character": "Jackson",
+        "urlCharacter": "https://www.imdb.com/title/tt0060196/characters/nm0142804",
+        "main": true,
+        "idIMDB": "nm0142804",
+        "name": "Antonio Casale",
+        "urlIMDB": "https://www.imdb.com/name/nm0142804/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BY2U3MmM1NDQtMjU4OC00YTQ1LThjZjUtMjFlN2Q5MmVkZDIwXkEyXkFqcGdeQXVyMjIxMzMyMQ@@._V1_QL75_UY140_CR51,0,140,140_.jpg"
+      },
+      {
+        "character": "Mexican Peon",
+        "urlCharacter": "https://www.imdb.com/title/tt0060196/characters/nm0769118",
+        "main": true,
+        "idIMDB": "nm0769118",
+        "name": "Sandro Scarchilli",
+        "urlIMDB": "https://www.imdb.com/name/nm0769118/"
+      },
+      {
+        "character": "Member of Angel Eyes' Gang",
+        "urlCharacter": "https://www.imdb.com/title/tt0060196/characters/nm0824934",
+        "main": true,
+        "idIMDB": "nm0824934",
+        "name": "Benito Stefanelli",
+        "urlIMDB": "https://www.imdb.com/name/nm0824934/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BYTIzNjY5MWUtOTJlMC00MTA0LTkyOGYtNTIwMTcwMWI3YTU4XkEyXkFqcGdeQXVyMTI3MDk3MzQ@._V1_QL75_UY140_CR94,0,140,140_.jpg"
+      },
+      {
+        "character": "Monk",
+        "urlCharacter": "https://www.imdb.com/title/tt0060196/characters/nm0637064",
+        "main": true,
+        "idIMDB": "nm0637064",
+        "name": "Angelo Novi",
+        "urlIMDB": "https://www.imdb.com/name/nm0637064/"
+      },
+      {
+        "character": "Stevens",
+        "urlCharacter": "https://www.imdb.com/title/tt0060196/characters/nm0143030",
+        "main": true,
+        "idIMDB": "nm0143030",
+        "name": "Antonio Casas",
+        "urlIMDB": "https://www.imdb.com/name/nm0143030/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BNmQ4NDJmNWUtYzgwZS00YTU1LWE4ZDAtNzJiZGFhZDUzNjg2XkEyXkFqcGdeQXVyNzA4ODc3ODU@._V1_QL75_UY140_CR55,0,140,140_.jpg"
+      },
+      {
+        "character": "Member of Angel Eyes' Gang",
+        "urlCharacter": "https://www.imdb.com/title/tt0060196/characters/nm0759757",
+        "main": true,
+        "idIMDB": "nm0759757",
+        "name": "Aldo Sambrell",
+        "urlIMDB": "https://www.imdb.com/name/nm0759757/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMjAxNjY0NTQzMV5BMl5BanBnXkFtZTYwODEwMjI0._V1_QL75_UX140_CR0,0,140,140_.jpg"
+      },
+      {
+        "character": "One-Armed Bounty Hunter",
+        "urlCharacter": "https://www.imdb.com/title/tt0060196/characters/nm0612468",
+        "main": true,
+        "idIMDB": "nm0612468",
+        "name": "Al Mulock",
+        "urlIMDB": "https://www.imdb.com/name/nm0612468/"
+      },
+      {
+        "character": "Blonde Bounty Hunter",
+        "urlCharacter": "https://www.imdb.com/title/tt0060196/characters/nm0579155",
+        "main": true,
+        "idIMDB": "nm0579155",
+        "name": "Sergio Mendizábal",
+        "urlIMDB": "https://www.imdb.com/name/nm0579155/"
+      }
+    ],
+    "business": {
+      "budget": "$1,200,000 (estimated)",
+      "grossUsa": "$25,100,000",
+      "worldwide": "$25,253,887"
+    },
+    "rating": 8.8,
+    "metascore": 90,
+    "rated": "Approved",
+    "trailer": {
+      "description": "Official Trailer",
+      "type": "movie",
+      "duration": "196 ",
+      "qualities": [
+        {
+          "quality": "AUTO",
+          "videoURL": "https://imdb-video.media-imdb.com/vi3416964889/hls-1568221418683-master.m3u8?Expires=1700655654&Signature=uxqDSG26bv9UvuDvCaZjsqxI7y5iqdokXSawCMojNYxCV1e8OCMYvQrGmWxv~fljnFFtccqN1Ho-K2OnjVMjv2uZKx3BGGDz42T35~jjNEOMtK0TVK33YKgpu-IgIrT5NBxfwz69QU9bVIofQ7uaHxhtW78Fgxo~ozQYbXHBPs8kWCM2GjNM~ezujJAPam6BuqfVtQaZrhaBqYaw8JxQ7tRBb3Ayn3xpTHiZU-JCJNz6EDfAQdi~ndYhlRKgTYipFA3r5OHviTbYaY8g2RTD5Qt2-ZRyd72bcruHhXNRsWO9QNEsdPmw-O24UczIi9Z2F938Co188es9wIdQ9lKKbQ__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        },
+        {
+          "quality": "1080p",
+          "videoURL": "https://imdb-video.media-imdb.com/vi3416964889/1434659529640-260ouz-1568221418683.mp4?Expires=1700655654&Signature=b2L75Sz9XeRf11MUXj1nHxliq4sEQn27HavEgcoyreFHhhBZ~-SjBvGqljr5Hfx72Y8FSjK65FYJPnT3Bfk1KY2FIg2b5YcO6lSC9t3XtsWKznS1ht1cRireXCzsuh2LiiZEo1t7iakVEum6qJludusZD-ORYtxhirDslEjg3U5kEHbOvKbJ9K894JkAu3O9EM~bpSs4NI7WUPvmrDHKLl4a~kTIy2e-gp6EE4neckMNYLvloMWf4SGXMhIPrjRJQ0iwToaAdUVI3rhSSEPpgUJAV88LMPyjl7~6HCVR9k9i0yxGvbloWXGLY6y27vYKAZY58OqIidH6d2nAecoOIw__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        },
+        {
+          "quality": "720p",
+          "videoURL": "https://imdb-video.media-imdb.com/vi3416964889/1434659379400-8cjq25-1568221418682.mp4?Expires=1700655654&Signature=u6iGY32YZLCQDKmKzauRdioZEq5jmT~yKRwIZRVVDLdzYpAGAzvu0MNd9EdIuSCDnH6QNvUjw7wNzEu2-JQ0sSv2G4WYgy5rw1lOsFReUc6IeP68YPaGg7xW9KW6o0GWciLRvRFVEQE1VQOkXVC0goTEQe4nwW0wKTjeHcEW4h-lbgS9gEcPY8Wk1NaFuMCyiAGgeyYIaroNRHqDuSzdN1gu8hPx9kwiYnYeTnfn0S~TBUSF1tbQF8xaFJQUurBI3sJ6q8YzKieuWfuOAp7ED2aRel6Si7mZFXjI0N5KmJH5GgV3Q0TDFubzHouicYWprwn9F2qvRTd0rW-VoDs5VQ__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        },
+        {
+          "quality": "480p",
+          "videoURL": "https://imdb-video.media-imdb.com/vi3416964889/1434659607842-pgv4ql-1568221418682.mp4?Expires=1700655654&Signature=cP3IqCoUL8iQpR5-iVGyu7BHyDdkVx4suWmt~8cNjc0nKx-l~djP4SdJO7XAgEu3auhP7yKveUS5k5qmJogiqYrIxN9bbTtt-B3AdxaHSylmbDm-eSsrLZmCuz8cee8Mi0zbgoIdEmp738fKukvfjQR~BKU3AIYuIkSoWg~0HI~kGNCLV9Mt7DjqyUICI31Fkj93Q1VJ5d7mhZMyPArXsYb0VoSEFde5iQfbpybocO6WVULWfnu4bvldCQIVRACWdv~ks4MSA08E0Ht8N0cbAPeDQ~Zl5-5VDG2X-uPj0zLF8RYwfKKcumBGjKWRJ8rtaFAPxDKVB5Z3Kf-1oy~OtA__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        },
+        {
+          "quality": "SD",
+          "videoURL": "https://imdb-video.media-imdb.com/vi3416964889/1434659454657-dx9ykf-1568221418682.mp4?Expires=1700655654&Signature=se4ZzKRAklIKYQZRCGFX3t8B2blMNK98wAbZxBZRYbl6NLFWmjh3Sc-WxKPpMZwBolepOI~z2nFIwFwjGNeUnfZ3uMn3X9yzNv1lGg9AqxghMc4Yp-Yk2cVVhDjzpzxdYaexzdARt17URoBskP8Ir9C0YTbt-PRLXbFEavrPHToq2TsT07kjxjKxiaHORi3ixww5Q3G6lFgVVBPRvkvUw64Pv1A96I9S0ajm~m6vZAUdFs9-lmacZTTde-rpFZT2sIY4b37WrSOnV0QQ1uj5ikDN5g2CQoGrAM0U4vcvpBDbM4Cx4VrS6ssIO7lShBsD9R0l7vnj40THpH5gwS4LMQ__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        }
+      ]
+    },
+    "votes": 794817,
+    "type": "MOVIE",
+    "idIMDB": "tt0060196",
+    "title": "The Good, the Bad and the Ugly",
+    "urlIMDB": "https://www.imdb.com/title/tt0060196/",
+    "urlPoster": "https://m.media-amazon.com/images/M/MV5BNjJlYmNkZGItM2NhYy00MjlmLTk5NmQtNjg1NmM2ODU4OTMwXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1.jpg"
+  },
+  {
+    "year": 1994,
+    "releaseDate": "19940706",
+    "directors": [
+      {
+        "id": "nm0000709",
+        "name": "Robert Zemeckis"
+      }
+    ],
+    "writers": [
+      {
+        "id": "nm0343165",
+        "name": "Winston Groom"
+      },
+      {
+        "id": "nm0744839",
+        "name": "Eric Roth"
+      }
+    ],
+    "runtime": 142,
+    "countries": [
+      "United States"
+    ],
+    "languages": [
+      "English"
+    ],
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "plot": "Forrest Gump is a simple man with a low I.Q. but good intentions. He is running through childhood with his best and only friend Jenny. His 'mama' teaches him the ways of life and leaves him to choose his destiny. Forrest joins the army for service in Vietnam, finding new friends called Dan and Bubba, he wins medals, creates a famous shrimp fishing fleet, inspires people to jog, starts a ping-pong craze, creates the smiley, writes bumper stickers and songs, donates to people and meets the president several times. However, this is all irrelevant to Forrest who can only think of his childhood sweetheart Jenny Curran, who has messed up her life. Although in the end all he wants to prove is that anyone can love anyone.",
+    "simplePlot": "The history of the United States from the 1950s to the '70s unfolds from the perspective of an Alabama man with an IQ of 75, who yearns to be reunited with his childhood sweetheart.",
+    "actors": [
+      {
+        "character": "Forrest Gump",
+        "urlCharacter": "https://www.imdb.com/title/tt0109830/characters/nm0000158",
+        "main": true,
+        "idIMDB": "nm0000158",
+        "name": "Tom Hanks",
+        "urlIMDB": "https://www.imdb.com/name/nm0000158/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTQ2MjMwNDA3Nl5BMl5BanBnXkFtZTcwMTA2NDY3NQ@@._V1_QL75_UX140_CR0,8,140,140_.jpg"
+      },
+      {
+        "character": "Jenny Curran",
+        "urlCharacter": "https://www.imdb.com/title/tt0109830/characters/nm0000705",
+        "main": true,
+        "idIMDB": "nm0000705",
+        "name": "Robin Wright",
+        "urlIMDB": "https://www.imdb.com/name/nm0000705/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTU0NTc4MzEyOV5BMl5BanBnXkFtZTcwODY0ODkzMQ@@._V1_QL75_UX140_CR0,7,140,140_.jpg"
+      },
+      {
+        "character": "Lieutenant Dan Taylor",
+        "urlCharacter": "https://www.imdb.com/title/tt0109830/characters/nm0000641",
+        "main": true,
+        "idIMDB": "nm0000641",
+        "name": "Gary Sinise",
+        "urlIMDB": "https://www.imdb.com/name/nm0000641/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMzE4NzcyMzU3OV5BMl5BanBnXkFtZTYwOTM2NDE2._V1_QL75_UX140_CR0,5,140,140_.jpg"
+      },
+      {
+        "character": "Mrs. Gump",
+        "urlCharacter": "https://www.imdb.com/title/tt0109830/characters/nm0000398",
+        "main": true,
+        "idIMDB": "nm0000398",
+        "name": "Sally Field",
+        "urlIMDB": "https://www.imdb.com/name/nm0000398/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMTQwOTMyMDI4MV5BMl5BanBnXkFtZTcwMDYzMTM5OA@@._V1_QL75_UX140_CR0,3,140,140_.jpg"
+      },
+      {
+        "character": "Nurse at Park Bench",
+        "urlCharacter": "https://www.imdb.com/title/tt0109830/characters/nm0931508",
+        "main": true,
+        "idIMDB": "nm0931508",
+        "name": "Rebecca Williams",
+        "urlIMDB": "https://www.imdb.com/name/nm0931508/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BZGVmNzAzODctNjI4MS00MzI2LThiZDItOGIyZGJlNDZmZDI5XkEyXkFqcGdeQXVyNjUxMjc1OTM@._V1_QL75_UY140_CR66,0,140,140_.jpg"
+      },
+      {
+        "character": "Young Forrest",
+        "urlCharacter": "https://www.imdb.com/title/tt0109830/characters/nm0402011",
+        "main": true,
+        "idIMDB": "nm0402011",
+        "name": "Michael Conner Humphreys",
+        "urlIMDB": "https://www.imdb.com/name/nm0402011/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BNDE1NGY4ODAtODMxMS00YjU2LTk3ZWItMDFkNDAzOWJhZDE0XkEyXkFqcGdeQXVyNTgzMzk4NDQ@._V1_QL75_UX140_CR0,11,140,140_.jpg"
+      },
+      {
+        "character": "Doctor",
+        "urlCharacter": "https://www.imdb.com/title/tt0109830/characters/nm0381041",
+        "main": true,
+        "idIMDB": "nm0381041",
+        "name": "Harold G. Herthum",
+        "urlIMDB": "https://www.imdb.com/name/nm0381041/"
+      },
+      {
+        "character": "Barber",
+        "urlCharacter": "https://www.imdb.com/title/tt0109830/characters/nm0446404",
+        "main": true,
+        "idIMDB": "nm0446404",
+        "name": "George Kelly",
+        "urlIMDB": "https://www.imdb.com/name/nm0446404/"
+      },
+      {
+        "character": "Crony",
+        "urlCharacter": "https://www.imdb.com/title/tt0109830/characters/nm0672225",
+        "main": true,
+        "idIMDB": "nm0672225",
+        "name": "Bob Penny",
+        "urlIMDB": "https://www.imdb.com/name/nm0672225/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMjI3OTI1ODUwMV5BMl5BanBnXkFtZTgwNDMzMjMxOTE@._V1_QL75_UX140_CR0,0,140,140_.jpg"
+      },
+      {
+        "character": "Crony",
+        "urlCharacter": "https://www.imdb.com/title/tt0109830/characters/nm0709615",
+        "main": true,
+        "idIMDB": "nm0709615",
+        "name": "John Randall",
+        "urlIMDB": "https://www.imdb.com/name/nm0709615/"
+      },
+      {
+        "character": "Principal",
+        "urlCharacter": "https://www.imdb.com/title/tt0109830/characters/nm0027402",
+        "main": true,
+        "idIMDB": "nm0027402",
+        "name": "Sam Anderson",
+        "urlIMDB": "https://www.imdb.com/name/nm0027402/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BMjA0OTcwOTc5OF5BMl5BanBnXkFtZTcwNzUyMTk5Nw@@._V1_QL75_UX140_CR0,0,140,140_.jpg"
+      },
+      {
+        "character": "Louise",
+        "urlCharacter": "https://www.imdb.com/title/tt0109830/characters/nm0602071",
+        "main": true,
+        "idIMDB": "nm0602071",
+        "name": "Margo Moorer",
+        "urlIMDB": "https://www.imdb.com/name/nm0602071/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BNWZmNzg5NWEtNmZiMC00ZWFhLWJhNjItNjk5OTc0MGE1MDYwXkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_QL75_UX140_CR0,0,140,140_.jpg"
+      },
+      {
+        "character": "Elderly Woman",
+        "urlCharacter": "https://www.imdb.com/title/tt0109830/characters/nm0854295",
+        "main": true,
+        "idIMDB": "nm0854295",
+        "name": "Ione M. Telech",
+        "urlIMDB": "https://www.imdb.com/name/nm0854295/"
+      },
+      {
+        "character": "Elderly Woman's Daughter",
+        "urlCharacter": "https://www.imdb.com/title/tt0109830/characters/nm0780410",
+        "main": true,
+        "idIMDB": "nm0780410",
+        "name": "Christine Seabrook",
+        "urlIMDB": "https://www.imdb.com/name/nm0780410/"
+      },
+      {
+        "character": "Southern Gentleman",
+        "urlCharacter": "https://www.imdb.com/title/tt0109830/characters/nm0941621",
+        "main": true,
+        "idIMDB": "nm0941621",
+        "name": "John Worsham",
+        "urlIMDB": "https://www.imdb.com/name/nm0941621/"
+      },
+      {
+        "character": "Young Elvis Presley",
+        "urlCharacter": "https://www.imdb.com/title/tt0109830/characters/nm0229930",
+        "main": true,
+        "idIMDB": "nm0229930",
+        "name": "Peter Dobson",
+        "urlIMDB": "https://www.imdb.com/name/nm0229930/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BZWJhYzBkZDItNTBiZi00Nzc4LTlkMTgtNmFkMWNiNWNlYmY0XkEyXkFqcGdeQXVyMTgyMTYxOTc@._V1_QL75_UX140_CR0,18,140,140_.jpg"
+      },
+      {
+        "character": "School Bus Driver",
+        "urlCharacter": "https://www.imdb.com/title/tt0109830/characters/nm0266441",
+        "main": true,
+        "idIMDB": "nm0266441",
+        "name": "Siobhan Fallon Hogan",
+        "urlIMDB": "https://www.imdb.com/name/nm0266441/",
+        "urlPhoto": "https://m.media-amazon.com/images/M/MV5BZjAxYTMyNjgtNzZlYi00NWIyLTg2NDgtOTRjMThkNmZlZDIzXkEyXkFqcGdeQXVyMzA3ODMxNw@@._V1_QL75_UX140_CR0,12,140,140_.jpg"
+      },
+      {
+        "character": "School Bus Boy",
+        "urlCharacter": "https://www.imdb.com/title/tt0109830/characters/nm0954754",
+        "main": true,
+        "idIMDB": "nm0954754",
+        "name": "Alexander Zemeckis",
+        "urlIMDB": "https://www.imdb.com/name/nm0954754/"
+      }
+    ],
+    "business": {
+      "budget": "$55,000,000 (estimated)",
+      "openingWeekend": "$24,450,602 Jul 10, 1994",
+      "grossUsa": "$330,455,270",
+      "worldwide": "$678,226,465"
+    },
+    "rating": 8.8,
+    "metascore": 82,
+    "rated": "PG-13",
+    "trailer": {
+      "description": "Trailer 1 for Forrest Gump",
+      "type": "movie",
+      "duration": "234 ",
+      "qualities": [
+        {
+          "quality": "AUTO",
+          "videoURL": "https://imdb-video.media-imdb.com/vi3567517977/hls-1564505606861-master.m3u8?Expires=1700655657&Signature=s7Zun80JipEVShYVu8i0muG4cyHjJZSvsgtHoT2Htd60mpXM9BADGw3iMbzw8l-5XpeMKuBgf2-5gNrSRfZRrGG6IsMAyllLSSxSixRIndSCbl-IR5L08TSevc0vY7BrL1ab9gNmKpqDCkOOn6dylH06qnQHutKdzQ8nCEWiHWpzyz2E3FFCPrTPr8sYcV8MAg6pUk6Fvs27X3hnUdGz1vcg4eVBeJfzrEbbuFK15VG4rJA~Jh-L6j6T6gGEC1sZ6wv38m8EOnZ8x8STH11xY2othK5dsmZA2-XweM-G3Qr9Nh8DJRoejlxTgxBJZYkJB86-oIzCTGFCc7GJd4IkBA__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        },
+        {
+          "quality": "480p",
+          "videoURL": "https://imdb-video.media-imdb.com/vi3567517977/1434659607842-pgv4ql-1564505606861.mp4?Expires=1700655657&Signature=tl0thg3N~K~sGln5G7XDC58avsUf2ampNOmwLy0JjT7PHJZn1i0QphJTSGyQHVVWFEegTEQ10OOBB03y9dHlHuPxVB40DgHt7jkb23n6-TRKnWVawzIDPkgUjEdyPSqaD83aYrPmEH~UBTfmeXEdtB-N0LmfYeEGahjN1yjvGCoczGq3r7yzazFIlR28OoaG0loFH-oqFO5rRCazN-y016eVMEHpO48O7u1oCdLvVgqMbngbYSlh2YU-jjAJGsaMeeRjE8Z~W3ojcTFZ~6VhHfd7iGfC40dmWiwgS9QSm~hYMDZwVS6N-97SgdnrVhp9-GVFZMrVrLwxswAuRyDSSQ__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        },
+        {
+          "quality": "SD",
+          "videoURL": "https://imdb-video.media-imdb.com/vi3567517977/1434659454657-dx9ykf-1564505606861.mp4?Expires=1700655657&Signature=L-1-WnF~SSzk-J8QVBCkZ4mhLa6UGQXQcSyivtBsfbauAoNVQUEeRqZ0-eWERnimC00hLkL1iZ6vwRNhwGhcxJTiUCNSZ9mNyOLsS-vbrOHaBV2K9jKDelIuPNszgVQDSi1zkYgYAcYOcHuuWaVs8hwwNlhY8ffezhQ99TyAVUB2mkaqBM659E6iwp8GVOfZR4Yv9z7mWYh2YoU4pKDFTp6wZ2l51hGXwRiQMKWEhDfrhqSdmFGuqpMNrAuzn99TG4qUcXp0sP5jkQQd~TA8lmiyEK3B-epTJ-msyzeWiFD0-MQe2q7Jg1rMpT8VlII70czPwrV3Ol4XX4pD2szKBw__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+        }
+      ]
+    },
+    "votes": 2197479,
+    "type": "MOVIE",
+    "idIMDB": "tt0109830",
+    "title": "Forrest Gump",
+    "urlIMDB": "https://www.imdb.com/title/tt0109830/",
+    "urlPoster": "https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1.jpg"
+  }
+]
