@@ -27,7 +27,8 @@
                             <img height="100rem" class="rounded" th:src="@{${title.getMainPosterURLPhotoUrl()}}" alt="">
                         </div>
                         <div class="d-flex flex-column justify-content-center">
-                            <p class="m-0" th:text="|${title.popularity} . ${title.title}|"></p>
+                            <p class="m-0 bold-font" th:text="|${title.popularity} . ${title.title}|"></p>
+                            <p class="m-0" th:text="${title.year}"></p>
                             <div class="d-flex align-items-center">
                                 <svg width="15" height="15" xmlns="http://www.w3.org/2000/svg"
                                      class="ipc-icon ipc-icon--star-inline color1" viewBox="0 0 24 24"
@@ -37,7 +38,6 @@
                                 </svg>
                                 <p class="m-0" th:text="|${title.imdbRating}|">Card title</p>
                             </div>
-                            <p class="m-0" th:text="${title.year}"></p>
                         </div>
                     </a>
                 </div>

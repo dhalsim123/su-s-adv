@@ -37,7 +37,7 @@ public class FetchService {
             LOGGER.info("Finished fetching the top 250 Imdb titles. " + info);
         }
         catch (Exception e){
-            LOGGER.error("Couldn't fetch top250ImdbTitles because of this error:" + e);
+            LOGGER.error("Couldn't fetch top250ImdbTitles because of this error: " + e);
         }
 
     }
@@ -123,7 +123,7 @@ public class FetchService {
         }
         catch (Exception e){
             LOGGER.error("Couldn't update the 100 most popular titles because of this error: " + e);
-            fetchThreadLog.add("Couldn't update the 100 most popular titles because of this error: " + e);
+            fetchThreadLog.add("Couldn't update the 100 most popular titles because of this error: " + e.getMessage());
         }
     }
 
@@ -136,7 +136,7 @@ public class FetchService {
         }
         catch (Exception e){
             LOGGER.error("Couldn't update the top 250 titles because of this error: " + e);
-            fetchThreadLog.add("Couldn't update the top 250 because of this error: " + e);
+            fetchThreadLog.add("Couldn't update the top 250 because of this error: " + e.getMessage());
         }
     }
 
@@ -148,8 +148,8 @@ public class FetchService {
             fetchThreadLog.add("Updated");
         }
         catch (Exception e){
-            LOGGER.error("Couldn't update the title because of this error" + e);
-            fetchThreadLog.add("Couldn't update the title because of this error" + e);
+            LOGGER.error("Couldn't update the title because of this error " + e);
+            fetchThreadLog.add("Couldn't update the title because of this error: " + e.getMessage());
         }
     }
 

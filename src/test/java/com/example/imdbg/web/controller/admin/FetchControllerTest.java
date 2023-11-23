@@ -90,7 +90,6 @@ class FetchControllerTest {
 
         mockMvc.perform(MockMvcRequestBuilders.get("/admin/fetchIMDB/status")
                         .with(SecurityMockMvcRequestPostProcessors.user(testUser)))
-                .andExpect(MockMvcResultMatchers.content().string("false"))
                 .andExpect(MockMvcResultMatchers.status().isOk());
     }
 

@@ -19,15 +19,13 @@ public class FirstInit implements CommandLineRunner {
     private final TypeService typeService;
     private final TitleService titleService;
 
-    private final DataSource dataSource;
 
-    public FirstInit(UserService userService, RoleService roleService, GenreService genreService, TypeService typeService, TitleService titleService, DataSource dataSource) {
+    public FirstInit(UserService userService, RoleService roleService, GenreService genreService, TypeService typeService, TitleService titleService) {
         this.userService = userService;
         this.roleService = roleService;
         this.genreService = genreService;
         this.typeService = typeService;
         this.titleService = titleService;
-        this.dataSource = dataSource;
     }
 
 
@@ -39,21 +37,9 @@ public class FirstInit implements CommandLineRunner {
         genreService.initGenres();
         typeService.initTypes();
 
-        if (isTestDB()) {
-            titleService.initTitlesFromJson_TestDB();
-        }
-        else {
-            titleService.initTitlesFromJson();
-        }
+//        titleService.writeAJsonForTop250Titles();
+        titleService.initTitles();
     }
 
-    private boolean isTestDB() throws SQLException {
-        try {
-            String dbName = dataSource.getConnection().getCatalog();
-            return dbName.contains("test");
-        }
-        catch (Exception e){
-            throw new RuntimeException(e);
-        }
-    }
+
 }

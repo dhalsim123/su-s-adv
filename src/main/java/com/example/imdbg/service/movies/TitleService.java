@@ -15,18 +15,23 @@ import com.example.imdbg.service.api.MyApiFilmsService;
 import com.example.imdbg.service.scrape.ImdbScrapeService;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
 import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.sql.DataSource;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.sql.SQLException;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -50,13 +55,15 @@ public class TitleService {
     private final ImdbScrapeService imdbScrapeService;
     private final MyApiFilmsService myApiFilmsService;
 
+    private final DataSource dataSource;
+
     private final ModelMapper modelMapper;
     private final Gson gson;
 
     private final Logger LOGGER = LoggerFactory.getLogger(TitleService.class);
 
 
-    public TitleService(TitleRepository titleRepository, GenreService genreService, TypeService typeService, PersonService personService, PhotoService photoService, VideoService videoService, CharacterRoleService characterRoleService, ImdbScrapeService imdbScrapeService, MyApiFilmsService myApiFilmsService, ModelMapper modelMapper, Gson gson) {
+    public TitleService(TitleRepository titleRepository, GenreService genreService, TypeService typeService, PersonService personService, PhotoService photoService, VideoService videoService, CharacterRoleService characterRoleService, ImdbScrapeService imdbScrapeService, MyApiFilmsService myApiFilmsService, DataSource dataSource, ModelMapper modelMapper, Gson gson) {
         this.titleRepository = titleRepository;
         this.genreService = genreService;
         this.typeService = typeService;
@@ -66,6 +73,7 @@ public class TitleService {
         this.characterRoleService = characterRoleService;
         this.imdbScrapeService = imdbScrapeService;
         this.myApiFilmsService = myApiFilmsService;
+        this.dataSource = dataSource;
         this.modelMapper = modelMapper;
         this.gson = gson;
     }
@@ -82,31 +90,35 @@ public class TitleService {
 //        }
 //    }
 
-    public void tryToUpdateTitlesReleasedPastMonth() {
-        LocalDate releasedPastMonth = LocalDate.now().minusMonths(1);
-        LocalDate lastUpdatedBeforeTwoWeeks = LocalDate.now().minusWeeks(2);
-
-        List<TitleEntity> titlesToUpdate = titleRepository.findAllByReleaseDateAfterAndLastUpdatedBefore(releasedPastMonth, lastUpdatedBeforeTwoWeeks);
-
-        titlesToUpdate.forEach(title -> {
-            ApiMovieAddDTO apiMovieAddDTO = myApiFilmsService.requestMovieDataForImdbId(title.getImdbId());
-            updateTitle(title, apiMovieAddDTO);
-        });
-    }
+//    public void tryToUpdateTitlesReleasedPastMonth() {
+//        LocalDate releasedPastMonth = LocalDate.now().minusMonths(1);
+//        LocalDate lastUpdatedBeforeTwoWeeks = LocalDate.now().minusWeeks(2);
+//
+//        List<TitleEntity> titlesToUpdate = titleRepository.findAllByReleaseDateAfterAndLastUpdatedBefore(releasedPastMonth, lastUpdatedBeforeTwoWeeks);
+//
+//        titlesToUpdate.forEach(title -> {
+//            ApiMovieAddDTO apiMovieAddDTO = myApiFilmsService.requestMovieDataAsDTOForImdbId(title.getImdbId());
+//            updateTitle(title, apiMovieAddDTO);
+//        });
+//    }
 
     public void writeAJsonForTop250Titles() throws IOException {
-        List<String> top250Ids = imdbScrapeService.getTop250Ids();
+        LinkedHashMap<String, String> top250IdsAndRatings = imdbScrapeService.getTop250IdsAndRatings();
         UUID uuid = UUID.randomUUID();
-        String jsonFileName = "top250_" + uuid + ".json";
+        String jsonFileName = "top250_" + LocalDateTime.now() + ".json";
 
         JsonArray jsonArray = new JsonArray();
 
         int count = 0;
-        for (String top250Id : top250Ids) {
+        AtomicInteger atomicInteger = new AtomicInteger(1);
+        for (String imdbId : top250IdsAndRatings.keySet()) {
             if (count == 20) {
                 break;
             }
-            jsonArray.add(myApiFilmsService.test1(top250Id));
+            JsonObject jsonObject = myApiFilmsService.requestMovieDataAsJsonForImdbId(imdbId);
+            jsonObject.addProperty("rating", top250IdsAndRatings.get(imdbId));
+            jsonObject.addProperty("imdbTop250Rank", atomicInteger.getAndIncrement());
+            jsonArray.add(jsonObject);
             count++;
         }
 
@@ -115,32 +127,20 @@ public class TitleService {
         }
     }
 
-    public void initTitlesFromJson() {
-        if (titleRepository.count() == 0){
+    public void initTitles() {
+        if (titleRepository.count() == 0) {
             try {
                 Reader reader = Files.newBufferedReader(Paths.get("src/main/resources/data/top250_24f28252-acfa-46e5-aa9d-e8e1e8e4f3d8.json"));
                 ApiMovieAddDTO[] dtos = gson.fromJson(reader, ApiMovieAddDTO[].class);
-
-                for (ApiMovieAddDTO dto : dtos) {
-                    this.createTitleFromApiDataDTO(dto);
+                if (isTestDB()) {
+                    for (ApiMovieAddDTO dto : dtos) {
+                        this.createTitleFromApiDataDTO(dto);
+                    }
+                } else {
+                    this.createTitleFromApiDataDTO(Arrays.stream(dtos).findFirst().orElseThrow(() -> new ObjectNotFoundException("Json file is empty")));
                 }
                 reader.close();
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        }
-    }
-
-    public void initTitlesFromJson_TestDB() {
-        if (titleRepository.count() == 0){
-            try {
-                Reader reader = Files.newBufferedReader(Paths.get("src/main/resources/data/top250_24f28252-acfa-46e5-aa9d-e8e1e8e4f3d8.json"));
-                ApiMovieAddDTO[] dtos = gson.fromJson(reader, ApiMovieAddDTO[].class);
-
-                this.createTitleFromApiDataDTO(Arrays.stream(dtos).findFirst().orElseThrow(() -> new ObjectNotFoundException("Json file is empty")));
-
-                reader.close();
-            } catch (IOException e) {
+            } catch (Exception e) {
                 throw new RuntimeException(e);
             }
         }
@@ -150,12 +150,11 @@ public class TitleService {
     public String createNewTitlesWithIdsAndRatingsMap(LinkedHashMap<String, String> idsAndRatingsMap) {
         List<String> idsList = new ArrayList<>(idsAndRatingsMap.keySet());
         List<String> filteredList = filterExistingImdbIdTitles(idsList);
-
         List<String> failedToSaveIds = new ArrayList<>();
 
         filteredList.forEach(titleImdbId -> {
             try {
-                ApiMovieAddDTO apiMovieAddDTO = myApiFilmsService.requestMovieDataForImdbId(titleImdbId);
+                ApiMovieAddDTO apiMovieAddDTO = myApiFilmsService.requestMovieDataAsDTOForImdbId(titleImdbId);
                 apiMovieAddDTO.setRating(idsAndRatingsMap.get(titleImdbId));
                 this.createTitleFromApiDataDTO(apiMovieAddDTO);
             } catch (Exception e) {
@@ -169,12 +168,11 @@ public class TitleService {
 
     public String createNewTitlesWithIdsList(List<String> idsList) {
         List<String> filteredList = filterExistingImdbIdTitles(idsList);
-
         List<String> failedToSaveIds = new ArrayList<>();
 
         filteredList.forEach(titleImdbId -> {
             try {
-                ApiMovieAddDTO apiMovieAddDTO = myApiFilmsService.requestMovieDataForImdbId(titleImdbId);
+                ApiMovieAddDTO apiMovieAddDTO = myApiFilmsService.requestMovieDataAsDTOForImdbId(titleImdbId);
                 this.createTitleFromApiDataDTO(apiMovieAddDTO);
             } catch (Exception e) {
                 LOGGER.error("Couldn't save title with Imdb Id " + titleImdbId + " " + e);
@@ -190,12 +188,9 @@ public class TitleService {
         if (filteredList.isEmpty() && failedToSaveIds.isEmpty()) {
             return "Already in DB";
         }
-
-
         if (filteredList.size() == failedToSaveIds.size()) {
             return "Failed to save any Ids. Check the back-end logs for more info";
         }
-
 
         filteredList.removeAll(failedToSaveIds);
 
@@ -229,6 +224,7 @@ public class TitleService {
                     .plot(apiMovieAddDTO.getPlot())
                     .simplePlot(apiMovieAddDTO.getSimplePlot())
                     .imdbRating(Float.parseFloat(apiMovieAddDTO.getRating()))
+                    .imdbTop250Rank(apiMovieAddDTO.getImdbTop250Rank() == null ? null : Integer.parseInt(apiMovieAddDTO.getImdbTop250Rank()))
                     .metascore(Integer.valueOf(apiMovieAddDTO.getMetascore()))
                     .imdbVotes(Integer.valueOf(apiMovieAddDTO.getVotes()))
                     .runtime(Long.valueOf(apiMovieAddDTO.getRuntime()))
@@ -256,17 +252,23 @@ public class TitleService {
         }
     }
 
-    public List<TitleEntity> findTop250ImdbRatedTitles() {
-        return titleRepository.findTop250ImdbRatedTitles();
-    }
+//    public List<TitleEntity> findTop250ImdbRatedTitles() {
+//        return titleRepository.findTop250ImdbRatedTitles();
+//    }
 
     public List<TitleEntity> findTop250ImdbList() {
         return titleRepository.findTop250ImdbList();
     }
 
+    public List<TitleEntity> find100MostPopularImdbList(){
+        return titleRepository.find100MostPopularImdbList();
+    }
+
     public List<TitleEntity> findMostPopularImdbRatedMovies() {
         return titleRepository.findAllByType_NameAndMainTrailerURLNotNullAndPopularityNotNullOrderByPopularityAsc(TypeEnum.MOVIE);
     }
+
+
 
     public TitleEntity findTitleEntityByImdbId(String imdbId) {
         return titleRepository.findTitleEntityByImdbId(imdbId).orElseThrow(() -> new ObjectNotFoundException("Title with IMDB id " + imdbId + " was not found"));
@@ -295,11 +297,7 @@ public class TitleService {
 
     private LocalDate parseReleaseDate(String releaseDate) {
 
-        if (releaseDate == null) {
-            return null;
-        }
-
-        if (releaseDate.isEmpty()) {
+        if (releaseDate == null || releaseDate.isEmpty()) {
             return null;
         }
 
@@ -312,9 +310,11 @@ public class TitleService {
     }
 
     private void createCharacterRoles(ApiMovieAddDTO apiMovieAddDTO) {
+        TitleEntity titleEntityByImdbId = this.findTitleEntityByImdbId(apiMovieAddDTO.getIdIMDB());
+
         apiMovieAddDTO.getActors().forEach(apiActorAddDTO -> {
             characterRoleService.createCharacterRole(
-                    this.findTitleEntityByImdbId(apiMovieAddDTO.getIdIMDB()),
+                    titleEntityByImdbId,
                     personService.findPersonEntityByImdbId(apiActorAddDTO.getId()),
                     apiActorAddDTO.getCharacter());
         });
@@ -322,9 +322,7 @@ public class TitleService {
 
     private List<String> filterExistingImdbIdTitles(List<String> list) {
         List<String> newList = new ArrayList<>(List.copyOf(list));
-        List<TitleEntity> existingTitles = titleRepository.findAllByImdbIdIsIn(list);
-
-        List<String> existingImdbIds = existingTitles.stream().map(TitleEntity::getImdbId).toList();
+        List<String> existingImdbIds = titleRepository.findAllImdbIdsByImdbIdIsIn(list);
 
         newList.removeAll(existingImdbIds);
 
@@ -333,13 +331,42 @@ public class TitleService {
 
     public void updateSingleTitle(String imdbId) {
         TitleEntity titleEntityByImdbId = this.findTitleEntityByImdbId(imdbId);
-        ApiMovieAddDTO apiMovieAddDTO = myApiFilmsService.requestMovieDataForImdbId(imdbId);
+        ApiMovieAddDTO apiMovieAddDTO = myApiFilmsService.requestMovieDataAsDTOForImdbId(imdbId);
 
         this.updateTitle(titleEntityByImdbId, apiMovieAddDTO);
     }
 
+    private void ifTrailerFromApiIsNullGetFromImdb(String imdbId, ApiMovieAddDTO apiMovieAddDTO) {
+        if (apiMovieAddDTO.getTrailer() == null) {
+            try {
+                String trailerImdbId = imdbScrapeService.getTrailer(imdbId);
+                videoService.createNewTrailerFromIdOnly(trailerImdbId);
+            }
+            catch (Exception ignored){
+
+            }
+        }
+    }
+
     private void updateTitle(TitleEntity title, ApiMovieAddDTO apiMovieAddDTO) {
         try {
+
+            if (title.getMainTrailerURL() == null) {
+                VideoEntity trailer = null;
+                if (apiMovieAddDTO.getTrailer() == null){
+                    try {
+                        String trailerImdbId = imdbScrapeService.getTrailer(title.getImdbId());
+                        trailer = videoService.createNewTrailerFromIdOnly(trailerImdbId);
+                    }
+                    catch (Exception ignored){
+                    }
+                }
+                else {
+                    trailer = videoService.createNewTrailer(apiMovieAddDTO.getTrailer());
+                }
+                title.setMainTrailerURL(trailer);
+            }
+
             if (apiMovieAddDTO.getBusiness() != null) {
                 title.setBoxOfficeGrossUsa(apiMovieAddDTO.getBusiness().getGrossUsa());
                 title.setBoxOfficeWorldwide(apiMovieAddDTO.getBusiness().getWorldwide());
@@ -351,10 +378,7 @@ public class TitleService {
             title.setGenres(genreEntities);
 
 
-            if (title.getMainTrailerURL() == null) {
-                VideoEntity videoEntity = apiMovieAddDTO.getTrailer() == null ? null : videoService.createNewTrailer(apiMovieAddDTO.getTrailer());
-                title.setMainTrailerURL(videoEntity);
-            }
+
 
             if (title.getMainPosterURL() == null) {
                 title.setMainPosterURL(photoService.createNewMainPosterFromApiDataDTO(apiMovieAddDTO));
@@ -432,7 +456,6 @@ public class TitleService {
         LinkedHashMap<String, String> mostPopularIdsAndPopularity = imdbScrapeService.get100MostPopularIdsAndPopularity();
 
         ArrayList<String> idsList = new ArrayList<>(mostPopularIdsAndPopularity.keySet());
-
         List<String> newTitleIds = this.filterExistingImdbIdTitles(idsList);
 
         createNewTitlesWithIdsList(newTitleIds);
@@ -441,9 +464,6 @@ public class TitleService {
 
         clearImdbPopularity();
         allByImdbIdIsIn.forEach(title -> title.setPopularity(Integer.valueOf(mostPopularIdsAndPopularity.get(title.getImdbId()))));
-
-
-
         titleRepository.saveAllAndFlush(allByImdbIdIsIn);
 
     }
@@ -452,40 +472,31 @@ public class TitleService {
         LinkedHashMap<String, String> top250IdsAndRatings = imdbScrapeService.getTop250IdsAndRatings();
 
         ArrayList<String> idsList = new ArrayList<>(top250IdsAndRatings.keySet());
-
         List<String> newTitleIds = this.filterExistingImdbIdTitles(idsList);
 
         createNewTitlesWithIdsList(newTitleIds);
 
         List<TitleEntity> allByImdbIdIsIn = titleRepository.findAllByImdbIdIsIn(idsList);
-
         allByImdbIdIsIn.forEach(title -> title.setImdbRating(Float.parseFloat(top250IdsAndRatings.get(title.getImdbId()))));
 
         AtomicInteger atomicInteger = new AtomicInteger(1);
-
         top250IdsAndRatings.forEach((id, value) -> {
             allByImdbIdIsIn.stream().filter(title -> title.getImdbId().equals(id)).forEach(title -> title.setImdbTop250Rank(atomicInteger.getAndIncrement()));
         });
 
         titleRepository.saveAllAndFlush(allByImdbIdIsIn);
-
     }
 
 
     private void clearImdbPopularity() {
-
         List<TitleEntity> allByPopularityNotNull = titleRepository.findAllByPopularityNotNull();
-
         allByPopularityNotNull.forEach(title -> title.setPopularity(null));
-
         titleRepository.saveAllAndFlush(allByPopularityNotNull);
     }
 
     @Transactional
     public TitleVideoViewDTO getTitleVideoViewDTOByVideoImdbId(String videoImdbId) {
-
         TitleEntity title = findTitleByVideoImdbId(videoImdbId);
-
         return modelMapper.map(title, TitleVideoViewDTO.class);
     }
 
@@ -507,7 +518,7 @@ public class TitleService {
 
     @Transactional
     public List<TitleViewDTO> get100MostPopularTitleViewDTOs() {
-        List<TitleEntity> mostPopularImdbRatedMovies = this.findMostPopularImdbRatedMovies();
+        List<TitleEntity> mostPopularImdbRatedMovies = this.find100MostPopularImdbList();
         return mapTitleViewDTOS(mostPopularImdbRatedMovies);
     }
 
@@ -522,11 +533,11 @@ public class TitleService {
                 .toList();
     }
 
-    public List<TitleViewDTO> getTitleViewDTOsFromIdsList(List<Long> idsList) {
-        List<TitleEntity> allById = titleRepository.findAllById(idsList);
-
-        return mapTitleViewDTOS(allById);
-    }
+//    public List<TitleViewDTO> getTitleViewDTOsFromIdsList(List<Long> idsList) {
+//        List<TitleEntity> allById = titleRepository.findAllById(idsList);
+//
+//        return mapTitleViewDTOS(allById);
+//    }
 
     public void updateTitlePageViews(Long titleId, Integer count) {
         try {
@@ -535,6 +546,15 @@ public class TitleService {
             titleRepository.saveAndFlush(titleById);
         } catch (Exception e) {
             LOGGER.error("Couldn't increment page views for titleId {} because of this error {}", titleId, e.getMessage());
+        }
+    }
+
+    private boolean isTestDB() throws SQLException {
+        try {
+            String dbName = dataSource.getConnection().getCatalog();
+            return dbName.contains("test");
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
     }
 

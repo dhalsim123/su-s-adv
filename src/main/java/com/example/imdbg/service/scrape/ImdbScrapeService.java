@@ -5,6 +5,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -59,38 +60,38 @@ public class ImdbScrapeService {
         return getImdbIdsAndRatingsFromTheSearchPage(url);
     }
 
+    public String getTrailer(String imdbId){
+        String urlFormat = "https://www.imdb.com/title/%s/";
+        String url = String.format(urlFormat, imdbId);
+        return getTrailerFromTitlePage(url);
+    }
 
-//    public LinkedHashMap<String, String> getTitlesIdsAndRatingsFromPageNumber(int pageNumber){
-//
-//        int totalTitlesCount = pageNumber * 100;
-//        int startTitle = (pageNumber - 1) * 100 + 1;
-//        LinkedHashMap<String, String> idsAndRatings = new LinkedHashMap<>();
-//        String urlFormat = "https://www.imdb.com/search/title/?moviemeter=1,%d&view=simple&count=100&start=%d&ref_=adv_nxt";
-//        String url = String.format(urlFormat, totalTitlesCount, startTitle);
-//        return getImdbIdsAndRatingsFromTheSearchPage(url);
-//    }
+    private static String getTrailerFromTitlePage(String url){
+        String trailerImdbId;
+        try {
+            Document doc = Jsoup.connect(url).get();
+            trailerImdbId = doc.select("a.VideoSlate__title").first().attr("href").replaceAll("/video/(.*?)/.*", "$1");
 
+            if (trailerImdbId.isEmpty()){
+                throw new RuntimeException("Couldn't select the trailer id");
+            }
+        } catch (Exception e) {
+            throw new RuntimeException("Couldn't fetch the trailer id" + e);
+        }
+        return trailerImdbId;
+    }
 
     private static List<String> getImdbIds(String url) {
-
         List<String> idList;
         try {
             Document doc = Jsoup.connect(url).get();
-            Elements liItems = doc.select("li.ipc-metadata-list-summary-item");
-
-            idList = liItems.stream().map(element -> {
+            Elements items = doc.select("li.ipc-metadata-list-summary-item");
+            idList = items.stream().map(element -> {
                         String id = element.select("a").attr("href");
                         return id.replaceAll("/title/(.*?)/.*", "$1");
                     })
                     .collect(Collectors.toList());
-
-            if (idList.isEmpty()) {
-                throw new RuntimeException("Couldn't select any html elements with the given queries");
-            }
-            if (idList.stream().allMatch(String::isEmpty)) {
-                throw new RuntimeException("Couldn't select any ids with the given queries");
-            }
-
+            throwIfIdListIsEmpty(idList);
         } catch (Exception e) {
             throw new RuntimeException("Couldn't fetch imdb page data" + e);
         }
@@ -98,63 +99,27 @@ public class ImdbScrapeService {
     }
 
     private static LinkedHashMap<String, String> getImdbIdsAndRatings(String url) {
-
         LinkedHashMap<String, String> idAndRatingMap = new LinkedHashMap<>();
         try {
             Document doc = Jsoup.connect(url).get();
-            Elements liItems = doc.select("li.ipc-metadata-list-summary-item");
-
-            liItems.forEach(element -> {
-
-                String id = element.select("a.ipc-lockup-overlay").attr("href");
-                id = id.replaceAll("/title/(.*?)/.*", "$1");
-
-                String rating = "0";
-                if (!element.select("span.ipc-rating-star").textNodes().isEmpty()) {
-                    rating = String.valueOf(element.select("span.ipc-rating-star").textNodes().get(0));
-                }
-                idAndRatingMap.putIfAbsent(id, rating);
-            });
-
-            if (idAndRatingMap.isEmpty()) {
-                throw new RuntimeException("Couldn't select any html elements with the given queries");
-            }
-            if (idAndRatingMap.keySet().stream().allMatch(String::isEmpty)) {
-                throw new RuntimeException("Couldn't select any ids with the given queries");
-            }
-
+            Elements items = doc.select("li.ipc-metadata-list-summary-item");
+            getHrefAndSpanRating(items, idAndRatingMap);
+            throwIfIdAndRatingMapIsEmpty(idAndRatingMap);
         } catch (Exception e) {
             throw new RuntimeException("Couldn't fetch imdb page data" + e);
         }
         return idAndRatingMap;
     }
 
-    private static LinkedHashMap<String, String> getImdbIdsAndPopularity(String url) {
 
+
+    private static LinkedHashMap<String, String> getImdbIdsAndPopularity(String url) {
         LinkedHashMap<String, String> idAndPopularityMap = new LinkedHashMap<>();
         try {
             Document doc = Jsoup.connect(url).get();
-            Elements liItems = doc.select("li.ipc-metadata-list-summary-item");
-
-            liItems.forEach(element -> {
-
-                String id = element.select("a.ipc-lockup-overlay").attr("href");
-                id = id.replaceAll("/title/(.*?)/.*", "$1");
-
-                String popularity = "0";
-                if (!element.select("div.cli-meter-title-header").attr("aria-label").isEmpty()) {
-                    popularity = String.valueOf(element.select("div.cli-meter-title-header").attr("aria-label").replaceAll("Ranking ", ""));
-                }
-                idAndPopularityMap.putIfAbsent(id, popularity);
-            });
-
-            if (idAndPopularityMap.isEmpty()) {
-                throw new RuntimeException("Couldn't select any html elements with the given queries");
-            }
-            if (idAndPopularityMap.keySet().stream().allMatch(String::isEmpty)) {
-                throw new RuntimeException("Couldn't select any ids with the given queries");
-            }
-
+            Elements items = doc.select("li.ipc-metadata-list-summary-item");
+            getHrefAndDivPopularity(items, idAndPopularityMap);
+            throwIfIdAndRatingMapIsEmpty(idAndPopularityMap);
         } catch (Exception e) {
             throw new RuntimeException("Couldn't fetch imdb page data" + e);
         }
@@ -169,43 +134,87 @@ public class ImdbScrapeService {
             Elements divItems = doc.select("div.lister-item.mode-simple");
 
             if (divItems.isEmpty()) {
-                Elements liItems = doc.select("li.ipc-metadata-list-summary-item");
+                Elements items = doc.select("li.ipc-metadata-list-summary-item");
 
-                liItems.forEach(element -> {
-
-                    String id = element.select("a.ipc-lockup-overlay").attr("href");
-                    id = id.replaceAll("/title/(.*?)/.*", "$1");
-
-                    String rating = "0";
-                    if (!element.select("span.ipc-rating-star").textNodes().isEmpty()) {
-                        rating = String.valueOf(element.select("span.ipc-rating-star").textNodes().get(0));
-                    }
-                    idAndRatingMap.putIfAbsent(id, rating);
-                });
+                getHrefAndSpanRating(items, idAndRatingMap);
             } else {
-                divItems.forEach(element -> {
-
-                    String id = element.select("a").attr("href");
-                    id = id.replaceAll("/title/(.*?)/.*", "$1");
-
-                    String rating = "0";
-                    if (!element.select("div.col-imdb-rating > strong").text().isEmpty()) {
-                        rating = String.valueOf(element.select("div.col-imdb-rating > strong").text());
-                    }
-                    idAndRatingMap.putIfAbsent(id, rating);
-                });
+                getHrefAndDivRating(divItems, idAndRatingMap);
             }
-
-            if (idAndRatingMap.isEmpty()) {
-                throw new RuntimeException("Couldn't select any html elements with the given queries");
-            }
-            if (idAndRatingMap.keySet().stream().allMatch(String::isEmpty)) {
-                throw new RuntimeException("Couldn't select any ids with the given queries");
-            }
-
+            throwIfIdAndRatingMapIsEmpty(idAndRatingMap);
         } catch (Exception e) {
             throw new RuntimeException("Couldn't fetch imdb page data" + e);
         }
         return idAndRatingMap;
     }
+
+    private static void getHrefAndDivRating(Elements divItems, LinkedHashMap<String, String> idAndRatingMap) {
+        divItems.forEach(element -> {
+
+            String id = element.select("a").attr("href");
+            id = id.replaceAll("/title/(.*?)/.*", "$1");
+
+            String rating = "0";
+            if (!element.select("div.col-imdb-rating > strong").text().isEmpty()) {
+                rating = String.valueOf(element.select("div.col-imdb-rating > strong").text());
+            }
+            idAndRatingMap.putIfAbsent(id, rating);
+        });
+    }
+
+    private static void getHrefAndDivPopularity(Elements items, LinkedHashMap<String, String> idAndPopularityMap) {
+        items.forEach(element -> {
+
+            String id = element.select("a.ipc-lockup-overlay").attr("href");
+            id = id.replaceAll("/title/(.*?)/.*", "$1");
+
+            String popularity = "0";
+            if (!element.select("div.cli-meter-title-header").attr("aria-label").isEmpty()) {
+                popularity = String.valueOf(element.select("div.cli-meter-title-header").attr("aria-label").replaceAll("Ranking ", ""));
+            }
+            idAndPopularityMap.putIfAbsent(id, popularity);
+        });
+    }
+
+    private static void getHrefAndSpanRating(Elements items, LinkedHashMap<String, String> idAndRatingMap) {
+        items.forEach(element -> {
+
+            String id = element.select("a.ipc-lockup-overlay").attr("href");
+            id = id.replaceAll("/title/(.*?)/.*", "$1");
+
+            String rating = "0";
+            if (!element.select("span.ipc-rating-star").textNodes().isEmpty()) {
+                rating = String.valueOf(element.select("span.ipc-rating-star").textNodes().get(0));
+            }
+            idAndRatingMap.putIfAbsent(id, rating);
+        });
+    }
+
+    private static void throwIfIdListIsEmpty(List<String> idList) {
+        if (idList.isEmpty()) {
+            throw new RuntimeException("Couldn't select any html elements with the given queries");
+        }
+        if (idList.stream().allMatch(String::isEmpty)) {
+            throw new RuntimeException("Couldn't select any ids with the given queries");
+        }
+    }
+
+    private static void throwIfIdAndRatingMapIsEmpty(LinkedHashMap<String, String> idAndRatingMap) {
+        if (idAndRatingMap.isEmpty()) {
+            throw new RuntimeException("Couldn't select any html elements with the given queries");
+        }
+        if (idAndRatingMap.keySet().stream().allMatch(String::isEmpty)) {
+            throw new RuntimeException("Couldn't select any ids with the given queries");
+        }
+    }
 }
+
+
+//    public LinkedHashMap<String, String> getTitlesIdsAndRatingsFromPageNumber(int pageNumber){
+//
+//        int totalTitlesCount = pageNumber * 100;
+//        int startTitle = (pageNumber - 1) * 100 + 1;
+//        LinkedHashMap<String, String> idsAndRatings = new LinkedHashMap<>();
+//        String urlFormat = "https://www.imdb.com/search/title/?moviemeter=1,%d&view=simple&count=100&start=%d&ref_=adv_nxt";
+//        String url = String.format(urlFormat, totalTitlesCount, startTitle);
+//        return getImdbIdsAndRatingsFromTheSearchPage(url);
+//    }

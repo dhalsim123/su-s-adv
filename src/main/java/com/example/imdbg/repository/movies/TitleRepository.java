@@ -17,6 +17,9 @@ public interface TitleRepository extends JpaRepository<TitleEntity, Long> {
     Optional<TitleEntity> findTitleEntityByImdbId(String ImdbId);
 
     List<TitleEntity> findAllByImdbIdIsIn(List<String> ids);
+
+    @Query("SELECT t.imdbId FROM TitleEntity t WHERE t.imdbId IN :ids")
+    List<String> findAllImdbIdsByImdbIdIsIn(List<String> ids);
     List<TitleEntity> findAllByImdbIdIsInAndImdbRating(List<String> ids, float rating);
     List<TitleEntity> findAllByReleaseDateAfterAndLastUpdatedBefore(LocalDate releaseDateAfter, LocalDate lastUpdatedBefore);
 
@@ -35,6 +38,9 @@ public interface TitleRepository extends JpaRepository<TitleEntity, Long> {
 
     @Query("SELECT t FROM TitleEntity t WHERE t.imdbTop250Rank != null ORDER BY t.imdbTop250Rank")
     List<TitleEntity> findTop250ImdbList();
+
+    @Query("SELECT t FROM TitleEntity t WHERE t.popularity != null ORDER BY t.popularity")
+    List<TitleEntity> find100MostPopularImdbList();
 
     @Query("SELECT a.idIMDB FROM TitleEntity t JOIN t.actors a WHERE t.imdbId = :titleImdbId")
     List<String> findIdsOfActorsForTitle (@Param("titleImdbId") String titleImdbId);

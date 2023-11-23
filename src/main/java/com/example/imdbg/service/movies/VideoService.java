@@ -45,4 +45,16 @@ public class VideoService {
         }
         else return null;
     }
+
+    public VideoEntity createNewTrailerFromIdOnly(String videoImdbId){
+
+        if (videoImdbId != null && !videoImdbId.isEmpty()){
+            return VideoEntity.builder()
+                    .videoImdbId(videoImdbId)
+                    .isTrailer(true)
+                    .build();
+        }
+
+       return null;
+    }
 }
