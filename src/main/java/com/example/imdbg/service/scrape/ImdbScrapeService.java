@@ -1,11 +1,11 @@
 package com.example.imdbg.service.scrape;
 
+import com.google.gson.JsonObject;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 import org.springframework.stereotype.Service;
 
-import java.io.IOException;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -60,25 +60,29 @@ public class ImdbScrapeService {
         return getImdbIdsAndRatingsFromTheSearchPage(url);
     }
 
-    public String getTrailer(String imdbId){
+    public JsonObject getTitleData(String imdbId){
         String urlFormat = "https://www.imdb.com/title/%s/";
         String url = String.format(urlFormat, imdbId);
-        return getTrailerFromTitlePage(url);
+        return getDataFromTitlePage(url);
     }
 
-    private static String getTrailerFromTitlePage(String url){
-        String trailerImdbId;
+    private static JsonObject getDataFromTitlePage(String url){
+        JsonObject object = new JsonObject();
         try {
             Document doc = Jsoup.connect(url).get();
-            trailerImdbId = doc.select("a.VideoSlate__title").first().attr("href").replaceAll("/video/(.*?)/.*", "$1");
+            String trailerImdbId = doc.select("a.VideoSlate__title").first().attr("href").replaceAll("/video/(.*?)/.*", "$1");
+            String imdbRating = doc.select("span.cMEQkK").first().text();
+            object.addProperty("trailerImdbId", trailerImdbId);
+            object.addProperty("imdbRating", imdbRating);
 
-            if (trailerImdbId.isEmpty()){
-                throw new RuntimeException("Couldn't select the trailer id");
+            if (trailerImdbId.isEmpty() && imdbRating.isEmpty()){
+                throw new RuntimeException("Could select any ids with the given queries");
             }
+
         } catch (Exception e) {
-            throw new RuntimeException("Couldn't fetch the trailer id" + e);
+            throw new RuntimeException("Couldn't fetch any data" + e);
         }
-        return trailerImdbId;
+        return object;
     }
 
     private static List<String> getImdbIds(String url) {

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:replace="~{fragments/commons::head}">
+</head>
+<header th:replace="~{fragments/commons::header}">
+</header>
+
+
+<body>
+<main class="container mt-5">
+    <section class="mb-lg-5 mb-sm-3">
+        <div th:if="${search != null}" class="mb-lg-5 mb-sm-1">
+            <h3 class="mb-lg-3 mb-sm-1" th:text="|Search: &#34;${search}&#34;|">
+
+            </h3>
+        </div>
+        <div th:if="${search == null}" class="mb-lg-5 mb-sm-1">
+            <h3 class="mb-lg-3 mb-sm-1">
+                Search the DB
+            </h3>
+            <p>Search the DB by typing a word or phrase in the search box at the top of this page.</p>
+        </div>
+        <div th:if="${search != null}" class="mb-3">
+
+            <div th:if="${titles.isEmpty()}" class="mb-lg-5 mb-sm-1">
+                <p>No results found</p>
+            </div>
+            <div th:if="${titles.size() > 0}" class="d-flex gap-3 w-75 flex-wrap flex-column personPage-credits-div">
+                <div class="cards d-flex flex-column gap-1">
+                    <a th:each="title : ${titles}" th:href="@{/title/{id}(id=${title.id})}"
+                       class="a-no-decoration d-flex gap-3 titleDiv-person-page2 rounded">
+                        <div>
+                            <img height="100rem" class="rounded" th:src="@{${title.getMainPosterURLPhotoUrl()}}" alt="">
+                        </div>
+                        <div class="d-flex flex-column justify-content-center">
+                            <p class="m-0 bold-font" th:text="${title.title}"></p>
+                            <p class="m-0" th:text="${title.year}"></p>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</main>
+</body>
+</html>

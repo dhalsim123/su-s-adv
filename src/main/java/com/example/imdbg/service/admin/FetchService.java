@@ -32,7 +32,7 @@ public class FetchService {
 
         try {
             LinkedHashMap<String, String> top250IdsAndRatings = imdbScrapeService.getTop250IdsAndRatings();
-            String info = titleService.createNewTitlesWithIdsAndRatingsMap(top250IdsAndRatings);
+            String info = titleService.createNewTitlesFromIdsAndRatingsMap(top250IdsAndRatings);
             this.fetchThreadLog.add(info);
             LOGGER.info("Finished fetching the top 250 Imdb titles. " + info);
         }
@@ -46,7 +46,7 @@ public class FetchService {
 
         try {
             LinkedHashMap<String, String> mostPopularIdsAndRatings = imdbScrapeService.get100MostPopularIdsAndRatings();
-            String info = titleService.createNewTitlesWithIdsAndRatingsMap(mostPopularIdsAndRatings);
+            String info = titleService.createNewTitlesFromIdsAndRatingsMap(mostPopularIdsAndRatings);
             fetchThreadLog.add(info);
             LOGGER.info("Finished fetching the 100 most popular Imdb titles. " + info);
         }
@@ -61,7 +61,7 @@ public class FetchService {
 
         try {
             List<String> upcomingReleases = imdbScrapeService.getUpcomingReleases();
-            String info = titleService.createNewTitlesWithIdsList(upcomingReleases);
+            String info = titleService.createNewTitlesFromIdsList(upcomingReleases);
             fetchThreadLog.add(info);
             LOGGER.info("Finished fetching the most popular upcoming releases of Imdb titles. " + info);
         }
@@ -74,7 +74,7 @@ public class FetchService {
         newFetchThreadLog("Single Title Fetch with id " + imdbId + ": ");
 
         try {
-            String info = titleService.createNewTitlesWithIdsList(new ArrayList<>(List.of(imdbId)));
+            String info = titleService.createNewTitlesFromIdsList(new ArrayList<>(List.of(imdbId)));
             fetchThreadLog.add(info);
         }
         catch (Exception e){
@@ -91,7 +91,7 @@ public class FetchService {
 
         try {
             LinkedHashMap<String, String> idsAndRatingsMap = imdbScrapeService.get50TitleIdsAndRatings(pageNumber);
-            String info = titleService.createNewTitlesWithIdsAndRatingsMap(idsAndRatingsMap);
+            String info = titleService.createNewTitlesFromIdsAndRatingsMap(idsAndRatingsMap);
             fetchThreadLog.add(info);
             LOGGER.info("Finished fetching page " + pageNumber + "  of the Imdb titles search results. " + (info.isEmpty() ? "" : "But failed to save: " + info));
         }
@@ -105,7 +105,7 @@ public class FetchService {
 
         try {
             LinkedHashMap<String, String> idsAndRatingsMap = imdbScrapeService.get250TitleIdsAndRatings(pageNumber);
-            String info = titleService.createNewTitlesWithIdsAndRatingsMap(idsAndRatingsMap);
+            String info = titleService.createNewTitlesFromIdsAndRatingsMap(idsAndRatingsMap);
             fetchThreadLog.add(info);
             LOGGER.info("Finished fetching page " + pageNumber + " of the Imdb titles search results. " + (info.isEmpty() ? "" : "But failed to save: " + info));
         }
@@ -140,11 +140,11 @@ public class FetchService {
         }
     }
 
-    public void updateSingleTitle(String imdbId){
-        newFetchThreadLog("Title with id: " + imdbId);
+    public void updateSingleTitle(Long id){
+        newFetchThreadLog("Title with id: " + id);
 
         try {
-            titleService.updateSingleTitle(imdbId);
+            titleService.updateSingleTitle(id);
             fetchThreadLog.add("Updated");
         }
         catch (Exception e){

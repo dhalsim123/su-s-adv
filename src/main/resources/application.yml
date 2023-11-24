@@ -27,6 +27,6 @@ logging:
     blog: WARN
 server:
   port: 8080
-#  servlet:
-#    session:
-#      persistent: false
+  servlet:
+    session:
+      persistent: false

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:replace="~{fragments/commons::head}">
+</head>
+<header th:replace="~{fragments/commons::header}">
+</header>
+
+
+<body>
+<main class="container mt-5">
+    <section th:if="${titles.size() > 0}" class="mb-lg-5 mb-sm-3">
+        <div class="mb-lg-5 mb-sm-1">
+            <h3 class="mb-lg-3 mb-sm-1">
+                100 Most Popular Movies
+            </h3>
+            <h4>Based On This Site's Users' Activity</h4>
+        </div>
+        <div class="mb-3">
+
+            <div class="d-flex gap-3 w-75 flex-wrap flex-column personPage-credits-div">
+                <div class="cards d-flex flex-column gap-1">
+                    <a th:each="title : ${titles}" th:href="@{/title/{id}(id=${title.id})}"
+                       class="a-no-decoration d-flex gap-3 titleDiv-person-page2 rounded">
+                        <div>
+                            <img height="100rem" class="rounded" th:src="@{${title.getMainPosterURLPhotoUrl()}}" alt="">
+                        </div>
+                        <div class="d-flex flex-column justify-content-center">
+                            <p class="m-0 bold-font" th:text="${title.title}"></p>
+                            <p class="m-0" th:text="${title.year}"></p>
+                            <div class="d-flex align-items-center">
+                                <svg width="15" height="15" xmlns="http://www.w3.org/2000/svg"
+                                     class="ipc-icon ipc-icon--star-inline color1" viewBox="0 0 24 24"
+                                     fill="currentColor"
+                                     role="presentation">
+                                    <path d="M12 20.1l5.82 3.682c1.066.675 2.37-.322 2.09-1.584l-1.543-6.926 5.146-4.667c.94-.85.435-2.465-.799-2.567l-6.773-.602L13.29.89a1.38 1.38 0 0 0-2.581 0l-2.65 6.53-6.774.602C.052 8.126-.453 9.74.486 10.59l5.147 4.666-1.542 6.926c-.28 1.262 1.023 2.26 2.09 1.585L12 20.099z"></path>
+                                </svg>
+                                <p class="m-0" th:text="|${title.imdbRating}|">Card title</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</main>
+</body>
+</html>

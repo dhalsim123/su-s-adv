@@ -42,4 +42,16 @@ public class ChartController {
 
         return modelAndView;
     }
+
+    @GetMapping("/sitePopularityRankings")
+    public ModelAndView getSiteSpecificPopularityRankings(ModelAndView modelAndView){
+
+        List<TitleViewDTO> mostPopularTitleViewDTOs = titleService.get100MostPopularOnThisSiteTitleViewDTOs();
+
+        modelAndView.addObject("titles", mostPopularTitleViewDTOs);
+
+        modelAndView.setViewName("SitePopularityRankings");
+
+        return modelAndView;
+    }
 }

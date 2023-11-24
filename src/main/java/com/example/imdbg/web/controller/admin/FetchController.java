@@ -110,7 +110,7 @@ public class FetchController {
     }
 
     @PostMapping("/start/updates/single/{id}")
-    public ModelAndView postStartUpdateSingleFetch(@PathVariable String id, ModelAndView modelAndView) {
+    public ModelAndView postStartUpdateSingleFetch(@PathVariable Long id, ModelAndView modelAndView) {
         if (isThreadNull() || !isThreadRunning()){
             fetchThread = new Thread(() -> fetchService.updateSingleTitle(id));
             fetchThread.start();

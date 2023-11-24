@@ -41,7 +41,7 @@ class FetchServiceTest {
         toTest.fetchTop250ImdbTitles();
 
         Mockito.verify(imdbScrapeService, Mockito.times(1)).getTop250IdsAndRatings();
-        Mockito.verify(titleService, Mockito.times(1)).createNewTitlesWithIdsAndRatingsMap(testMap);
+        Mockito.verify(titleService, Mockito.times(1)).createNewTitlesFromIdsAndRatingsMap(testMap);
 
     }
 
@@ -59,7 +59,7 @@ class FetchServiceTest {
         toTest.fetch100MostPopularImdbTitles();
 
         Mockito.verify(imdbScrapeService, Mockito.times(1)).get100MostPopularIdsAndRatings();
-        Mockito.verify(titleService, Mockito.times(1)).createNewTitlesWithIdsAndRatingsMap(testMap);
+        Mockito.verify(titleService, Mockito.times(1)).createNewTitlesFromIdsAndRatingsMap(testMap);
     }
 
     @Test
@@ -76,7 +76,7 @@ class FetchServiceTest {
         toTest.fetchUpcomingImdbTitles();
 
         Mockito.verify(imdbScrapeService, Mockito.times(1)).getUpcomingReleases();
-        Mockito.verify(titleService, Mockito.times(1)).createNewTitlesWithIdsList(testList);
+        Mockito.verify(titleService, Mockito.times(1)).createNewTitlesFromIdsList(testList);
 
     }
 
@@ -94,7 +94,7 @@ class FetchServiceTest {
 
         toTest.fetchSingleImdbTitle(testImdbId);
 
-        Mockito.verify(titleService, Mockito.times(1)).createNewTitlesWithIdsList(List.of(testImdbId));
+        Mockito.verify(titleService, Mockito.times(1)).createNewTitlesFromIdsList(List.of(testImdbId));
     }
 
     @Test
@@ -102,7 +102,7 @@ class FetchServiceTest {
 
         String testImdbId = "testImdbId";
 
-        Mockito.when(titleService.createNewTitlesWithIdsList(List.of(testImdbId))).thenThrow(RuntimeException.class);
+        Mockito.when(titleService.createNewTitlesFromIdsList(List.of(testImdbId))).thenThrow(RuntimeException.class);
         assertDoesNotThrow(() -> toTest.fetchSingleImdbTitle(testImdbId));
     }
 
@@ -116,7 +116,7 @@ class FetchServiceTest {
         toTest.fetch50Titles(testPageNumber);
 
         Mockito.verify(imdbScrapeService, Mockito.times(1)).get50TitleIdsAndRatings(testPageNumber);
-        Mockito.verify(titleService, Mockito.times(1)).createNewTitlesWithIdsAndRatingsMap(testMap);
+        Mockito.verify(titleService, Mockito.times(1)).createNewTitlesFromIdsAndRatingsMap(testMap);
 
     }
 
@@ -139,7 +139,7 @@ class FetchServiceTest {
         toTest.fetch250Titles(testPageNumber);
 
         Mockito.verify(imdbScrapeService, Mockito.times(1)).get250TitleIdsAndRatings(testPageNumber);
-        Mockito.verify(titleService, Mockito.times(1)).createNewTitlesWithIdsAndRatingsMap(testMap);
+        Mockito.verify(titleService, Mockito.times(1)).createNewTitlesFromIdsAndRatingsMap(testMap);
 
     }
 
@@ -185,20 +185,20 @@ class FetchServiceTest {
     @Test
     void updateSingleTitle() {
 
-        String testImdbId = "testImdbId";
+        Long testId = 1L;
 
-        toTest.updateSingleTitle(testImdbId);
+        toTest.updateSingleTitle(testId);
 
-        Mockito.verify(titleService, Mockito.times(1)).updateSingleTitle(testImdbId);
+        Mockito.verify(titleService, Mockito.times(1)).updateSingleTitle(testId);
     }
 
     @Test
     void updateSingleTitle_Throw_Catch() {
 
-        String testImdbId = "testImdbId";
+        Long testId = 1L;
 
-        Mockito.doThrow(RuntimeException.class).when(titleService).updateSingleTitle(testImdbId);
-        assertDoesNotThrow(() -> toTest.updateSingleTitle(testImdbId));
+        Mockito.doThrow(RuntimeException.class).when(titleService).updateSingleTitle(testId);
+        assertDoesNotThrow(() -> toTest.updateSingleTitle(testId));
     }
 
 

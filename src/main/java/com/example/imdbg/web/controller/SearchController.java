@@ -2,16 +2,20 @@ package com.example.imdbg.web.controller;
 
 import com.example.imdbg.model.entity.movies.dtos.view.TitleSearchViewDTO;
 import com.example.imdbg.service.movies.TitleService;
+import jakarta.servlet.http.HttpServletRequest;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
 @Controller
-@RequestMapping("/searchSuggestions")
+@RequestMapping("/search")
 public class SearchController {
 
     private final TitleService titleService;
@@ -20,9 +24,37 @@ public class SearchController {
         this.titleService = titleService;
     }
 
-    @GetMapping
+    @GetMapping("/suggestions")
     @ResponseBody
-    public List<TitleSearchViewDTO> getSearchSuggestions(@RequestParam String search) {
-        return titleService.getSearchSuggestionsContaining(search);
+    public ResponseEntity<?> getSearchSuggestions(@RequestParam(required = false) String search, HttpServletRequest request) {
+        if (search == null || search.trim().isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+
+        if (request.getHeader("X-Requested-With") == null){
+            return new ResponseEntity<>(HttpStatus.FORBIDDEN);
+        }
+
+        List<TitleSearchViewDTO> searchSuggestionsContaining = titleService.getSearchSuggestionsContaining(search);
+        return new ResponseEntity<>(searchSuggestionsContaining, HttpStatus.OK);
     }
+
+    @GetMapping("/results")
+    public ModelAndView getSearchResults(@RequestParam(required = false) String search, ModelAndView modelAndView){
+
+        if (search == null || search.trim().isEmpty()) {
+            modelAndView.addObject("search", null);
+            modelAndView.setViewName("searchResults");
+            return modelAndView;
+        }
+
+        List<TitleSearchViewDTO> searchSuggestionsContaining = titleService.getSearchSuggestionsContaining(search);
+
+        modelAndView.addObject("titles", searchSuggestionsContaining);
+        modelAndView.addObject("search", search);
+        modelAndView.setViewName("searchResults");
+
+        return modelAndView;
+    }
+
 }

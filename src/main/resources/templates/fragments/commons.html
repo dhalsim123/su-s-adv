@@ -37,24 +37,18 @@
           <h5 class="modal-title"></h5>
           <button type="button" class="btn-close background-color-orange" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body menu1">
-          <div class="d-flex flex-column">
-            <h5 class="modal-title">Movies</h5>
-            <a href="/chart/top250">Top 250 Movies</a>
-            <a href="/chart/100MostPopular">100 Most Popular Movies</a>
+        <div class="modal-body menu1 d-flex flex-column">
+          <div class="d-flex flex-column text-center gap-1">
+            <h1 class="modal-title">Site Specific Charts</h1>
+            <a href="/chart/sitePopularityRankings"><h5>100 Most Popular Movies</h5></a>
           </div>
-          <div class="d-flex flex-column">
-            <h5 class="modal-title">TV Shows</h5>
-            <a href="/login">Login</a>
-            <a href="/login">Login</a>
-            <a href="/login">Login</a>
+          <div class="d-flex flex-column text-center gap-1">
+            <h1 class="modal-title">IMDB Based Charts</h1>
+            <a href="/chart/top250"><h5>Top 250 Movies</h5></a>
+            <a href="/chart/100MostPopular"><h5>100 Most Popular Movies</h5></a>
           </div>
-          <div class="d-flex flex-column">
-            <h5 class="modal-title">Watch</h5>
-            <a href="/login">Login</a>
-            <a href="/login">Login</a>
-            <a href="/login">Login</a>
-          </div>
+
+
         </div>
       </div>
     </div>
@@ -91,9 +85,9 @@
         </ul>
         <!-- Left links -->
 
-        <form class="d-flex align-items-center w-100 form-search">
+        <form class="d-flex align-items-center w-100 form-search" th:action="@{/search/results}">
           <div id="input-group" class="input-group">
-            <input type="search" id="search" class="form-control border-end-0" oninput="updateSearchBar()" placeholder="Search" aria-label="Search" />
+            <input name="search" type="search" id="search" class="form-control border-end-0" oninput="updateSearchBar()" placeholder="Search" aria-label="Search" />
             <button id="suggestion-search-button" type="submit" aria-label="Submit Search" class="form-control align-self-end max-width-fit-content"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="ipc-icon ipc-icon--magnify" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 0 0 1.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 0 0-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 0 0 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></button>
           </div>
 

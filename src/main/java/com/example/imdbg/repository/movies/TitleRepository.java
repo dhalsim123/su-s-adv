@@ -42,6 +42,9 @@ public interface TitleRepository extends JpaRepository<TitleEntity, Long> {
     @Query("SELECT t FROM TitleEntity t WHERE t.popularity != null ORDER BY t.popularity")
     List<TitleEntity> find100MostPopularImdbList();
 
+    @Query("SELECT t FROM TitleEntity t WHERE t.pageViews != null ORDER BY t.pageViews DESC LIMIT 100")
+    List<TitleEntity> find100MostPopularOnThisSite();
+
     @Query("SELECT a.idIMDB FROM TitleEntity t JOIN t.actors a WHERE t.imdbId = :titleImdbId")
     List<String> findIdsOfActorsForTitle (@Param("titleImdbId") String titleImdbId);
 
