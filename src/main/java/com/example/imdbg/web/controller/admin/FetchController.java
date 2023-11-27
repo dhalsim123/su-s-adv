@@ -1,7 +1,12 @@
 package com.example.imdbg.web.controller.admin;
 
+import com.example.imdbg.event.InitTitlesFinishedEvent;
+import com.example.imdbg.event.InitTitlesStartedEvent;
 import com.example.imdbg.service.admin.FetchService;
+import lombok.Getter;
+import org.springframework.context.event.EventListener;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.parameters.P;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
@@ -12,6 +17,9 @@ public class FetchController {
 
     private final FetchService fetchService;
     private Thread fetchThread;
+
+    @Getter
+    private static boolean fetchEnabled = true;
 
     public FetchController(FetchService fetchService) {
         this.fetchService = fetchService;
@@ -45,7 +53,10 @@ public class FetchController {
 
 
     @GetMapping("/status")
-    public ResponseEntity<Boolean> getFetchStatus() {
+    public Object getFetchStatus(@RequestHeader("Accept") String acceptHeader) {
+        if (acceptHeader.contains("text/html")){
+            return new ModelAndView("adminPanel");
+        }
         return ResponseEntity.ok(isThreadRunning());
     }
 
@@ -169,5 +180,19 @@ public class FetchController {
 
     public boolean isThreadNull() {
         return fetchThread == null;
+    }
+
+    public static void setFetchEnabled(boolean flag){
+        FetchController.fetchEnabled = flag;
+    }
+
+    @EventListener(InitTitlesStartedEvent.class)
+    public void handleInitTitlesStarted (){
+        FetchController.setFetchEnabled(false);
+    }
+
+    @EventListener(InitTitlesFinishedEvent.class)
+    public void handleInitTitlesFinished (){
+        FetchController.setFetchEnabled(true);
     }
 }

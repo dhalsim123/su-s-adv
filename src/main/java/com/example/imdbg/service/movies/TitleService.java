@@ -1,5 +1,7 @@
 package com.example.imdbg.service.movies;
 
+import com.example.imdbg.event.InitTitlesFinishedEvent;
+import com.example.imdbg.event.InitTitlesStartedEvent;
 import com.example.imdbg.model.entity.movies.*;
 import com.example.imdbg.model.entity.api.apidtos.ApiMovieAddDTO;
 import com.example.imdbg.model.entity.api.apidtos.ApiPersonAddDTO;
@@ -15,10 +17,12 @@ import com.example.imdbg.service.api.MyApiFilmsService;
 import com.example.imdbg.service.scrape.ImdbScrapeService;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -30,7 +34,6 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.sql.SQLException;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -59,10 +62,12 @@ public class TitleService {
     private final ModelMapper modelMapper;
     private final Gson gson;
 
+    private final ApplicationEventPublisher applicationEventPublisher;
+
     private final Logger LOGGER = LoggerFactory.getLogger(TitleService.class);
 
 
-    public TitleService(TitleRepository titleRepository, GenreService genreService, TypeService typeService, PersonService personService, PhotoService photoService, VideoService videoService, CharacterRoleService characterRoleService, ImdbScrapeService imdbScrapeService, MyApiFilmsService myApiFilmsService, DataSource dataSource, ModelMapper modelMapper, Gson gson) {
+    public TitleService(TitleRepository titleRepository, GenreService genreService, TypeService typeService, PersonService personService, PhotoService photoService, VideoService videoService, CharacterRoleService characterRoleService, ImdbScrapeService imdbScrapeService, MyApiFilmsService myApiFilmsService, DataSource dataSource, ModelMapper modelMapper, Gson gson, ApplicationEventPublisher applicationEventPublisher) {
         this.titleRepository = titleRepository;
         this.genreService = genreService;
         this.typeService = typeService;
@@ -75,6 +80,7 @@ public class TitleService {
         this.dataSource = dataSource;
         this.modelMapper = modelMapper;
         this.gson = gson;
+        this.applicationEventPublisher = applicationEventPublisher;
     }
 
 
@@ -104,21 +110,72 @@ public class TitleService {
     public void writeAJsonForTop250Titles() throws IOException {
         LinkedHashMap<String, String> top250IdsAndRatings = imdbScrapeService.getTop250IdsAndRatings();
         UUID uuid = UUID.randomUUID();
-        String jsonFileName = "top250_" + LocalDateTime.now() + ".json";
+        String jsonFileName = "top250_" + LocalDate.now() + uuid + ".json";
 
         JsonArray jsonArray = new JsonArray();
 
-        int count = 0;
         AtomicInteger atomicInteger = new AtomicInteger(1);
         for (String imdbId : top250IdsAndRatings.keySet()) {
-            if (count == 20) {
-                break;
-            }
             JsonObject jsonObject = myApiFilmsService.requestMovieDataAsJsonForImdbId(imdbId);
             jsonObject.addProperty("rating", top250IdsAndRatings.get(imdbId));
             jsonObject.addProperty("imdbTop250Rank", atomicInteger.getAndIncrement());
+            if (jsonObject.get("trailer") == null) {
+                try {
+                    JsonObject titleData = imdbScrapeService.getTitleData(imdbId);
+                    String trailerImdbId = titleData.get("trailerImdbId").getAsString();
+                    JsonArray trailerQualities = new JsonArray();
+                    JsonObject trailerId = new JsonObject();
+                    trailerId.addProperty("videoURL", trailerImdbId);
+                    trailerQualities.add(trailerId);
+                    JsonObject trailer = new JsonObject();
+                    trailer.add("qualities", trailerQualities);
+                    jsonObject.add("trailer", trailer);
+                }
+                catch (Exception ignored){
+
+                }
+
+            }
             jsonArray.add(jsonObject);
-            count++;
+            System.out.println("wrote as json: " + imdbId + " " + atomicInteger);
+        }
+
+        try (FileWriter fileWriter = new FileWriter("src/main/resources/data/" + jsonFileName)) {
+            fileWriter.write(jsonArray.toString());
+        }
+    }
+//
+    public void writeAJsonForTop100MostPopular() throws IOException {
+        LinkedHashMap<String, String> mostPopularIdsAndRatings = imdbScrapeService.get100MostPopularIdsAndRatings();
+        UUID uuid = UUID.randomUUID();
+        String jsonFileName = "100MostPopular" + LocalDate.now() + uuid + ".json";
+
+        JsonArray jsonArray = new JsonArray();
+
+        AtomicInteger atomicInteger = new AtomicInteger(1);
+        for (String imdbId : mostPopularIdsAndRatings.keySet()) {
+            JsonObject jsonObject = myApiFilmsService.requestMovieDataAsJsonForImdbId(imdbId);
+            jsonObject.addProperty("rating", mostPopularIdsAndRatings.get(imdbId));
+            jsonObject.addProperty("popularity", atomicInteger.getAndIncrement());
+            if (jsonObject.get("trailer") == null) {
+                try {
+                    JsonObject titleData = imdbScrapeService.getTitleData(imdbId);
+                    String trailerImdbId = titleData.get("trailerImdbId").getAsString();
+                    JsonArray trailerQualities = new JsonArray();
+                    JsonObject trailerId = new JsonObject();
+                    trailerId.addProperty("videoURL", trailerImdbId);
+                    trailerQualities.add(trailerId);
+                    JsonObject trailer = new JsonObject();
+                    trailer.add("qualities", trailerQualities);
+                    jsonObject.add("trailer", trailer);
+                }
+                catch (Exception ignored){
+
+                }
+
+            }
+            jsonArray.add(jsonObject);
+            System.out.println("wrote as json: " + imdbId + " " + atomicInteger);
         }
 
         try (FileWriter fileWriter = new FileWriter("src/main/resources/data/" + jsonFileName)) {
@@ -128,21 +185,61 @@ public class TitleService {
 
     public void initTitles() {
         if (titleRepository.count() == 0) {
+            applicationEventPublisher.publishEvent(new InitTitlesStartedEvent(this));
             try {
-                Reader reader = Files.newBufferedReader(Paths.get("src/main/resources/data/top250_24f28252-acfa-46e5-aa9d-e8e1e8e4f3d8.json"));
-                ApiMovieAddDTO[] dtos = gson.fromJson(reader, ApiMovieAddDTO[].class);
-                if (isTestDB()) {
-                    for (ApiMovieAddDTO dto : dtos) {
-                        this.createTitleFromApiDataDTO(dto);
-                    }
-                } else {
-                    this.createTitleFromApiDataDTO(Arrays.stream(dtos).findFirst().orElseThrow(() -> new ObjectNotFoundException("Json file is empty")));
-                }
-                reader.close();
+                String top250JsonPath = "src/main/resources/data/top250_2023-11-23.json";
+                String mostPopularJsonPath = "src/main/resources/data/100MostPopular2023-11-2767de3bde-1cf8-4e0d-8b28-7378b596ea36.json";
+
+                List<ApiMovieAddDTO> top250 = this.readAndProcessJson(top250JsonPath);
+                List<ApiMovieAddDTO> mostPopular = this.readAndProcessJson(mostPopularJsonPath);
+
+                LinkedHashMap<String, ApiMovieAddDTO> filteredDTOs = this.filterInitTitles(top250, mostPopular);
+                saveInitTitles(filteredDTOs);
+
+                applicationEventPublisher.publishEvent(new InitTitlesFinishedEvent(this));
+                
             } catch (Exception e) {
+                applicationEventPublisher.publishEvent(new InitTitlesFinishedEvent(this));
                 throw new RuntimeException(e);
             }
         }
+    }
+
+    private void saveInitTitles(LinkedHashMap<String, ApiMovieAddDTO> filteredDTOs) throws SQLException {
+        List<String> idsList = filteredDTOs.keySet().stream().toList();
+        List<String> filteredIdsList = this.filterExistingImdbIdTitles(idsList);
+
+        if (!isTestDB()) {
+            for (ApiMovieAddDTO dto : filteredDTOs.values().stream().limit(350).toList()) {
+                if (filteredIdsList.contains(dto.getIdIMDB())){
+                    this.createTitleFromApiDataDTO(dto);
+                }
+            }
+        } else {
+            this.createTitleFromApiDataDTO(filteredDTOs.values().stream().findFirst().orElseThrow(() -> new ObjectNotFoundException("Json file is empty")));
+        }
+    }
+
+    private LinkedHashMap<String, ApiMovieAddDTO> filterInitTitles(List<ApiMovieAddDTO> list1, List<ApiMovieAddDTO> list2) {
+        LinkedHashMap<String, ApiMovieAddDTO> filteredDTOs = new LinkedHashMap<>();
+
+        list1.forEach(dto -> filteredDTOs.put(dto.getIdIMDB(), dto));
+        list2.forEach(dto -> {
+            if (filteredDTOs.containsKey(dto.getIdIMDB())){
+                filteredDTOs.get(dto.getIdIMDB()).setPopularity(dto.getPopularity());
+            }
+            else {
+                 filteredDTOs.put(dto.getIdIMDB(), dto);
+            }
+        });
+        return filteredDTOs;
+    }
+
+    private List<ApiMovieAddDTO> readAndProcessJson(String jsonPath) throws IOException {
+        Reader reader = Files.newBufferedReader(Paths.get(jsonPath));
+        List<ApiMovieAddDTO> apiMovieAddDTOList = Arrays.stream(gson.fromJson(reader, ApiMovieAddDTO[].class)).toList();
+        reader.close();
+        return apiMovieAddDTOList;
     }
 
 
@@ -224,6 +321,7 @@ public class TitleService {
                     .simplePlot(apiMovieAddDTO.getSimplePlot())
                     .imdbRating(Float.parseFloat(apiMovieAddDTO.getRating()))
                     .imdbTop250Rank(apiMovieAddDTO.getImdbTop250Rank() == null ? null : Integer.parseInt(apiMovieAddDTO.getImdbTop250Rank()))
+                    .popularity(apiMovieAddDTO.getPopularity() == null ? null : Integer.parseInt(apiMovieAddDTO.getPopularity()))
                     .metascore(Integer.valueOf(apiMovieAddDTO.getMetascore()))
                     .imdbVotes(Integer.valueOf(apiMovieAddDTO.getVotes()))
                     .runtime(Long.valueOf(apiMovieAddDTO.getRuntime()))

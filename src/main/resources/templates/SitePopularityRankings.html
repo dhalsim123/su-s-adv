@@ -10,6 +10,13 @@
 
 <body>
 <main class="container mt-5">
+    <section th:if="${titles.size() == 0}" class="mb-lg-5 mb-sm-3">
+        <h3 class="mb-lg-3 mb-sm-1">
+            100 Most Popular Movies
+        </h3>
+        <h4>Based On This Site's Users' Activity</h4>
+        <p>Browse around and you might actually tip the scale of popularity</p>
+    </section>
     <section th:if="${titles.size() > 0}" class="mb-lg-5 mb-sm-3">
         <div class="mb-lg-5 mb-sm-1">
             <h3 class="mb-lg-3 mb-sm-1">

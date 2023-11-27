@@ -76,7 +76,7 @@ public class ImdbScrapeService {
             object.addProperty("imdbRating", imdbRating);
 
             if (trailerImdbId.isEmpty() && imdbRating.isEmpty()){
-                throw new RuntimeException("Could select any ids with the given queries");
+                throw new RuntimeException("Couldn't select any ids with the given queries");
             }
 
         } catch (Exception e) {

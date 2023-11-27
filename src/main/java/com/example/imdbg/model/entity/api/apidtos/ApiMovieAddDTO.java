@@ -48,6 +48,7 @@ public class ApiMovieAddDTO {
     private String rating;
 
     private String imdbTop250Rank;
+    private String popularity;
 
 
     @SerializedName("metascore")

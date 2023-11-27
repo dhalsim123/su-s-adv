@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:replace="~{fragments/commons::head}">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+
+        <div class="navbar-1" id="navbarSupportedContent">
+            <ul class="navbar-nav-1">
+                <li class="nav-item">
+                    <a id="menu-button1" class="ipc-btn nav-link active d-flex align-items-center me-lg-3" aria-current="page" th:href="@{/}">DB</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<main class="container mt-5">
+    <h3>You tried to do something that's not supported. <a th:href="@{/}">Go to the homepage</a></h3>
+</main>
+</body>
+</html>

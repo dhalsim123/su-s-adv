@@ -28,6 +28,9 @@ class FetchControllerTest {
     @Autowired
     private MockMvc mockMvc;
 
+    @Autowired
+    private TitleService titleService;
+
 
     @Test
     void getFetchLists() throws Exception {
@@ -128,9 +131,7 @@ class FetchControllerTest {
 
         User testUser = new User("admin123", "admin123", List.of(new SimpleGrantedAuthority("ROLE_ADMIN")));
 
-        String testImdbIdToUpdate = "tt0167260";
-
-        mockMvc.perform(MockMvcRequestBuilders.post("/admin/fetchIMDB/start/updates/single/" + testImdbIdToUpdate)
+        mockMvc.perform(MockMvcRequestBuilders.post("/admin/fetchIMDB/start/updates/single/" + 1L)
                 .with(SecurityMockMvcRequestPostProcessors.user(testUser))
                 .with(csrf()))
                 .andExpect(MockMvcResultMatchers.redirectedUrl("/admin/fetchIMDB/updates/single"));

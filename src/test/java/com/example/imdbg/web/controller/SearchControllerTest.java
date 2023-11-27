@@ -23,8 +23,9 @@ class SearchControllerTest {
 
         String search = "test";
 
-        mockMvc.perform(MockMvcRequestBuilders.get("/searchSuggestions")
-                .param("search", search)
+        mockMvc.perform(MockMvcRequestBuilders.get("/search/suggestions")
+                        .param("search", search)
+                        .header("X-requested-With", "XMLHttpRequest")
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))

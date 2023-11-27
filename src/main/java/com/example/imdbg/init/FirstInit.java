@@ -37,7 +37,6 @@ public class FirstInit implements CommandLineRunner {
         genreService.initGenres();
         typeService.initTypes();
 
-//        titleService.writeAJsonForTop250Titles();
         titleService.initTitles();
     }
 
