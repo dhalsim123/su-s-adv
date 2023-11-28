@@ -51,7 +51,7 @@
 
 
 
-    <section th:if="${topRatedCarouselViewDTOs.size() > 17}">
+    <section th:if="${topRatedCarouselViewDTOs.size() > 17}" class="mb-lg-5 mb-sm-3">
         <div id="carouselExampleControls" class="carousel carousel-dark slide" data-touch="true" data-bs-interval="false" data-bs-ride="carousel">
             <h3 class="sectionHeading1">Today's Top Picks</h3>
             <div class="carousel-inner">
@@ -70,11 +70,11 @@
         </div>
     </section>
 
-    <section th:if="${topRatedCarouselViewDTOs.size() > 17}">
+    <section th:if="${top24OnImdbThisWeekCarouselViewDTOs.size() > 23}" class="mb-lg-5 mb-sm-3">
         <div id="carouselExampleControls1" class="carousel carousel-dark slide" data-touch="true" data-bs-interval="false" data-bs-ride="carousel">
-            <h3>Today's Top Picks</h3>
+            <h3>Top 24 on IMDb this week</h3>
             <div class="carousel-inner">
-                <div th:replace="~{fragments/card :: carouselItem-3 (${topRatedCarouselViewDTOs})}">
+                <div th:replace="~{fragments/card :: carouselItem-6 (${top24OnImdbThisWeekCarouselViewDTOs})}">
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls1" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -89,27 +89,19 @@
         </div>
     </section>
 
+<!--    <section th:if="${top24OnImdbThisWeekCarouselViewDTOs.size() > 0}" class="mb-lg-5 mb-sm-3">-->
+<!--        <div id="carouselExampleControls2">-->
+<!--            <h3>Fan favorites</h3>-->
+<!--            <div class="">-->
+<!--                <div th:replace="~{fragments/card :: items-6 (${mostPopularOnThisSiteCarouselViewDTOs})}">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
 
-    <section th:if="${topRatedCarouselViewDTOs.size() > 17}">
-        <div id="carouselExampleControls2" class="carousel carousel-dark slide" data-touch="true" data-bs-interval="false" data-bs-ride="carousel">
-            <h3>Coming soon to theaters</h3>
-            <div class="carousel-inner">
-                <div th:replace="~{fragments/card :: carouselItem-3 (${topRatedCarouselViewDTOs})}">
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls1" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls1" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-
-            </div>
-        </div>
-    </section>
 
 </main>
+
 
 
 <script src="/js/topTrailersScript.js"></script>

@@ -43,7 +43,6 @@ public class WatchlistService {
     @Transactional
     public void removeFromWatchlist(Long id, Principal principal){
 
-
             UserEntity userByUsername = userService.findUserByUsernameForUpdate(principal.getName());
 
             List<TitleEntity> watchlist = userByUsername.getWatchlist();

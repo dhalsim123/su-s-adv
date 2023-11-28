@@ -101,7 +101,7 @@ public class FetchService {
     }
 
     public void fetch250Titles(int pageNumber){
-        newFetchThreadLog("Top250 Fetch: ");
+        newFetchThreadLog("Page Fetch: ");
 
         try {
             LinkedHashMap<String, String> idsAndRatingsMap = imdbScrapeService.get250TitleIdsAndRatings(pageNumber);

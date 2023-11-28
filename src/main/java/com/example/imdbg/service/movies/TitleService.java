@@ -16,8 +16,6 @@ import com.example.imdbg.repository.movies.TitleRepository;
 import com.example.imdbg.service.api.MyApiFilmsService;
 import com.example.imdbg.service.scrape.ImdbScrapeService;
 import com.google.gson.Gson;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
@@ -27,7 +25,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.sql.DataSource;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Reader;
 import java.nio.file.Files;
@@ -107,94 +104,95 @@ public class TitleService {
 //        });
 //    }
 
-    public void writeAJsonForTop250Titles() throws IOException {
-        LinkedHashMap<String, String> top250IdsAndRatings = imdbScrapeService.getTop250IdsAndRatings();
-        UUID uuid = UUID.randomUUID();
-        String jsonFileName = "top250_" + LocalDate.now() + uuid + ".json";
-
-        JsonArray jsonArray = new JsonArray();
-
-        AtomicInteger atomicInteger = new AtomicInteger(1);
-        for (String imdbId : top250IdsAndRatings.keySet()) {
-            JsonObject jsonObject = myApiFilmsService.requestMovieDataAsJsonForImdbId(imdbId);
-            jsonObject.addProperty("rating", top250IdsAndRatings.get(imdbId));
-            jsonObject.addProperty("imdbTop250Rank", atomicInteger.getAndIncrement());
-            if (jsonObject.get("trailer") == null) {
-                try {
-                    JsonObject titleData = imdbScrapeService.getTitleData(imdbId);
-                    String trailerImdbId = titleData.get("trailerImdbId").getAsString();
-                    JsonArray trailerQualities = new JsonArray();
-                    JsonObject trailerId = new JsonObject();
-                    trailerId.addProperty("videoURL", trailerImdbId);
-                    trailerQualities.add(trailerId);
-                    JsonObject trailer = new JsonObject();
-                    trailer.add("qualities", trailerQualities);
-                    jsonObject.add("trailer", trailer);
-                }
-                catch (Exception ignored){
-
-                }
-
-            }
-            jsonArray.add(jsonObject);
-            System.out.println("wrote as json: " + imdbId + " " + atomicInteger);
-        }
-
-        try (FileWriter fileWriter = new FileWriter("src/main/resources/data/" + jsonFileName)) {
-            fileWriter.write(jsonArray.toString());
-        }
-    }
+//    public void writeAJsonForTop250Titles() throws IOException {
+//        LinkedHashMap<String, String> top250IdsAndRatings = imdbScrapeService.getTop250IdsAndRatings();
+//        UUID uuid = UUID.randomUUID();
+//        String jsonFileName = "top250_" + LocalDate.now() + uuid + ".json";
 //
-    public void writeAJsonForTop100MostPopular() throws IOException {
-        LinkedHashMap<String, String> mostPopularIdsAndRatings = imdbScrapeService.get100MostPopularIdsAndRatings();
-        UUID uuid = UUID.randomUUID();
-        String jsonFileName = "100MostPopular" + LocalDate.now() + uuid + ".json";
-
-        JsonArray jsonArray = new JsonArray();
-
-        AtomicInteger atomicInteger = new AtomicInteger(1);
-        for (String imdbId : mostPopularIdsAndRatings.keySet()) {
-            JsonObject jsonObject = myApiFilmsService.requestMovieDataAsJsonForImdbId(imdbId);
-            jsonObject.addProperty("rating", mostPopularIdsAndRatings.get(imdbId));
-            jsonObject.addProperty("popularity", atomicInteger.getAndIncrement());
-            if (jsonObject.get("trailer") == null) {
-                try {
-                    JsonObject titleData = imdbScrapeService.getTitleData(imdbId);
-                    String trailerImdbId = titleData.get("trailerImdbId").getAsString();
-                    JsonArray trailerQualities = new JsonArray();
-                    JsonObject trailerId = new JsonObject();
-                    trailerId.addProperty("videoURL", trailerImdbId);
-                    trailerQualities.add(trailerId);
-                    JsonObject trailer = new JsonObject();
-                    trailer.add("qualities", trailerQualities);
-                    jsonObject.add("trailer", trailer);
-                }
-                catch (Exception ignored){
-
-                }
-
-            }
-            jsonArray.add(jsonObject);
-            System.out.println("wrote as json: " + imdbId + " " + atomicInteger);
-        }
-
-        try (FileWriter fileWriter = new FileWriter("src/main/resources/data/" + jsonFileName)) {
-            fileWriter.write(jsonArray.toString());
-        }
-    }
+//        JsonArray jsonArray = new JsonArray();
+//
+//        AtomicInteger atomicInteger = new AtomicInteger(1);
+//        for (String imdbId : top250IdsAndRatings.keySet()) {
+//            JsonObject jsonObject = myApiFilmsService.requestMovieDataAsJsonForImdbId(imdbId);
+//            jsonObject.addProperty("rating", top250IdsAndRatings.get(imdbId));
+//            jsonObject.addProperty("imdbTop250Rank", atomicInteger.getAndIncrement());
+//            if (jsonObject.get("trailer") == null) {
+//                try {
+//                    JsonObject titleData = imdbScrapeService.getTitleData(imdbId);
+//                    String trailerImdbId = titleData.get("trailerImdbId").getAsString();
+//                    JsonArray trailerQualities = new JsonArray();
+//                    JsonObject trailerId = new JsonObject();
+//                    trailerId.addProperty("videoURL", trailerImdbId);
+//                    trailerQualities.add(trailerId);
+//                    JsonObject trailer = new JsonObject();
+//                    trailer.add("qualities", trailerQualities);
+//                    jsonObject.add("trailer", trailer);
+//                }
+//                catch (Exception ignored){
+//
+//                }
+//
+//            }
+//            jsonArray.add(jsonObject);
+//            System.out.println("wrote as json: " + imdbId + " " + atomicInteger);
+//        }
+//
+//        try (FileWriter fileWriter = new FileWriter("src/main/resources/data/" + jsonFileName)) {
+//            fileWriter.write(jsonArray.toString());
+//        }
+//    }
+////
+//    public void writeAJsonForTop100MostPopular() throws IOException {
+//        LinkedHashMap<String, String> mostPopularIdsAndRatings = imdbScrapeService.get100MostPopularIdsAndRatings();
+//        UUID uuid = UUID.randomUUID();
+//        String jsonFileName = "100MostPopular" + LocalDate.now() + uuid + ".json";
+//
+//        JsonArray jsonArray = new JsonArray();
+//
+//        AtomicInteger atomicInteger = new AtomicInteger(1);
+//        for (String imdbId : mostPopularIdsAndRatings.keySet()) {
+//            JsonObject jsonObject = myApiFilmsService.requestMovieDataAsJsonForImdbId(imdbId);
+//            jsonObject.addProperty("rating", mostPopularIdsAndRatings.get(imdbId));
+//            jsonObject.addProperty("popularity", atomicInteger.getAndIncrement());
+//            if (jsonObject.get("trailer") == null) {
+//                try {
+//                    JsonObject titleData = imdbScrapeService.getTitleData(imdbId);
+//                    String trailerImdbId = titleData.get("trailerImdbId").getAsString();
+//                    JsonArray trailerQualities = new JsonArray();
+//                    JsonObject trailerId = new JsonObject();
+//                    trailerId.addProperty("videoURL", trailerImdbId);
+//                    trailerQualities.add(trailerId);
+//                    JsonObject trailer = new JsonObject();
+//                    trailer.add("qualities", trailerQualities);
+//                    jsonObject.add("trailer", trailer);
+//                }
+//                catch (Exception ignored){
+//
+//                }
+//
+//            }
+//            jsonArray.add(jsonObject);
+//            System.out.println("wrote as json: " + imdbId + " " + atomicInteger);
+//        }
+//
+//        try (FileWriter fileWriter = new FileWriter("src/main/resources/data/" + jsonFileName)) {
+//            fileWriter.write(jsonArray.toString());
+//        }
+//    }
 
     public void initTitles() {
         if (titleRepository.count() == 0) {
             applicationEventPublisher.publishEvent(new InitTitlesStartedEvent(this));
             try {
-                String top250JsonPath = "src/main/resources/data/top250_2023-11-23.json";
-                String mostPopularJsonPath = "src/main/resources/data/100MostPopular2023-11-2767de3bde-1cf8-4e0d-8b28-7378b596ea36.json";
+                String top250JsonPath = "src/main/resources/data/InitTitles-top250.json";
+                String mostPopularJsonPath = "src/main/resources/data/InitTitles-100MostPopular.json";
 
-                List<ApiMovieAddDTO> top250 = this.readAndProcessJson(top250JsonPath);
-                List<ApiMovieAddDTO> mostPopular = this.readAndProcessJson(mostPopularJsonPath);
+                List<ApiMovieAddDTO> top250 = this.readAndProcessJsonToApiDTO(top250JsonPath);
+                List<ApiMovieAddDTO> mostPopular = this.readAndProcessJsonToApiDTO(mostPopularJsonPath);
 
                 LinkedHashMap<String, ApiMovieAddDTO> filteredDTOs = this.filterInitTitles(top250, mostPopular);
-                saveInitTitles(filteredDTOs);
+
+                this.saveInitTitles(filteredDTOs);
 
                 applicationEventPublisher.publishEvent(new InitTitlesFinishedEvent(this));
                 
@@ -235,7 +233,7 @@ public class TitleService {
         return filteredDTOs;
     }
 
-    private List<ApiMovieAddDTO> readAndProcessJson(String jsonPath) throws IOException {
+    private List<ApiMovieAddDTO> readAndProcessJsonToApiDTO(String jsonPath) throws IOException {
         Reader reader = Files.newBufferedReader(Paths.get(jsonPath));
         List<ApiMovieAddDTO> apiMovieAddDTOList = Arrays.stream(gson.fromJson(reader, ApiMovieAddDTO[].class)).toList();
         reader.close();
@@ -357,8 +355,16 @@ public class TitleService {
         return titleRepository.findTop250ImdbList();
     }
 
+    public List<TitleEntity> findTop24OnImdbThisWeek() {
+        return titleRepository.findTop24OnImdbThisWeek();
+    }
+
     public List<TitleEntity> find100MostPopularImdbList(){
         return titleRepository.find100MostPopularImdbList();
+    }
+
+    public List<TitleEntity> find6MostPopularOnThisSite(){
+        return titleRepository.find6MostPopularOnThisSite();
     }
 
     public List<TitleEntity> find100MostPopularOnThisSite(){
@@ -556,10 +562,22 @@ public class TitleService {
         return mapTitleCarouselViewDTOS(top250ImdbRatedTitles);
     }
 
+    public List<TitleCarouselViewDTO> getTop24OnImdbThisWeekCarouselViewDTOs() {
+        List<TitleEntity> top10OnImdbThisWeek = this.findTop24OnImdbThisWeek();
+
+        return mapTitleCarouselViewDTOS(top10OnImdbThisWeek);
+    }
+
     public List<TitleCarouselViewDTO> get4MostPopularCarouselViewDTOs() {
         List<TitleEntity> mostPopular4 = this.findMostPopularImdbRatedMovies().stream().limit(4).toList();
 
         return mapTitleCarouselViewDTOS(mostPopular4);
+    }
+
+    public List<TitleCarouselViewDTO> get6MostPopularOnThisSiteCarouselViewDTOs() {
+        List<TitleEntity> mostPopularOnThisSite = this.find6MostPopularOnThisSite();
+
+        return mapTitleCarouselViewDTOS(mostPopularOnThisSite);
     }
 
     private List<TitleCarouselViewDTO> mapTitleCarouselViewDTOS(List<TitleEntity> list) {

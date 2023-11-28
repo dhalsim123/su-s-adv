@@ -92,6 +92,7 @@ class FetchControllerTest {
         User testUser = new User("admin123", "admin123", List.of(new SimpleGrantedAuthority("ROLE_ADMIN")));
 
         mockMvc.perform(MockMvcRequestBuilders.get("/admin/fetchIMDB/status")
+                        .header("Accept", "")
                         .with(SecurityMockMvcRequestPostProcessors.user(testUser)))
                 .andExpect(MockMvcResultMatchers.status().isOk());
     }

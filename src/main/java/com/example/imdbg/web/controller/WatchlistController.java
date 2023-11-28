@@ -39,11 +39,9 @@ public class WatchlistController {
     public ResponseEntity postAdd(@PathVariable Long id, Principal principal){
         try {
             watchlistService.addToWatchlist(id, principal);
-            LOGGER.info("added to watchlist {}", id);
             return ResponseEntity.ok().build();
         }
         catch (Exception e){
-            LOGGER.error("{} wasn't added to watchlist because of this error: " + e, id);
             return ResponseEntity.badRequest().build();
         }
     }
@@ -52,11 +50,9 @@ public class WatchlistController {
     public ResponseEntity postRemove(@PathVariable Long id, Principal principal){
         try {
             watchlistService.removeFromWatchlist(id, principal);
-            LOGGER.info("removed from watchlist {}", id);
             return ResponseEntity.ok().build();
         }
         catch (Exception e){
-            LOGGER.error("{} wasn't removed from the watchlist because of this error: " + e, id);
             return ResponseEntity.badRequest().build();
         }
     }

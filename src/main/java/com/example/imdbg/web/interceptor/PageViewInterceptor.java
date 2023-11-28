@@ -20,7 +20,6 @@ public class PageViewInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(@NonNull HttpServletRequest request, @NonNull HttpServletResponse response, @NonNull Object handler){
-
         String requestURI = request.getRequestURI();
         if (requestURI.startsWith("/title")){
             String sessionId = request.getSession().getId();

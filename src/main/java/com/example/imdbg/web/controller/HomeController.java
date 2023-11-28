@@ -27,6 +27,12 @@ public class HomeController {
         List<TitleCarouselViewDTO> topRatedCarouselViewDTOs = titleService.get18TopRatedCarouselViewDTOs();
         modelAndView.addObject("topRatedCarouselViewDTOs", topRatedCarouselViewDTOs);
 
+        List<TitleCarouselViewDTO> top24OnImdbThisWeekCarouselViewDTOs = titleService.getTop24OnImdbThisWeekCarouselViewDTOs();
+        modelAndView.addObject("top24OnImdbThisWeekCarouselViewDTOs", top24OnImdbThisWeekCarouselViewDTOs);
+
+        List<TitleCarouselViewDTO> mostPopularOnThisSiteCarouselViewDTOs = titleService.get6MostPopularOnThisSiteCarouselViewDTOs();
+        modelAndView.addObject("mostPopularOnThisSiteCarouselViewDTOs", mostPopularOnThisSiteCarouselViewDTOs);
+
         List<TitleCarouselViewDTO> fourMostPopular = titleService.get4MostPopularCarouselViewDTOs();
         modelAndView.addObject("fourMostPopular", fourMostPopular);
 

@@ -55,7 +55,7 @@ public class FetchController {
     @GetMapping("/status")
     public Object getFetchStatus(@RequestHeader("Accept") String acceptHeader) {
         if (acceptHeader.contains("text/html")){
-            return new ModelAndView("adminPanel");
+            return new ModelAndView("redirect:/admin/panel");
         }
         return ResponseEntity.ok(isThreadRunning());
     }

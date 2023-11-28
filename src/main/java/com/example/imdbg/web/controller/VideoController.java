@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.io.IOException;
+
 @Controller
 @RequestMapping("/video")
 public class VideoController {
@@ -20,7 +22,7 @@ public class VideoController {
     }
 
     @GetMapping("/{id}")
-    public ModelAndView getById(@PathVariable String id, ModelAndView modelAndView){
+    public ModelAndView getById(@PathVariable String id, ModelAndView modelAndView) throws IOException {
 
         TitleVideoViewDTO titleVideoViewDTO = titleService.getTitleVideoViewDTOByVideoImdbId(id);
 
