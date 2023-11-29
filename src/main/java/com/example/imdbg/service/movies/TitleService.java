@@ -20,6 +20,7 @@ import com.google.gson.JsonObject;
 import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -214,7 +215,7 @@ public class TitleService {
                 }
             }
         } else {
-            this.createTitleFromApiDataDTO(filteredDTOs.values().stream().findFirst().orElseThrow(() -> new ObjectNotFoundException("Json file is empty")));
+            this.createTitleFromApiDataDTO(filteredDTOs.values().stream().findFirst().orElseThrow(() -> new RuntimeException("Json file is empty")));
         }
     }
 
@@ -353,6 +354,10 @@ public class TitleService {
 
     public List<TitleEntity> findTop250ImdbList() {
         return titleRepository.findTop250ImdbList();
+    }
+
+    public List<TitleEntity> findTop250ImdbListLimit18() {
+        return titleRepository.findTop250ImdbListLimit18();
     }
 
     public List<TitleEntity> findTop24OnImdbThisWeek() {
@@ -557,7 +562,7 @@ public class TitleService {
     }
 
     public List<TitleCarouselViewDTO> get18TopRatedCarouselViewDTOs() {
-        List<TitleEntity> top250ImdbRatedTitles = this.findTop250ImdbList().stream().limit(18).toList();
+        List<TitleEntity> top250ImdbRatedTitles = this.findTop250ImdbListLimit18();
 
         return mapTitleCarouselViewDTOS(top250ImdbRatedTitles);
     }
@@ -647,12 +652,14 @@ public class TitleService {
     }
 
     @Transactional
+    @Cacheable("top250TitleViewDTOs")
     public List<TitleViewDTO> getTop250TitleViewDTOs() {
         List<TitleEntity> top250ImdbRatedMovies = this.findTop250ImdbList();
         return mapTitleViewDTOS(top250ImdbRatedMovies);
     }
 
     @Transactional
+    @Cacheable("100MostPopularTitleViewDTOs")
     public List<TitleViewDTO> get100MostPopularTitleViewDTOs() {
         List<TitleEntity> mostPopularImdbRatedMovies = this.find100MostPopularImdbList();
         return mapTitleViewDTOS(mostPopularImdbRatedMovies);

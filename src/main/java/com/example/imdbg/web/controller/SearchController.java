@@ -1,6 +1,8 @@
 package com.example.imdbg.web.controller;
 
 import com.example.imdbg.model.entity.movies.dtos.view.TitleSearchViewDTO;
+import com.example.imdbg.model.exceptions.BadRequestException;
+import com.example.imdbg.model.exceptions.ForbiddenException;
 import com.example.imdbg.service.movies.TitleService;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
@@ -27,12 +29,12 @@ public class SearchController {
     @GetMapping("/suggestions")
     @ResponseBody
     public ResponseEntity<?> getSearchSuggestions(@RequestParam(required = false) String search, HttpServletRequest request) {
-        if (search == null || search.trim().isEmpty()) {
-            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-        }
+//        if (search == null || search.trim().isEmpty()) {
+//            throw new BadRequestException("Search parameter is required");
+//        }
 
         if (request.getHeader("X-Requested-With") == null){
-            return new ResponseEntity<>(HttpStatus.FORBIDDEN);
+            throw new ForbiddenException("You cannot request search suggestions outside the site's search bar");
         }
 
         List<TitleSearchViewDTO> searchSuggestionsContaining = titleService.getSearchSuggestionsContaining(search);

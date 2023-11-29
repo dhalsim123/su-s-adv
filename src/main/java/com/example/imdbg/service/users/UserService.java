@@ -8,6 +8,7 @@ import com.example.imdbg.model.entity.users.dto.binding.ChangeUsernameDTO;
 import com.example.imdbg.model.entity.users.dto.binding.UserRegisterDTO;
 import com.example.imdbg.model.entity.users.dto.view.UserSettingsDTO;
 import com.example.imdbg.model.entity.users.enums.RoleEnum;
+import com.example.imdbg.model.exceptions.UserNotFoundException;
 import com.example.imdbg.repository.users.UserRepository;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.LockModeType;
@@ -61,11 +62,11 @@ public class UserService {
     }
 
     public UserEntity findUserByUsername(String username) {
-        return userRepository.findUserEntityByUsername(username).orElseThrow(() -> new UsernameNotFoundException("User with username" + username + "was not found!"));
+        return userRepository.findUserEntityByUsername(username).orElseThrow(() -> new UserNotFoundException("User with username " + username + " was not found!"));
     }
 
     public UserEntity findUserById(Long id) {
-        return userRepository.findById(id).orElseThrow(() -> new UsernameNotFoundException("User with id" + id + "was not found!"));
+        return userRepository.findById(id).orElseThrow(() -> new UserNotFoundException("User with id " + id + " was not found!"));
     }
 
     public UserEntity findUserByUsernameForUpdate(String username) {

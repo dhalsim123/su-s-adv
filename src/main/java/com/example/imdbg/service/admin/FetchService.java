@@ -5,6 +5,7 @@ import com.example.imdbg.service.scrape.ImdbScrapeService;
 import lombok.Getter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -27,6 +28,7 @@ public class FetchService {
         this.imdbScrapeService = imdbScrapeService;
     }
 
+    @CacheEvict("top250TitleViewDTOs")
     public void fetchTop250ImdbTitles(){
         newFetchThreadLog("Top250 Fetch: ");
 
@@ -41,6 +43,8 @@ public class FetchService {
         }
 
     }
+
+    @CacheEvict("100MostPopularTitleViewDTOs")
     public void fetch100MostPopularImdbTitles(){
         newFetchThreadLog("100 Most Popular Fetch: ");
 
@@ -114,6 +118,7 @@ public class FetchService {
         }
     }
 
+    @CacheEvict("100MostPopularTitleViewDTOs")
     public void updateImdbPopularityRanks100MostPopular(){
         newFetchThreadLog("100 Most Popular Ranks Update: ");
 
@@ -127,6 +132,7 @@ public class FetchService {
         }
     }
 
+    @CacheEvict("top250TitleViewDTOs")
     public void updateImdbTop250(){
         newFetchThreadLog("Top 250 Update: ");
 

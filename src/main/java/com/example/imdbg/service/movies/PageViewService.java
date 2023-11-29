@@ -25,12 +25,13 @@ public class PageViewService {
     }
 
     public void incrementUniquePageView(String uri, String sessionId) {
-        sessionMap.compute(Long.valueOf(uri), (key, value) -> {
+        Long id = Long.valueOf(uri);
+        sessionMap.compute(id, (key, value) -> {
             if (value == null){
                 value = new HashSet<>();
             }
             if (value.add(sessionId)) {
-                uniqueClicks.compute(Long.valueOf(uri), (key1, value1) -> value1 == null ? 1 : value1 + 1);
+                uniqueClicks.compute(id, (key1, value1) -> value1 == null ? 1 : value1 + 1);
             }
             return value;
         });

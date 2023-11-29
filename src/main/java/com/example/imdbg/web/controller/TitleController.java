@@ -26,6 +26,7 @@ public class TitleController {
     @GetMapping("{id}")
     public ModelAndView getById(@PathVariable Long id, Principal principal, ModelAndView modelAndView){
 
+
         TitleViewDTO titleViewDTO = titleService.getTitleViewDTOById(id);
 
         modelAndView.addObject("titleViewDTO", titleViewDTO);
