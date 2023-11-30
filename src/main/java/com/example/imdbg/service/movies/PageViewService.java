@@ -1,6 +1,5 @@
 package com.example.imdbg.service.movies;
 
-import lombok.Getter;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 

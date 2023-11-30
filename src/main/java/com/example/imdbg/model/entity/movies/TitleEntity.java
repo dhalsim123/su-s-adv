@@ -4,7 +4,6 @@ import com.example.imdbg.model.entity.BaseEntity;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.Positive;
 import lombok.*;
 
 import java.time.LocalDate;
@@ -104,7 +103,7 @@ public class TitleEntity extends BaseEntity {
     private LocalDate lastUpdated;
 
     @PrePersist
-    public void updateMainPosterTitle() {
+    public void updateMainPosterAndTrailerTitle() {
         if (this.mainPosterURL != null) {
             this.mainPosterURL.setTitle(this);
         }

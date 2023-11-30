@@ -23,8 +23,8 @@ public class UserRegisterDTO {
     private String username;
 
     @Email
-    @NotBlank (message = "Must be a valid email")
     @AvailableEmailCheck
+    @Pattern(regexp = "^[\\w-.]+@([\\w-]+\\.)+[\\w-]{2,4}$", message = "Must be a valid email")
     private String email;
 
     @Size (min = 5, max = 50, message = "Password length must between 5 and 50 characters")

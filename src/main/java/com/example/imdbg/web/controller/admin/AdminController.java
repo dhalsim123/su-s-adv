@@ -1,10 +1,13 @@
 package com.example.imdbg.web.controller.admin;
 
 import com.example.imdbg.model.entity.users.dto.view.UserSettingsDTO;
-import com.example.imdbg.service.users.UserService;
 import com.example.imdbg.service.admin.AdminService;
+import com.example.imdbg.service.users.UserService;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.security.Principal;

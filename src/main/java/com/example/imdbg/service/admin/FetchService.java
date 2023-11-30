@@ -30,7 +30,7 @@ public class FetchService {
 
     @CacheEvict("top250TitleViewDTOs")
     public void fetchTop250ImdbTitles(){
-        newFetchThreadLog("Top250 Fetch: ");
+        this.newFetchThreadLog("Top250 Fetch: ");
 
         try {
             LinkedHashMap<String, String> top250IdsAndRatings = imdbScrapeService.getTop250IdsAndRatings();
@@ -46,7 +46,7 @@ public class FetchService {
 
     @CacheEvict("100MostPopularTitleViewDTOs")
     public void fetch100MostPopularImdbTitles(){
-        newFetchThreadLog("100 Most Popular Fetch: ");
+        this.newFetchThreadLog("100 Most Popular Fetch: ");
 
         try {
             LinkedHashMap<String, String> mostPopularIdsAndRatings = imdbScrapeService.get100MostPopularIdsAndRatings();
@@ -61,7 +61,7 @@ public class FetchService {
     }
 
     public void fetchUpcomingImdbTitles(){
-        newFetchThreadLog("Upcoming titles Fetch: ");
+        this.newFetchThreadLog("Upcoming titles Fetch: ");
 
         try {
             List<String> upcomingReleases = imdbScrapeService.getUpcomingReleases();
@@ -75,7 +75,7 @@ public class FetchService {
     }
 
     public void fetchSingleImdbTitle(String imdbId){
-        newFetchThreadLog("Single Title Fetch with id " + imdbId + ": ");
+        this.newFetchThreadLog("Single Title Fetch with id " + imdbId + ": ");
 
         try {
             String info = titleService.createNewTitlesFromIdsList(new ArrayList<>(List.of(imdbId)));
@@ -91,7 +91,7 @@ public class FetchService {
     }
 
     public void fetch50Titles(int pageNumber){
-        newFetchThreadLog("Page " + pageNumber + " Out of the Search Results: ");
+        this.newFetchThreadLog("Page " + pageNumber + " Out of the Search Results: ");
 
         try {
             LinkedHashMap<String, String> idsAndRatingsMap = imdbScrapeService.get50TitleIdsAndRatings(pageNumber);
@@ -105,7 +105,7 @@ public class FetchService {
     }
 
     public void fetch250Titles(int pageNumber){
-        newFetchThreadLog("Page Fetch: ");
+        this.newFetchThreadLog("Page Fetch: ");
 
         try {
             LinkedHashMap<String, String> idsAndRatingsMap = imdbScrapeService.get250TitleIdsAndRatings(pageNumber);
@@ -120,7 +120,7 @@ public class FetchService {
 
     @CacheEvict("100MostPopularTitleViewDTOs")
     public void updateImdbPopularityRanks100MostPopular(){
-        newFetchThreadLog("100 Most Popular Ranks Update: ");
+        this.newFetchThreadLog("100 Most Popular Ranks Update: ");
 
         try {
             titleService.updateImdb100MostPopular();
@@ -134,7 +134,7 @@ public class FetchService {
 
     @CacheEvict("top250TitleViewDTOs")
     public void updateImdbTop250(){
-        newFetchThreadLog("Top 250 Update: ");
+        this.newFetchThreadLog("Top 250 Update: ");
 
         try {
             titleService.updateImdbTop250Ranks();
@@ -147,7 +147,7 @@ public class FetchService {
     }
 
     public void updateSingleTitle(Long id){
-        newFetchThreadLog("Title with id: " + id);
+        this.newFetchThreadLog("Title with id: " + id);
 
         try {
             titleService.updateSingleTitle(id);

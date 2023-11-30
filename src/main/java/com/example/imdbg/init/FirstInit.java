@@ -8,9 +8,6 @@ import com.example.imdbg.service.users.UserService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-import javax.sql.DataSource;
-import java.sql.SQLException;
-
 @Component
 public class FirstInit implements CommandLineRunner {
     private final UserService userService;

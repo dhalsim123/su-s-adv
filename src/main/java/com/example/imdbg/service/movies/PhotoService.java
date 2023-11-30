@@ -1,7 +1,7 @@
 package com.example.imdbg.service.movies;
 
-import com.example.imdbg.model.entity.movies.PhotoEntity;
 import com.example.imdbg.model.entity.api.apidtos.ApiMovieAddDTO;
+import com.example.imdbg.model.entity.movies.PhotoEntity;
 import com.example.imdbg.repository.movies.PhotoRepository;
 import org.springframework.stereotype.Service;
 

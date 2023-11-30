@@ -1,6 +1,6 @@
 package com.example.imdbg.repository.movies;
 
-import com.example.imdbg.model.entity.movies.*;
+import com.example.imdbg.model.entity.movies.TitleEntity;
 import com.example.imdbg.model.entity.movies.enums.TypeEnum;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -29,12 +29,6 @@ public interface TitleRepository extends JpaRepository<TitleEntity, Long> {
     List<TitleEntity> findAllByPopularityNotNull();
 
     Optional<TitleEntity> findTitleEntityByMainTrailerURL_VideoImdbId (String videoImdbId);
-
-    @Query("SELECT t FROM TitleEntity t ORDER BY t.imdbRating DESC LIMIT 250")
-    List<TitleEntity> findTop250ImdbRatedTitles();
-
-    @Query("SELECT t FROM TitleEntity t WHERE t.type.name = 'MOVIE' ORDER BY t.imdbRating DESC LIMIT 250")
-    List<TitleEntity> findTop250ImdbRatedMovies();
 
     @Query("SELECT t FROM TitleEntity t WHERE t.imdbTop250Rank != null ORDER BY t.imdbTop250Rank")
     List<TitleEntity> findTop250ImdbList();

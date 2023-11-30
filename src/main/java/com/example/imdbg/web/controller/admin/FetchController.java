@@ -6,7 +6,6 @@ import com.example.imdbg.service.admin.FetchService;
 import lombok.Getter;
 import org.springframework.context.event.EventListener;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.parameters.P;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
@@ -16,7 +15,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class FetchController {
 
     private final FetchService fetchService;
-    private Thread fetchThread;
+    private static Thread fetchThread;
 
     @Getter
     private static boolean fetchEnabled = true;

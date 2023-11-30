@@ -2,7 +2,6 @@ package com.example.imdbg.service.users;
 
 import com.example.imdbg.model.entity.BaseEntity;
 import com.example.imdbg.model.entity.movies.TitleEntity;
-import com.example.imdbg.model.entity.users.RoleEntity;
 import com.example.imdbg.model.entity.users.UserEntity;
 import com.example.imdbg.model.entity.users.dto.binding.ChangeUsernameDTO;
 import com.example.imdbg.model.entity.users.dto.binding.UserRegisterDTO;
@@ -14,11 +13,6 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.LockModeType;
 import jakarta.persistence.PersistenceContext;
 import org.modelmapper.ModelMapper;
-import org.springframework.security.core.session.SessionInformation;
-import org.springframework.security.core.session.SessionRegistry;
-import org.springframework.security.core.userdetails.User;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -97,7 +91,7 @@ public class UserService {
         userRepository.saveAndFlush(user);
     }
 
-    public UserSettingsDTO getUserSettingsDTO(Principal principal) {
+    public UserSettingsDTO getPrincipalUserSettingsDTO(Principal principal) {
         UserEntity userByUsername = this.findUserByUsername(principal.getName());
         return modelMapper.map(userByUsername, UserSettingsDTO.class);
     }

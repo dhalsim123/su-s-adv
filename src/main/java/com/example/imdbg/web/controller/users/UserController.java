@@ -8,7 +8,10 @@ import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PatchMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -27,7 +30,7 @@ public class UserController {
     @GetMapping("/settings")
     public ModelAndView getSettings(Principal principal, ModelAndView modelAndView){
 
-        UserSettingsDTO userSettingsDTO = userService.getUserSettingsDTO(principal);
+        UserSettingsDTO userSettingsDTO = userService.getPrincipalUserSettingsDTO(principal);
 
         modelAndView.addObject("userSettingsDTO", userSettingsDTO);
 

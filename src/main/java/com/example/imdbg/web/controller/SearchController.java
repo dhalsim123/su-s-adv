@@ -1,7 +1,6 @@
 package com.example.imdbg.web.controller;
 
 import com.example.imdbg.model.entity.movies.dtos.view.TitleSearchViewDTO;
-import com.example.imdbg.model.exceptions.BadRequestException;
 import com.example.imdbg.model.exceptions.ForbiddenException;
 import com.example.imdbg.service.movies.TitleService;
 import jakarta.servlet.http.HttpServletRequest;

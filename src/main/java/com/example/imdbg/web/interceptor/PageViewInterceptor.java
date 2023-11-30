@@ -8,8 +8,6 @@ import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 
-import java.util.concurrent.ConcurrentHashMap;
-
 @Component
 public class PageViewInterceptor implements HandlerInterceptor {
 

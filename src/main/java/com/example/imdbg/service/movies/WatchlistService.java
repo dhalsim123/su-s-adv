@@ -4,7 +4,6 @@ import com.example.imdbg.model.entity.movies.TitleEntity;
 import com.example.imdbg.model.entity.movies.dtos.view.TitleViewDTO;
 import com.example.imdbg.model.entity.users.UserEntity;
 import com.example.imdbg.service.users.UserService;
-import org.hibernate.PessimisticLockException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

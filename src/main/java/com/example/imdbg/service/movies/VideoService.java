@@ -1,7 +1,7 @@
 package com.example.imdbg.service.movies;
 
-import com.example.imdbg.model.entity.movies.VideoEntity;
 import com.example.imdbg.model.entity.api.apidtos.ApiTrailerAddDTO;
+import com.example.imdbg.model.entity.movies.VideoEntity;
 import com.example.imdbg.repository.movies.VideoRepository;
 import org.springframework.stereotype.Service;
 

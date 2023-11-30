@@ -1,8 +1,6 @@
 package com.example.imdbg.service.movies;
 
-import com.example.imdbg.model.entity.movies.GenreEntity;
 import com.example.imdbg.model.entity.movies.TypeEntity;
-import com.example.imdbg.model.entity.movies.enums.GenreEnum;
 import com.example.imdbg.model.entity.movies.enums.TypeEnum;
 import com.example.imdbg.model.exceptions.ObjectNotFoundException;
 import com.example.imdbg.repository.movies.TypeRepository;
