@@ -28,7 +28,7 @@ public class ChartsLoadTimeInterceptor implements HandlerInterceptor {
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex){
         String requestURI = request.getRequestURI();
 
-        if (requestURI.startsWith("/chart/100MostPopular") || requestURI.startsWith("/chart/top250") || requestURI.startsWith("/chart/sitePopularityRankings") && request.getAttribute("startTime") != null){
+        if ((requestURI.startsWith("/chart/100MostPopular") || requestURI.startsWith("/chart/top250") || requestURI.startsWith("/chart/sitePopularityRankings")) && request.getAttribute("startTime") != null){
 
             long startTime = (long) request.getAttribute("startTime");
             long endTime = System.currentTimeMillis();
