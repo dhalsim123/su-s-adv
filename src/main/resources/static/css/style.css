@@ -279,6 +279,11 @@ svg:not(:root) {
     width: 75%;
 }
 
+#trailer-top-div-index-page{
+    width: 75%;
+    min-height: 40vw;
+}
+
 @media (max-width: 990px) {
     .display-none-under-1000px {
         display: none !important;

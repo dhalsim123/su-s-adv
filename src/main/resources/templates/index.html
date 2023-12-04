@@ -22,21 +22,21 @@
     <section th:if="${fourMostPopular.size() > 0}" class="mb-lg-5 mb-sm-3">
         <div class="d-flex gap-3">
 
-            <div  id="trailer-top-div" class=" position-relative">
-                <iframe id="trailer-top-embed" class="rounded" th:src="@{'https://www.imdb.com/video/embed/' + ${fourMostPopular.get(1).getMainTrailerURLVideoImdbId()}}" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="100%" width="100%" allowfullscreen></iframe>
-                <a id="trailer-top-href" th:href="@{/video/{id}(id=${fourMostPopular.get(1).getMainTrailerURLVideoImdbId()})}">
+            <div  id="trailer-top-div-index-page" class=" position-relative">
+                <iframe id="trailer-top-embed" class="rounded" th:src="@{'https://www.imdb.com/video/embed/' + ${fourMostPopular.get(0).getMainTrailerURLVideoImdbId()}}" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="100%" width="100%" allowfullscreen></iframe>
+                <a id="trailer-top-href" th:href="@{/video/{id}(id=${fourMostPopular.get(0).getMainTrailerURLVideoImdbId()})}">
                     <div class="trailer1">
                         <div class="trailerPoster1 rounded d-flex justify-content-center align-items-center gap-3">
-                            <img id="trailer-top-img" width="150px" class="rounded" th:src="${fourMostPopular.get(1).getMainPosterURLPhotoUrl()}" alt="">
+                            <img id="trailer-top-img" width="150px" class="rounded" th:src="${fourMostPopular.get(0).getMainPosterURLPhotoUrl()}" alt="">
 
                             <div id="trailer-top-text" class="d-flex flex-column align-self-end">
-                                <h3 id="trailer-top-title" class="text-white" th:text="${fourMostPopular.get(1).title}"></h3>
+                                <h3 id="trailer-top-title" class="text-white" th:text="${fourMostPopular.get(0).title}"></h3>
                                 <h4 class="text-light">Watch the trailer</h4>
                             </div>
                         </div>
                     </div>
                 </a>
-                <p id="trailer-top-videoId" class="d-none" th:text="${fourMostPopular.get(1).getMainTrailerURLVideoImdbId()}"></p>
+                <p id="trailer-top-videoId" class="d-none" th:text="${fourMostPopular.get(0).getMainTrailerURLVideoImdbId()}"></p>
             </div>
 
             <div class=" d-lg-flex flex-lg-column w-25 gap-3 display-none-under-1000px">
