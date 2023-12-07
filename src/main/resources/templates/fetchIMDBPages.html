@@ -24,6 +24,7 @@
     <div class="d-flex gap-3">
       <form class="d-flex flex-column gap-3 align-items-center" th:unless="${isThreadRunning}" id="start-form"
             method="POST" th:action="@{/admin/fetchIMDB/start/pages/1}">
+        <div th:if="${badRequestError}" th:text="${badRequestError}" class="alert alert-danger"></div>
         <label>
           <input type="text" required id="input-field" placeholder="Page Number">
         </label>

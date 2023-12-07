@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
 @RequestMapping("/admin/fetchIMDB")
@@ -91,18 +92,24 @@ public class FetchController {
         return modelAndView;
     }
 
-    @PostMapping("/start/pages/{pageNumber}")
-    public ModelAndView postStartPageFetch(@PathVariable Integer pageNumber, ModelAndView modelAndView) {
-        if (isThreadNull() || !isThreadRunning()){
-            fetchThread = new Thread(() -> fetchService.fetch250Titles(pageNumber));
-            fetchThread.start();
+    @PostMapping("/start/pages/{stringPageNumber}")
+    public ModelAndView postStartPageFetch(@PathVariable String stringPageNumber, RedirectAttributes redirectAttributes, ModelAndView modelAndView) {
+        try {
+            int pageNumber = Integer.parseInt(stringPageNumber);
+            if (isThreadNull() || !isThreadRunning()){
+                fetchThread = new Thread(() -> fetchService.fetch250Titles(pageNumber));
+                fetchThread.start();
+            }
+        }
+        catch (NumberFormatException e){
+            redirectAttributes.addFlashAttribute("badRequestError", "Bad request: Page number must be a number");
         }
         modelAndView.setViewName("redirect:/admin/fetchIMDB/pages");
         return modelAndView;
     }
 
     @PostMapping("/start/updates/{method}")
-    public ModelAndView postStartPageFetch(@PathVariable String method, ModelAndView modelAndView) {
+    public ModelAndView postStartUpdate(@PathVariable String method, ModelAndView modelAndView) {
         if (isThreadNull() || !isThreadRunning()){
             switch (method) {
                 case "100MostPopular" -> {
@@ -119,11 +126,16 @@ public class FetchController {
         return modelAndView;
     }
 
-    @PostMapping("/start/updates/single/{id}")
-    public ModelAndView postStartUpdateSingleFetch(@PathVariable Long id, ModelAndView modelAndView) {
-        if (isThreadNull() || !isThreadRunning()){
-            fetchThread = new Thread(() -> fetchService.updateSingleTitle(id));
-            fetchThread.start();
+    @PostMapping("/start/updates/single/{stringId}")
+    public ModelAndView postStartUpdateSingleFetch(@PathVariable String stringId, RedirectAttributes redirectAttributes, ModelAndView modelAndView) {
+        try {
+            Long id = Long.parseLong(stringId);
+            if (isThreadNull() || !isThreadRunning()){
+                fetchThread = new Thread(() -> fetchService.updateSingleTitle(id));
+                fetchThread.start();
+            }
+        } catch (NumberFormatException e){
+            redirectAttributes.addFlashAttribute("badRequestError", "Bad request: Id must be a number");
         }
         modelAndView.setViewName("redirect:/admin/fetchIMDB/updates/single");
         return modelAndView;

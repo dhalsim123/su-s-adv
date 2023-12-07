@@ -374,9 +374,7 @@ public class TitleService {
             }
 
             if (apiMovieAddDTO.getBusiness() != null) {
-                title.setBoxOfficeGrossUsa(apiMovieAddDTO.getBusiness().getGrossUsa());
-                title.setBoxOfficeWorldwide(apiMovieAddDTO.getBusiness().getWorldwide());
-                title.setBoxOfficeOpeningWeekend(apiMovieAddDTO.getBusiness().getOpeningWeekend());
+                updateTitleBoxOffice(title, apiMovieAddDTO);
             }
 
 
@@ -426,6 +424,12 @@ public class TitleService {
         } catch (Exception e) {
             LOGGER.error("Couldn't update this title " + title.getImdbId() + " because of this error " + e);
         }
+    }
+
+    private static void updateTitleBoxOffice(TitleEntity title, ApiMovieAddDTO apiMovieAddDTO) {
+        title.setBoxOfficeGrossUsa(apiMovieAddDTO.getBusiness().getGrossUsa());
+        title.setBoxOfficeWorldwide(apiMovieAddDTO.getBusiness().getWorldwide());
+        title.setBoxOfficeOpeningWeekend(apiMovieAddDTO.getBusiness().getOpeningWeekend());
     }
 
     private JsonObject updateDTOHas0RatingOrNullTrailer(TitleEntity title, ApiMovieAddDTO apiMovieAddDTO) {
